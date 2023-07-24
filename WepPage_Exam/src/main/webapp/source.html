@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JUST 쇼핑몰</title>
+<style>
+	.header{color: white;
+			background-color: black;
+			font-size: 50px;
+			text-align: center;
+			height: 65px;
+			width: 1904px;
+	}
+	#nav{
+		display: flex;				/* header와 #nav를 같은 레벨로 배치하기 위해 flex를 사용합니다. */
+		justify-content: center; 	/* 가로 정렬을 중앙으로 설정합니다. */
+		align-items: center; 		/* 세로 정렬을 중앙으로 설정합니다. */
+		height: 41px;				/* topMenu의 높이를 30px로 설정(제대로 설정 안하면 아래 내용이 깨짐) */
+		width: 1900px;				/* topMenu의 넓이를 850px로 설정(제대로 설정 안하면 브라우져 넓이가 좁아지면 깨짐) */
+	}
+	
+	#nav ul {
+		list-style: none;
+		padding: 0; /* 기본 리스트의 패딩을 제거합니다. */
+		margin: 0; /* 기본 리스트의 마진을 제거합니다. */
+		display: flex; /* 리스트 항목을 가로로 나열하기 위해 flex를 사용합니다. */
+	}
+	#nav ul li{
+		list-style: none;            /* <li> 태그는 위의 이미지처럼 목록을 나타내는 점을 없앤다 */ 
+        color: white;                /* 글씨 색을 흰색으로 설정 */
+        background-color: #2d2d2d;  /* 배경색을 진한 회색(RGB(2D,2D,2D)으로 설정 */
+        float: left;                /*  <li>태그들이 왼쪽에 흐르게 설정(그러면 아래있는 내용은 오른쪽으로 옴) */
+        line-height: 35px;           /* 글씨가 가운데로 오도록 설정하기 위해 한줄의 높이를 30px로 설정 */
+        vertical-align: middle;      /* 세로 정렬을 가운데로 설정(위의 line-height와 같이 설정 필요함) */
+        text-align: center;         /* 글씨 정렬을 가운데로 설정 */
+       
+	}
+	#nav .menuLink {                                /* topMenu 아이디를 가진 태그 안에 있는 menuLink 클래스 태그들의 스타일 설정 */
+        text-decoration:none;                       /* 링크(<a> 태그)가 가지는 기본 꾸밈 효과(밑줄 등)을 없앰 */
+        color: white;                              /*  폰트색을 흰색으로 설정 */
+        display: block;                             /* 링크를 글씨가 있는 부분 뿐만아니라 전체 영역을 클릭해도 링크가 걸리게 설정 */
+        width: 473px;                               /* 메뉴링크의 넓이 설정 */
+        font-size: 12px;                            /* 폰트 사이즈 12px로 설정 */
+        font-weight: bold;                          /* 폰트를 굵게 */
+        font-family: "Trebuchet MS", Dotum, Arial;  /* 기본 폰트 적용, 시스템 폰트를 종류별로 순서대로 */
+                }
+    #nav .menuLink:hover {            /* topMenu 아이디를 가진 태그 안에 menuLink클래스를 가진 태그에 마우스가 over되면 스타일 설정 */
+        color: red;                    /* 글씨 색을 붉은색으로 설정 */
+        background-color: #4d4d4d;   /* 배경색을 조금 더 밝은 회색으로 설정 */
+                }
+
+</style>
+</head>
+<body>
+<header class='header'>쇼핑몰 회원관리 ver1.0</header>
+<nav id="nav">
+	<ul>
+	<li><a class="menuLink" href="https://namu.wiki/w/%ED%91%B8%EB%B0%94%EC%98%A4" target="_blank">회원등록</a></li> 
+	<li>|</li>
+	<li><a class="menuLink" href="https://namu.wiki/w/%EB%9F%AC%EB%B0%94%EC%98%A4" target="_blank">회원목록조회/수정</a></li> 
+	<li>|</li>
+	<li><a class="menuLink" href="https://namu.wiki/w/%EC%95%84%EC%9D%B4%EB%B0%94%EC%98%A4" target="_blank">회원매출조회</a></li> 
+	<li>|</li>
+	<li><a class="menuLink" href="source.html" target="_blank">홈으로.</a></li>  
+	</ul>
+</nav>
+
+<section>
+  <h2 style="text-align: center">쇼핑몰 회원관리 프로그램</h2>
+  <p>쇼핑몰 회원정보와 회원매출정보 데이터베이스를 구축하고 회원관리 프로그램을 작성하는 프로그램이다.<br>
+  	프로그램 작성 순서</p>
+  <ol>
+    <li>회원정보 테이블을 생성한다.</li>
+    <li>매출정보 테이블을 생성한다.</li>
+    <li>회원정보, 매출정보 테이블에 제시된 문제지의 참조데이터를 추가 생성한다.</li>
+    <li>회원정보 입력 화면프로그램을 작성한다.</li>
+    <li>회원정보 조회 프로그램을 작성한다.</li>
+    <li>회원매출정보 조회 프로그램을 작성한다.</li>
+  </ol>
+</section>
+
+
+
+</body>
+</html>
