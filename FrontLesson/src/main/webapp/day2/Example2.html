@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+	h3{
+		text-align: center;
+		font-size: 30px;
+	}
+
+	tr, th{
+		border: 2px solid black;
+		padding: 20px 10px;
+		text-align: center;
+	}
+	
+	th{
+		background-color: #FFCCCC;
+	}
+	td:nth-child(3){
+		text-align: left;
+	}
+	tr:nth-child(2){
+		background-color: #FFE5CC;
+	}
+	tr:nth-child(3){
+		background-color: #FFFFCC;
+	}
+	tr:nth-child(4){
+		background-color: #E5FFCC;
+	}
+	tr:nth-child(5){
+		background-color: #CCFFCC;
+	}
+	tr:nth-child(6){
+		background-color: #CCFFE5;
+	}
+	tr:nth-child(7){
+		background-color: #CCFFFF;
+	}
+	tr:nth-child(8){
+		background-color: #CCE5FF;
+	}
+	tr:nth-child(9){
+		background-color: #CCCCFF;
+	}
+	tr:nth-child(10){
+		background-color: #E5CCFF;
+	}
+	tr:nth-child(11){
+		background-color: #FFCCFF;
+	}
+	tr:nth-child(12){
+		background-color: #FFCCE5;
+	}
+	tr:nth-child(13){
+		background-color: #FF9999;
+	}
+	tr:nth-child(14){
+		background-color: #FFCC99;
+	}
+	tr:nth-child(15){
+		background-color: #99FF99;
+	}
+	tr:nth-child(16){
+		background-color: #99FFFF;
+	}
+	tr:nth-child(17){
+		background-color: #CC99FF;
+	}
+	tr:nth-child(18){
+		background-color: #FF99FF;
+	}
+	tr:nth-child(19){
+		background-color: #FF99CC;
+	}
+	tr:nth-child(20){
+		background-color: #E0E0E0;
+	}
+	
+	table{
+		border-collapse: collapse;
+		margin: auto;
+		margin-top: 60px;
+	}
+	
+	tr, td{
+		border: 2px solid black;
+		padding: 20px 10px;
+	}
+
+
+
+</style>
+</head>
+<body>
+	<!-- table 태그에 스타일 설정해보기(style 태그) -->
+	<a href="https://d2u3dcdbebyaiu.cloudfront.net/uploads/atch_img/148/5f338a6f0771ba3cb4f9f3eb9298064a_res.jpeg" target="_blank">
+	<h3><em>css 프로퍼티 table 로 정리</em></h3>
+	</a>
+	<table>
+         <tr>  <!-- style 태그에서 설정한 width 는 무시되고 태그의 값이 적용됩니다. 단,값이 작아지는 것은 적용 안됨.-->
+            <th>번호</th>
+            <th style="width:200px;">프로퍼티(Property)</th>
+            <th style="width:400px;">설명</th>
+            <th style="width:200px;">값</th>
+         </tr>
+         <tr>   <!-- tr:행(줄) -->
+            <td>1</td>      <!-- td:열(칸) -->
+            <td>display</td>
+            <td>요소를 보일 것인지, 감출 것인지를 지정할 수 있다. 요소를 보이게 할 경우 어떤 방식으로 보이게 할 것인지 설정할 수 있다.</td>
+            <td>none, inline, block, list-item, run-in, compack, marker, table, inline-table, table-row-group, table-header-group, table-row, table-column-group, table-column, table-cell, table-caption</td>
+         </tr>
+         <tr>   <!-- tr:행(줄) -->
+            <td>2</td>      <!-- td:열(칸) -->
+            <td>width, height</td>
+            <td>요소의 너비와 높이를 지정할 수 있습니다.</td>
+            <td>auto, %, length</td>
+         </tr>
+         <tr>   <!-- tr:행(줄) -->
+            <td>3</td>      <!-- td:열(칸) -->
+            <td>margin</td>
+            <td>마진 속성을 한꺼번에 줄여서 사용할 수 있다.</td>
+            <td>margin-top, margin-right, margin-bottom, margin-left</td>
+         </tr>
+         <tr>   <!-- tr:행(줄) -->
+            <td>4</td>      <!-- td:열(칸) -->
+            <td>padding</td>
+            <td>패딩 속성을 한꺼번에 줄여서 사용할 수 있다.</td>
+            <td>padding-top, padding-right, padding-bottom, padding-left</td>
+         </tr>
+         <tr>   <!-- tr:행(줄) -->
+            <td>5</td>      <!-- td:열(칸) -->
+            <td>color</td>
+            <td>텍스트의 색상을 설정할 수 있다.</td>
+            <td>color</td>
+         </tr>
+         <tr>   <!-- tr:행(줄) -->
+            <td>6</td>      <!-- td:열(칸) -->
+            <td>font</td>
+            <td>폰트를 설정하기 위해 필요한 다양한 속성의 값들을 줄여서 간편하게 선언할 수 있다.</td>
+            <td>font-style, font-variant,font-weight,font-size/line-height,font-family,caption,icon,menu,message-box,small-caption,status-barfont-family</td>
+         </tr>
+         <tr>   <!-- tr:행(줄) -->
+            <td>7</td>      <!-- td:열(칸) -->
+            <td>text-align</td>
+            <td>요소 안의 텍스트 정렬을 지정 할 수 있다.</td>
+            <td>left, tight, center, justify</td>
+         </tr>
+         <tr>   <!-- tr:행(줄) -->
+            <td>8</td>      <!-- td:열(칸) -->
+            <td>background</td>
+            <td>background의 여러 가지 속성을 간단하게 한번에 선언하여 사용할수 있다.</td>
+            <td>background-color, background-images, background-repeat, background-attachment, background-position</td>
+         </tr>
+         <tr>   <!-- tr:행(줄) -->
+            <td>9</td>      <!-- td:열(칸) -->
+            <td>border</td>
+            <td>border의 여러 가지 속성을 간단하게 한번에 선언하여 사용할 수 있다.</td>
+            <td>border-width, border-style, border-color, border-bottom</td>
+         </tr>
+         <tr>   <!-- tr:행(줄) -->
+            <td>10</td>      <!-- td:열(칸) -->
+            <td>visibility</td>
+            <td>요소를 보이거나 감출 수 있다.</td>
+            <td>visible, hidden, collapse</td>
+         </tr>
+         <tr>   <!-- tr:행(줄) -->
+            <td>11</td>      <!-- td:열(칸) -->
+            <td>float</td>
+            <td>텍스트나 이미지 등의 요소를 흐리게 만들어, 인접해 있는 다른 요소와 함께 흐르게 만들수 있다.</td>
+            <td>left, right, none</td>
+         </tr>
+         <tr>   <!-- tr:행(줄) -->
+            <td>12</td>      <!-- td:열(칸) -->
+            <td>clear</td>
+            <td>바로 이전에 요소에서 선언된 float 속성을 해제한다.</td>
+            <td>left, right, both, none</td>
+         </tr>
+         <tr>   <!-- tr:행(줄) -->
+            <td>13</td>      <!-- td:열(칸) -->
+            <td>position</td>
+            <td>요소를 어떤 방식으로 위치시킬 것인지 지정할 수 있다.</td>
+            <td>static, relative, absolute, fixed</td>
+         </tr>
+         <tr>   <!-- tr:행(줄) -->
+            <td>14</td>      <!-- td:열(칸) -->
+            <td>cursor</td>
+            <td>마우스 포인터의 모양을 지정할 수 있다.</td>
+            <td>url, auto, crosshair, default, pointer, move, e-resize, ne-resize, nw-resize, n-resize, se-resize, s-resize, w-resize, text, wait, help</td>
+         </tr>
+         <tr>   <!-- tr:행(줄) -->
+            <td>15</td>      <!-- td:열(칸) -->
+            <td>border-style</td>
+            <td>상하좌우 모든 테두리의 모양을 1개에서 4개까지 스타일을 한번에 설정할 수 있다.</td>
+            <td>none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset</td>
+         </tr>
+         <tr>   <!-- tr:행(줄) -->
+            <td>16</td>      <!-- td:열(칸) -->
+            <td>viewport</td>
+            <td>반응형 웹이다. 반응형 홈페이지란 하나의 홈페이지로 PC, 테블릿, 노트북, 스마트폰 등 여러가지 디바이스에서 접속하는 디스플레이 종류에 따라 화면의 크기가 자동으로 변하는 웹페이지 접근 기법입니다.</td>
+            <td>width, height, initial-scale, user-scalable</td>
+         </tr>
+         <tr>   <!-- tr:행(줄) -->
+            <td>17</td>      <!-- td:열(칸) -->
+            <td>outline</td>
+            <td>요소의 윤곽을 디자인 할 수 있다. border와 달리 화면 배치나 크기에 영향을 주지 않는다.</td>
+            <td>outline-color, outline-style, outline-width</td>
+         </tr>
+         <tr>   <!-- tr:행(줄) -->
+            <td>18</td>      <!-- td:열(칸) -->
+            <td>text-indent</td>
+            <td>문장의 첫행을 들여쓰기 할 수 있다.</td>
+            <td>%, length</td>
+         </tr>
+         <tr>   <!-- tr:행(줄) -->
+            <td>19</td>      <!-- td:열(칸) -->
+            <td>text-decoration</td>
+            <td>텍스트를 꾸밀 수 있다.</td>
+            <td>none, underline, overline, line-through</td>
+         </tr>
+          <tr>   <!-- tr:행(줄) -->
+            <td>20</td>      <!-- td:열(칸) -->
+            <td>text-transform</td>
+            <td>소문자를 대문자로, 대문자를 소문자로 설정 할 수 있다.</td>
+            <td>none, capitalize, uppercase, lowercase</td>
+         </tr>
+   </table>
+
+
+</body>
+</html>
