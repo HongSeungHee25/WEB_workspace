@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+main {
+  width: 100%;
+  margin: auto;
+}
+
+h2.heading {
+  padding: 20px;
+  margin: 0px;
+  text-align: center;
+  background-color: #0066CC;
+  color: white; /* 제목 텍스트에 색상을 추가 */
+}
+
+nav.list {
+  border: 10px solid #9999FF;
+  background-color: #9999FF; /* 내비게이션에 배경색을 추가 */
+}
+
+nav.list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav.list ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav.list ul li:last-child {
+  margin-right: 0;
+}
+
+a.menuLink {
+  color: white; /* 메뉴 링크에 색상 추가 */
+  text-decoration: none;
+  padding: 5px;
+}
+
+a.menuLink:hover {
+	border: 1px solid #777;
+}
+h2.customer{
+	text-align: center;
+}
+table.registration{
+	border: 3px solid black;
+	margin: auto;
+	margin-top:40px; 
+	margin-bottom: 35%;
+	padding: 3px;
+	/* 테이블 가로 너비를 설정합니다. */
+  	width: 30%;
+}
+ table.registration tr,th,td{
+	border: 2px solid black;
+	padding-top:3px;
+	padding-bottom: 3px; 
+	/* 텍스트 가운데 정렬을 설정합니다. */
+  	text-align: center;
+	
+} 
+td#sale{
+		text-align: right;
+	}
+
+
+footer {
+  text-align: center;
+  background-color: #0066CC; /* 바닥글에 배경색 추가 */
+  color: white; /* 바닥글 텍스트에 색상을 추가 */
+  padding: 5px;
+}
+
+
+
+

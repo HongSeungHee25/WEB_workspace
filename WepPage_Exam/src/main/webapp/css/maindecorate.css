@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+main {
+  width: 100%;
+  margin: auto;
+}
+
+h2.heading {
+  padding: 20px;
+  margin: 0px;
+  text-align: center;
+  background-color: #0066CC;
+  color: white; /* 제목 텍스트에 색상을 추가 */
+}
+
+nav.list {
+  border: 10px solid #9999FF;
+  background-color: #9999FF; /* 내비게이션에 배경색을 추가 */
+}
+
+nav.list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav.list ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav.list ul li:last-child {
+  margin-right: 0;
+}
+
+a.menuLink {
+  color: white; /* 메뉴 링크에 색상 추가 */
+  text-decoration: none;
+  padding: 5px;
+}
+
+a.menuLink:hover {
+	border: 1px solid #777;
+}
+h2{
+	text-align: center;
+}
+section{
+	margin-bottom: 40%;
+}
+
+footer {
+  text-align: center;
+  background-color: #0066CC; /* 바닥글에 배경색 추가 */
+  color: white; /* 바닥글 텍스트에 색상을 추가 */
+  padding: 5px;
+}
