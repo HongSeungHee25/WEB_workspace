@@ -79,6 +79,11 @@ select[name="citycode"] {
 }
 
 footer {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 50px;
+  width: 100%;
   text-align: center;
   background-color: #0066CC; /* 바닥글에 배경색 추가 */
   color: white; /* 바닥글 텍스트에 색상을 추가 */
