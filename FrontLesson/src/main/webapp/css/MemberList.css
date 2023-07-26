@@ -1,0 +1,92 @@
+@charset "UTF-8";
+html, body{
+	margin: 0;
+	height: 100%;
+}
+header{
+	padding: 30px 20px;
+	background-color:  #0066CC;
+	color: white;
+	box-sizing: border-box;
+	height: 15%;
+	/* flextbox 레이아웃으로 자식 요소를 정렬하기 */
+	display: flex;
+	/* 수직 정렬 */
+	align-items: center;
+	/* 수평 정렬 */
+	justify-content: center;
+}
+/* header h2{
+	text-align: center;
+} */
+nav{
+	box-sizing: border-box;
+	height: 8%;
+	margin: 0px;
+	background-color: #9999FF;
+}
+nav ul{
+	box-sizing: border-box;
+	height: 100%;
+	list-style: none;
+	background-color: #9999FF;
+	margin: 0px;
+	/* overflow: hidden; */
+}
+ul a{
+	text-decoration: none;
+	padding: 20px;
+	display: inline-block;
+	color: white;
+}
+
+ul li{
+	float: left;
+}
+section{
+	box-sizing: border-box;
+	height: 70%;
+	padding: 20px;
+	background-color: #E0E0E0;
+}
+h2{
+	text-align: center;
+}
+ th, td{
+	border: 2px solid black;
+}
+
+/* th의 아래 테두리만 설정 */
+/*  th{
+	border-bottom: 2px solid black;
+} */
+
+a:nth-child(1){
+	color: white;
+	text-decoration: none;
+}
+table{
+	margin: auto;
+	border: 2px solid black;
+	/* 간격 겹치기 */
+	border-collapse: collapse;
+	/* 간격 띄우기 */
+	/* border-collapse: separate;
+	border-spacing: 2px; */
+	text-align: center;
+	width: 50%;
+	background-color: #E0E0E0;
+}
+footer{
+	box-sizing: border-box;
+	height: 7%;
+	position: fixed;
+  	left: 0px;
+  	bottom: 0px;
+  	width: 100%;
+	padding: 10px;
+	background-color: #0066CC;
+	color: white;
+	font-size: 80%;
+	text-align: center;
+}
