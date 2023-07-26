@@ -53,7 +53,7 @@ section{
 }
 footer{
 	box-sizing: border-box;
-	height: 7%;
+	min-height: 7%;
 	padding: 10px;
 	background-color: #0066CC;
 	color: white;

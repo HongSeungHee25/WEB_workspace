@@ -39,16 +39,18 @@ nav a{
 	padding: 20px;
 	display: inline-block;
 	color: white;
+	display: inline-block; /* <a>를 블록 요소로 설정하여 너비와 높이를 지정할 수 있도록 함 */
 	transform: scale(1); /* 기본 크기로 설정 */
   	transition: transform 0.3s; /* 확대 및 축소 애니메이션 효과를 설정 */
 }
 nav a:hover {
   transform: scale(1.2); /* 호버 시 1.2배 확대 */
 }
+
 nav li{
 	display: inline;
-	padding-top: 8px;
-	padding-bottom: 8px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 	float: left;
 } 
 nav li:last-child{
