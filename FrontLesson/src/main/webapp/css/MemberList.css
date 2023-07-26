@@ -80,10 +80,6 @@ table{
 footer{
 	box-sizing: border-box;
 	height: 7%;
-	position: fixed;
-  	left: 0px;
-  	bottom: 0px;
-  	width: 100%;
 	padding: 10px;
 	background-color: #0066CC;
 	color: white;
