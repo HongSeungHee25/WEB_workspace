@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>정규표현식 정리</title>
+<style>
+
+	h3{
+		text-align: center;
+		font-size: 30px;
+	}
+	
+	table{
+		border-collapse: collapse;
+		margin: auto;
+		margin-top: 40px;
+	}
+	th{
+		background-color: #FFCCCC;
+	}
+
+	tr,th,td{
+	border: 2px solid black;
+		padding: 10px;
+		text-align: center;
+	}
+
+</style>
+</head>
+<body>
+
+	<h3>자바스크립트 정규 표현식 정리</h3>
+	<table>
+		<tr>
+			<th colspan="3">일반 문자(리터럴 문자)</th>
+		</tr>
+		<tr>
+			<th>문자</th> <th colspan="2">설명</th>
+		</tr>
+		<tr>
+			<td>유니코드 문자</td> <td colspan="2">문자 그 자체. 
+(단, ^, $, \, ., *, +, ?, (, ), {, }, |는 정규 표현식 내에서 메타 문자로 사용되므로 제외. 앞에 \를 붙여 표현 가능. )</td>
+		</tr>
+		<tr>
+			<td>\0</td> <td colspan="2">NULL 문자</td>
+		</tr>
+		<tr>
+			<td>\n</td> <td colspan="2">개행 문자 (=엔터)</td>
+		</tr>
+		<tr>
+			<td>\t</td> <td colspan="2">탭 문자</td>
+		</tr>
+		<tr>
+			<td>\v</td> <td colspan="2">수직 탭 문자</td>
+		</tr>
+		<tr>
+			<td>\f</td> <td colspan="2">다음 페이지 문자</td>
+		</tr>
+		<tr>
+			<td>\r</td> <td colspan="2">캐리지 리턴 문자(=커서를 줄 맨 앞으로 옮겨놓는 문자)</td>
+		</tr>
+		<tr>
+			<td>\xhh</td> <td colspan="2">16진수 hh로 지정된 ASCII 문자(예: \x41은 아스키코드로 A) <a href="https://www.ibm.com/docs/ko/aix/7.1?topic=adapters-ascii-decimal-hexadecimal-octal-binary-conversion-table">*참고: 16진수 아스키 표</a></td>
+		</tr>
+		<tr>
+			<td>\uhhhh</td> <td colspan="2">16진수 hhhh로 지정된 유니코드 문자(예: \u0041은 유니코드 U+0041로 A)</td>
+		</tr>
+		<tr>
+			<td>\cX</td> <td colspan="2">X로 표시된 제어 문자. (=컨트롤과 함께 눌려진 문자.)(예: \cM는 Ctrl+M)</td>
+		</tr>
+		</table>
+		<table>
+		<tr>
+			<th colspan="3">정규 표현식 규칙</th>
+		</tr>
+		<tr>
+			<th>규칙</th> <th>설명</th> <th>예시</th>
+		</tr>
+		<tr>
+			<td>[문자]</td> <td>대괄호 내에 표현된 문자 집합 안의 모든 단일 문자 중 하나와 일치. -를 통해 범위 표현 가능. </td> <td>/[abc]/
+: a, b, c중 문자 한 개와 일치
+/[a-z]/
+: 모든 영문 소문자 중 한 개와 일치
+/[abx-z]/
+: a, b, x, y, z중 문자 한 개와 일치
+/[가-힣]/
+: 모든 한글 문자 한개와 일치</td>
+		</tr>
+		<tr>
+			<td>[^문자]</td> <td>대괄호 내에 없는 단일 문자 한 개와 일치</td> <td>/[^0-9]/
+: 숫자 외의 문자 한 개와 일치</td>
+		</tr>
+		<tr>
+			<td>.</td> <td>	마침표에 해당하는 부분은 임의의 문자(줄바꿈 문자 제외) 한 개와 일치</td> <td>/d.g/
+: 첫번째 글자가 d이고 세번째 글자가 g인 문자열 
+/a...l/
+: 첫번째 글자가 a이고 다섯번째 글자가 l인 문자열</td>
+		</tr>
+		<tr>
+			<td>\d / \D</td> <td>\d는 숫자
+\D는 숫자 외의 문자</td> <td rowspan="4"></td>
+		</tr>
+		<tr>
+			<td>\w / \W</td> <td>\w는 영어 단어 문자(알파뱃, 숫자, 언더바)
+\W는 영어 단어 문자 외의 문자</td>
+		</tr>
+		<tr>
+			<td>\s / \S</td> <td>\s는 공백 문자 (공백, 탭, 개행 문자 등)
+\s는 공백 외의 문자</td> 
+		</tr>
+		<tr>
+			<td>[\b]</td> <td>백스페이스 문자</td> 
+		</tr>
+		<tr>
+			<td>{m, n}</td> <td>바로 앞의 요소 최소 m번 최대 n번 반복 (n을 생략해 최소치만 표기도 가능)</td> <td>/[a-z]{6,20}/ 
+: 알파벳 소문자 최소 6자 ~ 최대 20자 반복
+/[0-9]{3,}/
+: 숫자 최소 3자 반복 </td>
+		</tr>
+		<tr>
+			<td>{n}</td> <td>바로 앞의 요소 n번 반복
+= {n, n}</td> <td>/[a-z]{5}\d{3}/
+: 알파벳 소문자 5자 반복, 그 뒤 숫자 3자 반복</td>
+		</tr>
+		<tr>
+			<td>?</td> <td>바로 앞의 요소 최대 1번 반복
+= {0, 1}</td> <td>/[a-z]{5}\d?/
+: 알파벳 소문자 5자 반복, 그 뒤 숫자 최대 한번 반복</td>
+		</tr>
+		<tr>
+			<td>+</td> <td>바로 앞의 요소 최소 1번 반복
+= {1,}</td> <td>/Mr\w+/
+: Mr의 바로 뒤에 영어 단어 문자가 최소 하나 이상 반복</td>
+		</tr>
+		<tr>
+			<td>*</td> <td>	바로 앞의 요소 최소 0번 반복
+= {0,}</td> <td>/\s*[a-z]{3}/
+: 공백 문자가 0개 이상 반복 후 알파벳 소문자 3자 반복
+/dis.*/
+: dis뒤로 가능한 최대 횟수만큼 임의의 문자를 반복 (욕심 많은 반복)
+/dis.*?/
+: dis뒤로 가능한 최소 횟수만큼 임의의 문자를 반복 (욕심 없는 반복)</td>
+		</tr>
+		<tr>
+			<td>(패턴 요소)</td> <td>소괄호 안의 내용을 부분적으로 그룹화 (캡쳐링 O)</td> <td>/<(h[1-6])>.*<\/\1>/
+: (h[1-6])에서 일치한 값을 \/\1에서 참조. 예를 들어 <h1>text</h1>이면 true, <h1>text</h2>면 false</td>
+		</tr>
+		<tr>
+			<td>(?:패턴 요소)</td> <td>소괄호 안의 내용을 부분적으로 그룹화 (캡쳐링 X)</td> <td rowspan="3"></td>
+		</tr>
+		<tr>
+			<td>시작 위치에 ^</td> <td>시작 위치에 패턴을 고정</td>
+		</tr>
+		<tr>
+			<td>마지막 위치에 $</td> <td>마지막 위치에 패턴을 고정</td>
+		</tr>
+		<tr>
+			<td>\b / \B</td> <td>\b는 영어 단어의 경계
+\B는 영어 단어 경계 외의 위치</td> <td>/\bdog/
+: Bulldog 일치, dog 일치
+/\Bdog/
+: Bulldog 일치, dog 불일치</td>
+		</tr>
+		<tr>
+			<td>(?=패턴)</td> <td>전방 탐색. 특정 패턴의 위치를 지정</td> <td>/x(?=y)/
+: x 다음에 y가 나오는 패턴</td>
+		</tr>
+		<tr>
+			<td>(?!패턴)</td> <td>전방 부정 탐색, 특정 패턴이 안나오는 위치를 지정</td> <td>/x(?!y)/
+: x 다음에 y가 안나오는 패턴</td>
+		</tr>
+		<tr>
+			<td>(문자열|문자열|문자열)</td> <td>문자열 여러 개 중 문자열 하나와 일치</td> <td>/\b(\d+) (dog|cat|bird)/
+: dog, cat, bird 중 문자열 하나와 일치 </td>
+		</tr>
+		</table>
+		
+		<table>
+		<tr>
+			<th colspan="3">플래그</th>
+		</tr>
+		<tr>
+			<th>플래그</th> <th colspan="2">뜻</th>
+		</tr>
+		<tr>
+			<td>i</td> <td colspan="2">ignoreCase / 대소문자 구별 없이 매칭</td>
+		</tr>
+		<tr>
+			<td>g</td> <td colspan="2">global / 일치하는 모든 문자열 검색</td>
+		</tr>
+		<tr>
+			<td>m</td> <td colspan="2">multiline / 여러 줄 모드로 패턴 매칭 (앵커 ^와 $의 작동 방식에만 영향을 줌)</td> 
+		</tr>
+		<tr>
+			<td>u</td> <td colspan="2">unicode / 패턴내부에 유니코드 관련 기능을 활성화 (4byte문자 처리 등)</td> 
+		</tr>
+		<tr>
+			<td>y</td> <td colspan="2">sticky / 접착 모드로 패턴 매칭 (문자 내 특정 위치에서 검색을 진행) </td> 
+		</tr>
+		
+
+</table>
+
+</body>
+</html>
