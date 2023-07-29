@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+table{
+	border: 1px solid black;
+	width: 600px;
+	margin: auto;
+}
+
+tr, th, td{
+	border: 1px solid black; 
+}
+td{
+	padding: 3px;
+}
+input, select{
+	float: left;
+	
+}
+input[type=text],input[type=number]{
+	width: 90%;
+	color: #ddd;
+}
+
+button{
+	cursor: pointer;
+	background-color: white;
+	border:none;
+	border-radius: 4px;
+	
+}

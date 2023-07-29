@@ -1,10 +1,10 @@
 // 시작 회원 번호
-let currentMemberNumber = 10001;
+let currentMemberNumber = 100001;
 
 // 자동으로 회원 번호 생성하는 함수
 function generateMemberNumber() {
   // 회원 번호를 현재 번호로 설정
-  document.getElementById('memberNumber').value = 'M' + currentMemberNumber;
+  document.getElementById('memberNumber').value =  currentMemberNumber;
   
   // 다음 회원 번호로 증가
   currentMemberNumber++;
