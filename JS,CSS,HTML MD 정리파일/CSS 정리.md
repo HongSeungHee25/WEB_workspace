@@ -53,25 +53,25 @@
 ## Font (글꼴)
 |속성|설명|값|
 |------|---|---|
-|font|폰트를 설정하기 위해 필요한 다양한 속성의<br>값들을 줄여서 간편하게 선언할 수 있다.|● font-style<br>● font-variant<br>● font-weight<br>● font-size/line-height<br>● font-family<br>● caption<br>● icon<br>● menu<br>● message-box<br>● small-caption<br>● status-barfont-family|
+|font|폰트를 설정하기 위해 필요한 다양한 속성의<br>값들을 줄여서 간편하게 선언할 수 있다.|● font-style : 폰트를 기울임체로 사용할지 설정<br>● font-variant : 소문자를 작은 대문자로 만들지 설정<br>● font-weight : 폰트의 두께를 지정<br>● font-size/line-height : 속성을 함께 사용하여 폰트의 크기와 문장의 줄 간격을 한 번에 설정<br>● font-family : 폰트의 종류를 지정<br>● caption : 특정 요소 유형에 대해 미리 정의된 폰트 패밀리들을 나타냄<br>● icon : 특정 요소 유형에 대해 미리 정의된 폰트 패밀리들을 나타냄<br>● menu : 특정 요소 유형에 대해 미리 정의된 폰트 패밀리들을 나타냄<br>● message-box : 특정 요소 유형에 대해 미리 정의된 폰트 패밀리들을 나타냄<br>● small-caption : 특정 요소 유형에 대해 미리 정의된 폰트 패밀리들을 나타냄<br>● status-barfont-family : 특정 요소 유형에 대해 미리 정의된 폰트 패밀리들을 나타냄|
 |family name|폰트의 종류를 지정할 수 있다.|● generic-family|
-|font-size|폰트의 크기를 지정할 수 있다.|● xx-small<br>● x-small<br>● small<br>● medium<br>● large<br>● x-large<br>● xx-large<br>● smaller<br>● lager<br>● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
-|font-size-adjust|소문자를 기준으로 글자 크기를 조정할 수 있다.<br>font-size에서 지정된 글자의 높이와 소문자 x의<br>비율로 글자 크기를 재지정한다.|● none<br>● number|
-|font-stretch|글자의 선명도, 즉 장평을 설정할 수 있다.|● normal<br>● wider<br>● narrower<br>● ultra-condensed<br>● extra-condensed<br>● condensed<br>● semi-condensed<br>● semi-expanded<br>● expanded<br>● extra-expanded<br>● ultra-expanded|
+|font-size|폰트의 크기를 지정할 수 있다.|● xx-small : 가장 작은 폰트 크기를 나타냄<br>● x-small : xx-small보다 조금 큰 폰트 크기를 나타냄<br>● small : 중간 크기의 작은 폰트를 나타냄<br>● medium : 폰트 크기의 기본값으로 설정<br>● large : 중간 크기의 큰 폰트를 나타냄<br>● x-large : large보다 조금 큰 폰트 크기를 나타냄<br>● xx-large : 가장 큰 폰트 크기를 나타냄<br>● smaller : 부모 요소의 폰트 크기보다 조금 더 작은 크기로 설정됨. 즉, 상대적으로 작은 폰트 크기를 지정할 때 사용됨<br>● lager : 부모 요소의 폰트 크기보다 조금 더 큰 크기로 설정됨.즉, 상대적으로 큰 폰트 크기를 지정할 때 사용됨<br>● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
+|font-size-adjust|소문자를 기준으로 글자 크기를 조정할 수 있다.<br>font-size에서 지정된 글자의 높이와 소문자 x의<br>비율로 글자 크기를 재지정한다.|● none : font-size-adjust를 비활성화하는 역할을 함.글자 크기를 재조정하지 않음.<br>● number : 글자 크기를 재조정할 때 사용되는 비율을 지정.글자의 높이와 소문자 'x'의 비율을 나타냄|
+|font-stretch|글자의 선명도, 즉 장평을 설정할 수 있다.|● normal : 폰트의 기본 장평을 사용.즉, 폰트가 기본으로 가지고 있는 너비를 사용<br>● wider : 폰트의 장평을 상대적으로 넓혀 사용.기본 장평보다 약간 더 넓은 글자를 보여줌<br>● narrower : 폰트의 장평을 상대적으로 좁혀 사용함.기본 장평보다 약간 더 좁은 글자를 보여줌<br>● ultra-condensed : 폰트의 장평을 매우 좁혀 사용함.가장 좁은 글자를 보여줌<br>● extra-condensed : 폰트의 장평을 매우 좁혀 사용함.ultra-condensed보다는 조금 더 넓은 글자를 보여줌<br>● condensed : 폰트의 장평을 좁혀 사용. extra-condensed보다는 조금 더 넓은 글자를 보여줌<br>● semi-condensed : 폰트의 장평을 다소 좁혀 사용.condensed보다는 조금 더 넓은 글자를 보여줌<br>● semi-expanded : 폰트의 장평을 다소 넓혀 사용.expanded보다는 조금 더 좁은 글자를 보여줌<br>● expanded : 폰트의 장평을 상대적으로 넓혀 사용.본 장평보다 약간 더 넓은 글자를 보여줌<br>● extra-expanded : 폰트의 장평을 매우 넓혀 사용.expanded보다는 조금 더 넓은 글자를 보여줌<br>● ultra-expanded : 폰트의 장평을 매우 넓혀 사용.가장 넓은 글자를 보여줌|
 |font-style|폰트를 기울임체로 사용할 수 있다.|● normal : 기본 폰트 스타일로 설정<br>● ltalic : 기울임체로 설정<br>● oblique : 경사로 설정|
 |font-variant|소문자를 작은 대문자로 만들 수 있다.|● normal : 기본 폰트 스타일로 설정<br>● small-caps : 소문자를 작은 대문자로 만듬|
 |font-weight|폰트의 두께를 지정할 수 있다.|● normal : 기본 폰트 두께로 설정<br>● bold : 굵은 폰트로 설정<br>● bolder : 더 굵은 폰트로 설정<br>● lighter : 더 가벼운 폰트로 설정<br>● 100~900 : 숫자로 지정하여 폰트의 두께를 상세하게 조절할 수 있음.400이 기본값이며 700이 굵은 폰트에 해당함.|
 ## Generated Content (콘텐츠 생성) 
 |속성|설명|값|
 |------|---|---|
-|content|요소의 앞(:before)과 뒤(:after)에 어떤 내용을<br>생성할 것인지 지정할 수 있다.|● string<br>● url<br>● counter(name)<br>● counter(name,list-style-type)<br>● counters(name,string)<br>● counters(name,string,list-style-type)<br>● attr(X)<br>● open-quote<br>● close-quote<br>● no-open-quote<br>● no-close-quote|
-|counter-increment|요소 요소에 번호를 매길 수 있다. 번호는 카운터로<br>자동으로 증가하는 특성을 가지고 있다.<br>앞과 뒤 선택자와 함께 사용된다.|● none<br>● identifier number|
-|counter-reset|앞서 만든 카운터의 값을 초기화 한다.|● none<br>● identifier number|
-|quotes string|요소 앞뒤에 인용부호를 주가할 수 있다.|● none|
+|content|요소의 앞(:before)과 뒤(:after)에 어떤 내용을<br>생성할 것인지 지정할 수 있다.|● string : 따옴표(" ")나 작은따옴표(' ')로 묶어서 사용<br>● url : 이미지의 경로를 url() 함수 안에 지정하여 사용<br>● counter(name) : counter(name) 값은 CSS 카운터를 나타냄.(name은 정의한 카운터의 이름)<br>● counter(name,list-style-type) : CSS 카운터와 함께 리스트의 형식을 지정함<br>● counters(name,string) : 중첩된 CSS 카운터와 함께 사용하여 리스트의 형식을 지정함<br>● counters(name,string,list-style-type) : 중첩된 CSS 카운터와 함께 리스트의 형식을 지정함<br>● attr(X) : 요소의 속성 값을 나타냄.(x는 요소의 속성이름)<br>● open-quote : 인용문의 시작 부분을 나타냄. 브라우저가 지원하는 인용 부호로 시작됨<br>● close-quote : 용문의 끝 부분을 나타냄.브라우저가 지원하는 인용 부호로 끝남<br>● no-open-quote : 인용문의 시작 부분을 생성하지 않음.인용 부호 없이 내용이 생성됨<br>● no-close-quote : 인용문의 끝 부분을 생성하지 않음.인용 부호 없이 내용이 생성됨|
+|counter-increment|요소 요소에 번호를 매길 수 있다. 번호는 카운터로<br>자동으로 증가하는 특성을 가지고 있다.<br>앞과 뒤 선택자와 함께 사용된다.|● none : 카운터를 증가시키지 않음.즉,번호가 자동으로 증가하지 않음 <br>● identifier number : 카운터의 이름을 지정.이 이름을 사용하여 해당 요소의 카운터를 증가시킬 수 있음|
+|counter-reset|앞서 만든 카운터의 값을 초기화 한다.|● none : 카운터를 초기화하지 않음.즉, 카운터의 값을 변경하지 않고 현재 값이 유지됨<br>● identifier number : 카운터의 이름을 지정.이 이름을 사용하여 해당 카운터의 값을 초기화할 수 있음|
+|quotes string|요소 앞뒤에 인용부호를 추가할 수 있다.|● none : 인용 부호를 추가하지 않음|
 ## List and Marker (리스트와 표시)
 |속성|설명|값|
 |------|---|---|
-|list-style|여러가지 리스트 스타일을 줄여서 한 번에<br>지정할 수 있다.|● list-style-type<br>● list-style-position<br>● list-style-image|
+|list-style|여러가지 리스트 스타일을 줄여서 한 번에<br>지정할 수 있다.|● none<br>● list-style-type<br>● list-style-position<br>● list-style-image|
 |list-style-image|리스트 앞에 붙는 아이콘을 임의의 이미지로<br>지정해 줄 수 있다.|● none<br>● url|
 |list-style-position|리스트 앞에 붙는 블릿을 리스트에 포함해서<br>표현할 것인지, 리스트에 포함하지 않고 표현할<br>것인지 지정할 수 있다.|● inside<br>● outside|
 |list-style-position|리스트 앞에 붙는 블릿 아이콘의 모양을<br>설정 할 수 있다.|● none<br>● disc<br>● circle<br>● square<br>● decimal<br>● decimal-leading-zero<br>● lower-roman<br>● upper-roman<br>● lower-alpha<br>● upper-alpha<br>● lower-latin<br>● upper-latin<br>● hebrew<br>● armenian<br>● georgian<br>● cjk-ideographic<br>● hiragana<br>● katakana<br>● hiragana-iroha<br>● katakana-iroha|
@@ -79,7 +79,7 @@
 ## Margin (마진 - 바깥여백)
 |속성|설명|값|
 |------|---|---|
-|margin|마진 속성을 한꺼번에 줄여서 사용할 수 있다.|● margin-top<br>● margin-right<br>● margin-bottom<br>● margin-left|
+|margin|마진 속성을 한꺼번에 줄여서 사용할 수 있다.|● margin-top : 요소의 위쪽 여백을 지정<br>● margin-right : 요소의 오른쪽 여백을 지정<br>● margin-bottom : 요소의 아래쪽 여백을 지정<br>● margin-left : 요소의 왼쪽 여백을 지정|
 |margin-bottom|요소의 아래쪽 마진을 줄일 수 있다.|● auto : 브라우저에 의해 자동으로 계산<br>● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
 |margin-left|요소의 왼쪽 마진을 줄일 수 있다.|● auto : 브라우저에 의해 자동으로 계산<br>● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
 |margin-right|요소의 오른쪽 마진을 줄일 수 있다.|● auto : 브라우저에 의해 자동으로 계산<br>● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
@@ -87,7 +87,7 @@
 ## Padding (패딩 - 안쪽여백)
 |속성|설명|값|
 |------|---|---|
-|padding|패딩 속성을 한꺼번에 줄여서 사용할 수 있다.|● padding-bottom<br>● padding-left<br>● padding-right<br>● padding-top|
+|padding|패딩 속성을 한꺼번에 줄여서 사용할 수 있다.|● padding-bottom : 요소의 아래쪽 여백 값을 지정<br>● padding-left : 요소의 왼쪽 여백 값을 지정<br>● padding-right : 요소의 오른쪽 여백 값을 지정<br>● padding-top : 요소의 위쪽 여백 값을 지정|
 |padding-bottom|요소의 아래쪽 패딩을 줄 수 있다.|● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
 |padding-left|요소의 왼쪽 패딩을 줄 수 있다.|● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
 |padding-right|요소의 오른쪽 패딩을 줄 수 있다.|● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
@@ -95,30 +95,30 @@
 ## Outlines (윤곽)
 |속성|설명|값|
 |------|---|---|
-|outline|요소의 윤곽을 디자인 할 수 있다. border와 달리<br>화면 배치나 크기에 영향을 주지 않는다.|● outline-color<br>● outline-style<br>● outline-width|
-|outline-color|요소의 윤곽 색상을 지정 할 수 있다.|● color<br>● invert|
-|outline-style|요소의 윤곽 스타일을 지정 할 수 있다.|● none<br>● dotted<br>● dashed<br>● solid<br>● double<br>● groove<br>● ridge<br>● inset<br>● outset|
-|outline-width|요소의 윤곽 너비를 지정할 수 있다.|● thin<br>● medium<br>● thick<br>● length|
+|outline|요소의 윤곽을 디자인 할 수 있다. border와 달리<br>화면 배치나 크기에 영향을 주지 않는다.|● outline-color : 윤곽의 색상을 지정<br>● outline-style : 윤곽의 스타일을 지정<br>● outline-width : 윤곽의 너비를 지정|
+|outline-color|요소의 윤곽 색상을 지정 할 수 있다.|● color : 윤곽의 색상을 지정<br>● invert : 윤곽의 색상을 요소의 배경색상과 대조하여 반전된 색상으로 지정|
+|outline-style|요소의 윤곽 스타일을 지정 할 수 있다.|● none : 윤곽을 없앰.즉, 요소에 윤곽이 표시되지 않음<br>● dotted : 점선 스타일의 윤곽을 나타냄.윤곽이 작은 점으로 이루어진 점선으로 표시<br>● dashed : 파선 스타일의 윤곽을 나타냄.윤곽이 짧은 선으로 이루어진 파선으로 표시<br>● solid : 실선 스타일의 윤곽을 나타냄.윤곽이 연속된 실선으로 표시됨<br>● double : 두 줄로 이루어진 윤곽을 나타냄.윤곽이 두 줄의 실선으로 표시됨<br>● groove : 3D 그루브 스타일의 윤곽을 나타냄.윤곽이 그루브 형태로 표시됨<br>● ridge : 3D 리지드 스타일의 윤곽을 나타냄.윤곽이 리지드 형태로 표시됨<br>● inset :  3D 인셋 스타일의 윤곽을 나타냄.윤곽이 인셋 형태로 표시됨<br>● outset : 3D 아웃셋 스타일의 윤곽을 나타냄.윤곽이 아웃셋 형태로 표시됨|
+|outline-width|요소의 윤곽 너비를 지정할 수 있다.|● thin : 상대적으로 얇은 선을 지정.medium보다 얇고, thick보다 더 얇음<br>● medium : 기본값으로 정해진 두께를 가진 선을 지정<br>● thick : 상대적으로 두꺼운 선을 지정.medium보다 두껍고, thin보다 더 두꺼움<br>● length : 픽셀(px), 백분율(%) 등과 같은 유효한 길이 값을 사용하여 직접 선의 두께를 지정할 수 있음|
 ## Positioning (위치제어) 
 |속성|설명|값|
 |------|---|---|
 |bottom|지정된 요소의 위치를 요소의 아래쪽 기준으로<br>지정한다.|● auto : 브라우저에 의해 자동으로 계산<br>● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
 |left|지정된 요소의 위치를 왼쪽 기준으로 지정한다.|● auto : 브라우저에 의해 자동으로 계산<br>● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
-|clip|지정된 수치만큼 4각형의 각 부분을 잘라낸다.|● auto : 브라우저에 의해 자동으로 계산<br>● shape|
-|overflow|컨텐츠가 요소의 크기보다 커져서 넘치게 되면<br>이를 보이게 할 것인지 혹은 감출 것인지 등에<br>대한 설정을 할 수 있다.|● visible<br>● hidden<br>● scroll<br>● auto : 브라우저에 의해 자동으로 계산|
-|position|요소가 위치할 방식을 지정한다.<br>요소가 자연스럽게 흐르게 할 것인지, 공중에<br>둥둥 뜨게 할 것인지 등을 지정할 수 있다.|● static<br>● relative<br>● absolute<br>● fixed|
+|clip|지정된 수치만큼 4각형의 각 부분을 잘라낸다.|● auto : 브라우저에 의해 자동으로 계산<br>● shape : rect() 함수를 사용하여 잘라낼 4각형 영역을 지정.(rect(top, right, bottom, left) 형태로 값을 지정)|
+|overflow|컨텐츠가 요소의 크기보다 커져서 넘치게 되면<br>이를 보이게 할 것인지 혹은 감출 것인지 등에<br>대한 설정을 할 수 있다.|● visible : 컨텐츠가 요소의 크기를 초과해도 넘치게 표시됨.요소의 크기를 넘어서도 컨텐츠가 보이게 됨.이 경우 스크롤바가 생성되지 않음<br>● hidden : 컨텐츠가 요소의 크기를 초과할 경우, 넘치는 부분을 숨김.즉, 요소의 영역 밖으로 넘어간 부분은 보이지 않게 됨. 스크롤바도 생성되지 않음<br>● scroll : 컨텐츠가 요소의 크기를 초과할 경우, 스크롤바를 표시하여 사용자가 컨텐츠를 스크롤하여 볼 수 있게 함.넘치는 부분을 숨기지 않고 스크롤바를 제공하여 컨텐츠의 전체 내용에 접근할 수 있음<br>● auto : 브라우저에 의해 자동으로 계산|
+|position|요소가 위치할 방식을 지정한다.<br>요소가 자연스럽게 흐르게 할 것인지, 공중에<br>둥둥 뜨게 할 것인지 등을 지정할 수 있다.|● static : 기본값으로, 요소가 문서의 일반적인 흐름에 따라 배치됨.다른 위치 값과 달리 top, right, bottom, left 속성을 사용하여 위치를 조정할 수 없음<br>● relative : 요소를 자기 자신의 정상적인 위치를 기준으로 이동시킴.top, right, bottom, left 속성을 사용하여 상대적으로 이동할 거리를 지정할 수 있음<br>● absolute : 요소를 문서의 일반적인 흐름에서 제거하고, 가장 가까운 위치 지정 조상 요소를 기준으로 배치함. 부모 요소 중 position 속성이 static이 아닌 가장 가까운 조상 요소를 찾아 해당 요소를 기준으로 위치를 조정할 수 있음<br>● fixed : 요소를 뷰포트(브라우저 창) 기준으로 배치함.스크롤해도 화면에 고정되어 있음|
 |right|지정된 요소의 위치를 오른쪽 기준으로 지정한다.|● auto : 브라우저에 의해 자동으로 계산<br>● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
 |top|지정된 요소의 위치를 위쪽 기준으로 지정한다.|● auto : 브라우저에 의해 자동으로 계산<br>● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
-|vertical-align|요소안에 들어가는 요소들에 대해서 세로정렬을<br>지정 할 수 있다.|● baseline<br>● sub<br>● super<br>● top<br>● text-top<br>● middle<br>● bottom<br>● text-bottom<br>● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
-|z-index|요소를 쌓아 올릴 수 있다. 이 설정을 통해서 요소끼리<br>겹처 보일 경우 어떤 요소가 더 위에 보이게 할 것인지<br>설정 할 수 있다.|● auto : 브라우저에 의해 자동으로 계산<br>● number|
+|vertical-align|요소안에 들어가는 요소들에 대해서 세로정렬을<br>지정 할 수 있다.|● baseline : 기본값.요소의 기본선(baseline)에 맞춰 요소를 정렬<br>● sub : 요소를 현재 텍스트 베이스라인 아래로 위치시킴.주로 아래첨자를 만들 때 사용됨<br>● super : 요소를 현재 텍스트 베이스라인 위로 위치시킴.주로 위첨자를 만들 때 사용됨<br>● top : 요소를 부모 요소의 상단에 맞춰 정렬<br>● text-top : 요소를 현재 텍스트의 최상단에 맞춰 정렬<br>● middle : 요소를 부모 요소의 중앙에 맞춰 정렬<br>● bottom : 요소를 부모 요소의 하단에 맞춰 정렬<br>● text-bottom : 요소를 현재 텍스트의 최하단에 맞춰 정렬<br>● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
+|z-index|요소를 쌓아 올릴 수 있다. 이 설정을 통해서 요소끼리<br>겹처 보일 경우 어떤 요소가 더 위에 보이게 할 것인지<br>설정 할 수 있다.|● auto : 브라우저에 의해 자동으로 계산<br>● number : 정수를 사용하여 요소의 쌓임 순서를 직접 지정할 수 있음. 숫자가 높을수록 더 위에 보이게 됨.또한, 음수 값을 사용할 수도 있음.음수 값은 일반적으로 부모 요소보다 아래에 배치되도록 해야 함|
 ## Table (표) 
 |속성|설명|값|
 |------|---|---|
-|border-collapse|이웃하는 셀의 테두리를 겹쳐서 보이게 하거나,<br>떨어져 보이게 할 수 있다.|● collapse<br>● separate|
-|border-spacing|인접한 테두리의 간격을 조성할 수 있다.|● length|
-|caption-side|테이블의 제목의 위치를 테이블의 상하좌우<br>어디에 위치시킬 것인지 지정할 수 있다.|● bottom<br>● left<br>● right<br>● top|
-|empty-cells|내용이 없는 셀을 보이게 할 것인지 감출 것인지<br>여부를 설정 할 수 있다.|● show<br>● hide|
-|table-layout|테이블과 셀 등의 요소의 크기를 고정하여 문장이<br>길어도 늘어나거나 줄어들지 않게 한다.|● auto : 브라우저에 의해 자동으로 계산<br>● fixed|
+|border-collapse|이웃하는 셀의 테두리를 겹쳐서 보이게 하거나,<br>떨어져 보이게 할 수 있다.|● collapse : 기본값.이웃하는 셀들의 테두리를 겹쳐서 하나의 테두리로 보이게 함.이 경우 이웃하는 셀들의 테두리가 서로 겹쳐져서 깔끔하게 보이게 됨.<br>● separate : 이웃하는 셀들의 테두리를 떨어져서 보이게 함.즉, 각 셀들의 테두리가 서로 독립적으로 그려지며, 이웃하는 셀들의 테두리가 겹쳐지지 않음|
+|border-spacing|인접한 테두리의 간격을 조성할 수 있다.|● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
+|caption-side|테이블의 제목의 위치를 테이블의 상하좌우<br>어디에 위치시킬 것인지 지정할 수 있다.|● bottom : 테이블의 제목을 테이블의 하단에 위치시킴<br>● left : 테이블의 제목을 테이블의 좌측에 위치시킴<br>● right : 테이블의 제목을 테이블의 우측에 위치시킴<br>● top : 테이블의 제목을 테이블의 상단에 위치시킴|
+|empty-cells|내용이 없는 셀을 보이게 할 것인지 감출 것인지<br>여부를 설정 할 수 있다.|● show : 내용이 없는 빈 셀을 보이게 함.즉, 테이블에 빈 셀이 있더라도 셀의 경계가 표시됨<br>● hide : 내용이 없는 빈 셀을 감춤.즉, 테이블에 빈 셀이 있으면 해당 셀의 경계가 사라짐|
+|table-layout|테이블과 셀 등의 요소의 크기를 고정하여 문장이<br>길어도 늘어나거나 줄어들지 않게 한다.|● auto : 브라우저에 의해 자동으로 계산<br>● fixed : 테이블과 셀의 크기를 고정.테이블 레이아웃은 처음에 설정된 크기를 유지하며, 셀의 내용에 따라 크기가 동적으로 변하지 않음.긴 문장이나 내용이 있더라도 셀의 크기가 늘어나지 않고, 내용이 잘리거나 줄어들지 않음|
 ## TEXT (문자) 
 |속성|설명|값|
 |------|---|---|
