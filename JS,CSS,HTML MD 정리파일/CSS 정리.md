@@ -4,10 +4,10 @@
 |------|---|---|
 |background|background의 여러 가지 속성을 간단하게<br> 한번에 선언하여 사용할수 있다.|● background-color<br>● background-images<br>● background-repeat<br>● background-attachment<br>● background-position|
 |background-attachment|페이지 스크롤을 할 때, 페이지와 함께 스크롤<br>되게 할 것인지 아니면 배경 이미지는 고정되게<br>할 것인지를 설정할 수 있다.|● scroll : 배경이 요소와 함께 스크롤됩니다.<br>● fixed : 배경이 고정되어 스크롤에 영향을 받지 않습니다.|
-|background-color|특정 요소의 배경 색상을 지정할 수 있다.|● color-rgb<br>● color-hex<br>● color-name<br>● transparent|
-|background-images|배경 이미지를 지정할 수 있다.|● url(URL)<br>● none|
-|background-position|배경 이미지가 시작되는 위치를 조정할 수 있다.|● top left<br>● top center<br>● top right<br>● center left<br>● center center<br>● center right<br>● bottom left<br>● bottom center<br>● bottom right<br>● x% y%<br>● xpos ypos|
-|background-repeat|배경이미지를 반복할 것인지 하나만 보여줄<br>것인지 설정할 수 있다. 배경 이미지 반복 시<br>어느 방향으로 반복할 것인지도 설정할 수 있다.|● repeat<br>● repeat-x<br>● repeat-y<br>● no-repeat|
+|background-color|특정 요소의 배경 색상을 지정할 수 있다.|● color-rgb : RGB(Red, Green, Blue) 값을 사용하여 색상을 지정<br>● color-hex : 16진수 값으로 색상을 지정<br>● color-name : 미리 정의된 색상 이름을 사용하여 지정<br>● transparent : 배경을 투명하게 처리|
+|background-images|배경 이미지를 지정할 수 있다.|● url(URL) : 이미지 파일의 URL 경로를 지정하여 배경 이미지를 추가<br>● none : 배경 이미지를 사용하지 않음을 나타냄|
+|background-position|배경 이미지가 시작되는 위치를 조정할 수 있다.|● top left : 배경 이미지를 요소의 위쪽에 정렬하며, 왼쪽에 위치시킴<br>● top center : 배경 이미지를 요소의 위쪽에 정렬하며, 가운데에 위치시킴<br>● top right : 배경 이미지를 요소의 위쪽에 정렬하며, 오른쪽에 위치시킴<br>● center left : 배경 이미지를 요소의 중앙에 정렬하며, 왼쪽에 위치시킴<br>● center center : 배경 이미지를 요소의 중앙에 정렬하며, 가운데에 위치시킴<br>● center right : 배경 이미지를 요소의 중앙에 정렬하며, 오른쪽에 위치시킴<br>● bottom left : 배경 이미지를 요소의 아래쪽에 정렬하며, 왼쪽에 위치시킴<br>● bottom center : 배경 이미지를 요소의 아래쪽에 정렬하며, 가운데에 위치시킴<br>● bottom right : 배경 이미지를 요소의 아래쪽에 정렬하며, 오른쪽에 위치시킴<br>● x% y% : 배경 이미지를 요소 내에서 지정한 수평 및 수직 백분율 위치에 위치시킴<br>● xpos ypos : 배경 이미지를 요소 내에서 지정한 수평 및 수직 위치에 위치시킴|
+|background-repeat|배경이미지를 반복할 것인지 하나만 보여줄<br>것인지 설정할 수 있다. 배경 이미지 반복 시<br>어느 방향으로 반복할 것인지도 설정할 수 있다.|● repeat : 기본값. 배경이미지가 반복적으로 적용<br>● repeat-x : 배경이미지가 가로방향으로만 반복적으로 적용<br>● repeat-y : 배경이미지가 세로방향으로만 반복적으로 적용<br>● no-repeat : 배경이미지가 반복적으로 적용되지 않고 한번만 적용|
 ## Border (테두리 관련 속성)
 |속성|설명|값|
 |------|---|---|
@@ -34,7 +34,7 @@
 ## CLASSIFICATION (분류)
 |속성|설명|값|
 |------|---|---|
-|clear|바로 이전의 요소에서 선언된 float 속성을<br>해제한다.|● left<br>● right<br>● both<br>● none|
+|clear|바로 이전의 요소에서 선언된 float 속성을<br>해제한다.|● left : 속성을 가진 요소가 왼쪽에 위치한 경우에만 해제함. 즉,바로 이전 요소가 왼쪽으로 띄워져 있을 때만 흐름을 해제함<br>● right : 속성을 가진 요소가 오른쪽에 위치한 경우에만 해제함. 즉, 바로 이전 요소가 오른쪽으로 띄워져 있을 때만 흐름을 해제함<br>● both : 속성을 가진 요소가 어느 쪽에 위치해도 해제함. 즉, 왼쪽이나 오른쪽으로 띄워진 요소가 있을 때 모두 흐름을 해제함<br>● none : 기본값으로, float 속성을 해제하지 않음. 이전 요소의 float 속성이 유지됨|
 |cursor|마우스 포인터의 모양을 지정할 수 있다.|● url : 사용자 지정 커서 이미지 지정 가능, URL에 이미지 파일 경로를 지정하여 원하는 커서 이미지 사용 가능<br>● auto : 기본값으로 브라우저가 요소에 대해 적절한 커서를 자동으로 선택<br>● crosshair : 십자선 형태의 커서를 표시<br>● default : 일반적인 화살표 모양의 커서를 표시<br>● pointer : 포인터 형태의 손가락 모양 커서를 표시. 일반적으로 링크에 사용<br>● move : 이동 가능한 커서를 표시. 요소를 드래그하여 이동할 수 있음을 나타냄<br>● e-resize : 요소의 오른쪽 가장자리를 가리키는 커서로, 요소의 가로 크기를 조정할 수 있음을 나타냄<br>● ne-resize : 요소의 오른쪽 상단 모서리를 가리키는 커서로, 요소의 오른쪽 상단 모서리를 드래그하여 가로 및 세로 크기를 동시에 조정할 수 있음을 나타냄<br>● nw-resize : 요소의 왼쪽 상단 모서리를 가리키는 커서로, 요소의 왼쪽 상단 모서리를 드래그하여 가로 및 세로 크기를 동시에 조정할 수 있음을 나타냄<br>● n-resize : 요소의 위쪽 가장자리를 가리키는 커서로, 요소의 세로 크기를 조정할 수 있음을 나타냄<br>● se-resize : 요소의 오른쪽 하단 모서리를 가리키는 커서로, 요소의 오른쪽 하단 모서리를 드래그하여 가로 및 세로 크기를 동시에 조정할 수 있음을 나타냄<br>● s-resize : 요소의 아래쪽 가장자리를 가리키는 커서로, 요소의 세로 크기를 조정할 수 있음을 나타냄<br>● w-resize : 요소의 왼쪽 가장자리를 가리키는 커서로, 요소의 가로 크기를 조정할 수 있음을 나타냄<br>● text : 텍스트 입력 가능 영역에서 텍스트 입력을 나타내는 커서를 표시<br>● wait : 작업이 처리되는 동안 기다리는 상태를 나타내는 커서를 표시<br>● help : 도움말이 필요함을 나타내는 커서를 표시|
 |display|요소를 보일 것인지, 감출 것인지를 지정할 수 있다.<br>요소를 보이게 할 경우 어떤 방식으로 보이게 할 것<br>인지 설정할 수 있다.|● none : 요소를 화면에서 숨김. 레이아웃에 영향을 주지 않음<br>● inline : 요소를 인라인 요소로 표시. 요소의 크기가 내용에 맞게 설정됨<br>● block : 요소를 블록 요소로 표시. 요소는 새로운 줄에서 시작하며, 가능한 최대 너비를 가짐<br>● list-item : 목록 요소를 표시. 주로 `< li >` 요소와 함께 사용<br>● run-in : 인라인 또는 블록 요소로 표시. 자동으로 결정됨<br>● compact : 요소를 인라인 요소로 표시하며, 높이와 너비를 축소하여 여러 요소를 동일 라인에 배치함<br>● marker : 표시하지 않는 목록 마커를 설정. `< li >` 요소 내용을 마커만 표시<br>● table : 테이블 요소를 블록 레벨 요소로 표시<br>● inline-table :  테이블 요소를 인라인 레벨 요소로 표시<br>● table-row-group : 테이블의 행들을 그룹화<br>● table-header-group : 테이블의 헤더(첫 번째 행)를 그룹화<br>● table-footer-group : 테이블의 푸터(마지막 행)를 그룹화<br>● table-row : 테이블의 각 행을 정의<br>● table-column-group : 테이블의 열들을 그룹화<br>● table-column : 테이블의 각 열을 정의<br>● table-cell : 테이블의 각 셀(데이터)을 정의<br>● table-caption : 테이블의 캡션(표 제목)을 정의|
 |float|텍스트나 이미지 등의 요소를 흐르게 만들어,<br>인접해 있는 다른 요소와 함께 흐르게 만들수 있다.|● left : 띄운 요소는 페이지에서 왼쪽으로 흐르게 되고, 다른 요소들이 오른쪽에 나란히 배치됨<br>● right : 띄운 요소는 페이지에서 오른쪽으로 흐르게 되고, 다른 요소들이 왼쪽에 나란히 배치됨<br>● none : 기본값으로, 요소를 띄우지 않고, 흐름에 따라 위치됨|
@@ -134,7 +134,7 @@
 |unicode-bidi|글자 하나하나의 방향을 뒤집거나 되돌릴 수 있다.|● normal<br>● embed<br>● bidi-override|
 |white-space|스페이스바(공백)을 자유롭게 지정할 수 있다.|● normal<br>● pre<br>● nowrap|
 |word-spacing|단어와 단어 사이의 간격을 줄이거나 늘릴 수 있다.|● normal<br>● nowrap|
-## Pseudo-Classes (유사클래스, 가상클래스) ● <br>● <br>● <br>● <br>● <br>● 
+## Pseudo-Classes (유사클래스, 가상클래스) 
 |속성|설명|
 |------|---|
 |: active|활동적인 요소의 특별한 스타일을 적용한다.|
