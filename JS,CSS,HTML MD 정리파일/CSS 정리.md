@@ -12,25 +12,25 @@
 |속성|설명|값|
 |------|---|---|
 |border|border의 여러 가지 속성을 간단하게 한번에<br>선언하여 사용할 수 있다.|● border-width<br>● border-style<br>● border-color<br>● border-bottom|
-|border-bottom|border-bottom(아래쪽 테두리)의 여러가지<br> 속성을 간단하게 한번에 선언할 수 있다.|● border-bottom-width<br>● border-style<br>● border-color|
-|border-bottom-color|border-bottom의 색상을 설정할 수 있다.|● border-color|
-|border-bottom-style|border-bottom의 스타일을 설정할 수 있다.|● border-style|
-|border-bottom-width|border-bottom의 너비를 설정할 수 있다.|● thin<br>● medium<br>● thick<br>● length|
+|border-bottom|border-bottom(아래쪽 테두리)의 여러가지<br> 속성을 간단하게 한번에 선언할 수 있다.|● border-bottom-width : border-bottom의 선의 두께를 설정.선의 두께는 픽셀(px), 백분율(%), thin, medium, thick 등의 값을 사용하여 지정할 수 있음<br>● border-style : border-bottom의 선의 스타일을 설정.선의 스타일은 none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset 등의 값을 사용하여 지정할 수 있음<br>● border-color : border-bottom의 선의 색상을 설정.|
+|border-bottom-color|border-bottom의 색상을 설정할 수 있다.|● border-color : border-bottom의 선의 색상을 설정.|
+|border-bottom-style|border-bottom의 스타일을 설정할 수 있다.|● border-style : border-bottom의 선의 스타일을 설정하는데 사용|
+|border-bottom-width|border-bottom의 너비를 설정할 수 있다.|● thin : 상대적으로 얇은 선을 지정.medium보다 얇고, thick보다 더 얇음<br>● medium : 기본값으로 정해진 두께를 가진 선을 지정<br>● thick : 상대적으로 두꺼운 선을 지정.medium보다 두껍고, thin보다 더 두꺼움<br>● length : 픽셀(px), 백분율(%) 등과 같은 유효한 길이 값을 사용하여 직접 선의 두께를 지정할 수 있음|
 |border-color|상하좌우 모든 테두리의 색상을 1개에서<br>4개까지 한번에 설정할 수 있다.|● color|
 |border-left|border-left(왼쪽테두리)의 여러가지 속성을<br>간단하게 한번에 선언하여 사용할 수 있다.|● border-left-width<br>● border-style<br>● border-color|
 |border-left-color|border-left의 색상을 설정할 수 있다.|border-color|
 |border-left-style|border-left의 스타일은 설정할 수 있다.|border-style|
-|border-left-width|border-left의 너비를 설정할 수 있다.|● thin<br>● medium<br>● trick<br>● lenght|
+|border-left-width|border-left의 너비를 설정할 수 있다.|● thin : 상대적으로 얇은 선을 지정.medium보다 얇고, thick보다 더 얇음<br>● medium : 기본값으로 정해진 두께를 가진 선을 지정<br>● thick : 상대적으로 두꺼운 선을 지정.medium보다 두껍고, thin보다 더 두꺼움<br>● length : 픽셀(px), 백분율(%) 등과 같은 유효한 길이 값을 사용하여 직접 선의 두께를 지정할 수 있음|
 |border-right|border-right(오른쪽테두리)의 여러가지 속성을<br>간단하게 한번에 선언하여 사용할 수 있다.|● border-bottom-width<br>● border-style<br>● border-color|
 |border-right-color|border-right의 색상을 설정할 수 있다.|● border-color|
 |border-right-style|border-right의 스타일을 설정할 수 있다.|● border-style|
-|border-right-width|border-right의 너비를 설정할 수 있다.|● thin<br>● medium<br>● trick<br>● lenght|
-|border-style|상하좌우 모든 테두리의 모양을 1개에서 4개까지<br>스타일을 한번에 설정할 수 있다.|● none<br>● hidden<br>● dotted<br>● dashed<br>● solid<br>● double<br>● groove<br>● ridge<br>● inset<br>● outset|
+|border-right-width|border-right의 너비를 설정할 수 있다.|● thin : 상대적으로 얇은 선을 지정.medium보다 얇고, thick보다 더 얇음<br>● medium : 기본값으로 정해진 두께를 가진 선을 지정<br>● thick : 상대적으로 두꺼운 선을 지정.medium보다 두껍고, thin보다 더 두꺼움<br>● length : 픽셀(px), 백분율(%) 등과 같은 유효한 길이 값을 사용하여 직접 선의 두께를 지정할 수 있음|
+|border-style|상하좌우 모든 테두리의 모양을 1개에서 4개까지<br>스타일을 한번에 설정할 수 있다.|● none : 테두리를 없애고 투명하게 처리. 테두리가 보이지 않음<br>● hidden : 테두리를 없애고 투명하게 처리.none과 동일하지만, 일부 브라우저에서는 다르게 처리될 수도 있음<br>● dotted : 점선 스타일의 테두리를 생성<br>● dashed : 대시 스타일의 테두리를 생성<br>● solid : 기본값.실선 스타일의 테두리를 생성<br>● double : 두 줄의 실선 테두리를 생성<br>● groove : 테두리를 홈 형태로 생성<br>● ridge : 테두리를 돌출 형태로 생성<br>● inset : 테두리를 요소 안쪽으로 홈 형태로 생성<br>● outset : 테두리를 요소 바깥쪽으로 돌출 형태로 생성|
 |border-top|border-top(위쪽테두리)의 여러가지 속성을<br>간단하게 한번에 선언하여 사용할 수 있다.|● berder-top-width<br>● border-style<br>● border-color|
 |border-top-color|border-top의 색상을 설정할 수 있다.|● border-color|
 |border-top-style|border-top의 스타일을 설정할 수 있다.|● border-style|
-|border-top-width|border-top의 너비를 설정할 수 있다.|● thin<br>● medium<br>● trick<br>● lenght|
-|border-width|상하좌우 모든 테두리의 너비를 한번에<br>설정할 수 있다.|● thin<br>● medium<br>● trick<br>● lenght|
+|border-top-width|border-top의 너비를 설정할 수 있다.|● thin : 상대적으로 얇은 선을 지정.medium보다 얇고, thick보다 더 얇음<br>● medium : 기본값으로 정해진 두께를 가진 선을 지정<br>● thick : 상대적으로 두꺼운 선을 지정.medium보다 두껍고, thin보다 더 두꺼움<br>● length : 픽셀(px), 백분율(%) 등과 같은 유효한 길이 값을 사용하여 직접 선의 두께를 지정할 수 있음|
+|border-width|상하좌우 모든 테두리의 너비를 한번에<br>설정할 수 있다.|● thin : 상대적으로 얇은 선을 지정.medium보다 얇고, thick보다 더 얇음<br>● medium : 기본값으로 정해진 두께를 가진 선을 지정<br>● thick : 상대적으로 두꺼운 선을 지정.medium보다 두껍고, thin보다 더 두꺼움<br>● length : 픽셀(px), 백분율(%) 등과 같은 유효한 길이 값을 사용하여 직접 선의 두께를 지정할 수 있음|
 ## CLASSIFICATION (분류)
 |속성|설명|값|
 |------|---|---|
