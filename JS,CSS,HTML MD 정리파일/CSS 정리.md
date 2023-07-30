@@ -11,24 +11,24 @@
 ## Border (테두리 관련 속성)
 |속성|설명|값|
 |------|---|---|
-|border|border의 여러 가지 속성을 간단하게 한번에<br>선언하여 사용할 수 있다.|● border-width<br>● border-style<br>● border-color<br>● border-bottom|
+|border|border의 여러 가지 속성을 간단하게 한번에<br>선언하여 사용할 수 있다.|● border-width : 테두리의 너비를 설정하는데 사용.선의 너비는 픽셀(px), 백분율(%), thin, medium, thick 등의 값을 사용하여 지정할 수 있음<br>● border-style : 테두리의 스타일을 설정하는데 사용.선의 스타일은 none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset 등의 값을 사용하여 지정할 수 있음<br>● border-color : 테두리의 색상을 설정하는데 사용.<br>● border-bottom : 아래쪽 테두리에 대해 다른 세부 속성들(border-bottom-width, border-bottom-style, border-bottom-color)을 간단하게 한 번에 설정하는데 사용|
 |border-bottom|border-bottom(아래쪽 테두리)의 여러가지<br> 속성을 간단하게 한번에 선언할 수 있다.|● border-bottom-width : border-bottom의 선의 두께를 설정.선의 두께는 픽셀(px), 백분율(%), thin, medium, thick 등의 값을 사용하여 지정할 수 있음<br>● border-style : border-bottom의 선의 스타일을 설정.선의 스타일은 none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset 등의 값을 사용하여 지정할 수 있음<br>● border-color : border-bottom의 선의 색상을 설정.|
 |border-bottom-color|border-bottom의 색상을 설정할 수 있다.|● border-color : border-bottom의 선의 색상을 설정.|
 |border-bottom-style|border-bottom의 스타일을 설정할 수 있다.|● border-style : border-bottom의 선의 스타일을 설정하는데 사용|
 |border-bottom-width|border-bottom의 너비를 설정할 수 있다.|● thin : 상대적으로 얇은 선을 지정.medium보다 얇고, thick보다 더 얇음<br>● medium : 기본값으로 정해진 두께를 가진 선을 지정<br>● thick : 상대적으로 두꺼운 선을 지정.medium보다 두껍고, thin보다 더 두꺼움<br>● length : 픽셀(px), 백분율(%) 등과 같은 유효한 길이 값을 사용하여 직접 선의 두께를 지정할 수 있음|
 |border-color|상하좌우 모든 테두리의 색상을 1개에서<br>4개까지 한번에 설정할 수 있다.|● color|
-|border-left|border-left(왼쪽테두리)의 여러가지 속성을<br>간단하게 한번에 선언하여 사용할 수 있다.|● border-left-width<br>● border-style<br>● border-color|
-|border-left-color|border-left의 색상을 설정할 수 있다.|border-color|
-|border-left-style|border-left의 스타일은 설정할 수 있다.|border-style|
+|border-left|border-left(왼쪽테두리)의 여러가지 속성을<br>간단하게 한번에 선언하여 사용할 수 있다.|● border-left-width : 왼쪽 테두리의 너비를 설정.선의 너비는 픽셀(px), 백분율(%), thin, medium, thick 등의 값을 사용하여 지정할 수 있음<br>● border-style : 왼쪽 테두리의 스타일을 설정.선의 스타일은 none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset 등의 값을 사용하여 지정할 수 있음<br>● border-color : 왼쪽 테두리의 색상을 설정.|
+|border-left-color|border-left의 색상을 설정할 수 있다.|border-color : 왼쪽 테두리의 색상을 설정하는데 사용|
+|border-left-style|border-left의 스타일은 설정할 수 있다.|border-style : 왼쪽 테두리의 스타일을 설정하는데 사용|
 |border-left-width|border-left의 너비를 설정할 수 있다.|● thin : 상대적으로 얇은 선을 지정.medium보다 얇고, thick보다 더 얇음<br>● medium : 기본값으로 정해진 두께를 가진 선을 지정<br>● thick : 상대적으로 두꺼운 선을 지정.medium보다 두껍고, thin보다 더 두꺼움<br>● length : 픽셀(px), 백분율(%) 등과 같은 유효한 길이 값을 사용하여 직접 선의 두께를 지정할 수 있음|
-|border-right|border-right(오른쪽테두리)의 여러가지 속성을<br>간단하게 한번에 선언하여 사용할 수 있다.|● border-bottom-width<br>● border-style<br>● border-color|
-|border-right-color|border-right의 색상을 설정할 수 있다.|● border-color|
-|border-right-style|border-right의 스타일을 설정할 수 있다.|● border-style|
+|border-right|border-right(오른쪽테두리)의 여러가지 속성을<br>간단하게 한번에 선언하여 사용할 수 있다.|● border-bottom-width : 오른쪽 테두리의 너비를 설정.선의 너비는 픽셀(px), 백분율(%), thin, medium, thick 등의 값을 사용하여 지정할 수 있음<br>● border-style : 오른쪽 테두리의 스타일을 설정.선의 스타일은 none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset 등의 값을 사용하여 지정할 수 있음<br>● border-color : 오른쪽 테두리의 색상을 설정|
+|border-right-color|border-right의 색상을 설정할 수 있다.|● border-color : 오른쪽 테두리의 색상을 설정하는데 사용|
+|border-right-style|border-right의 스타일을 설정할 수 있다.|● border-style : 오른쪽 테두리의 스타일을 설정하는데 사용|
 |border-right-width|border-right의 너비를 설정할 수 있다.|● thin : 상대적으로 얇은 선을 지정.medium보다 얇고, thick보다 더 얇음<br>● medium : 기본값으로 정해진 두께를 가진 선을 지정<br>● thick : 상대적으로 두꺼운 선을 지정.medium보다 두껍고, thin보다 더 두꺼움<br>● length : 픽셀(px), 백분율(%) 등과 같은 유효한 길이 값을 사용하여 직접 선의 두께를 지정할 수 있음|
 |border-style|상하좌우 모든 테두리의 모양을 1개에서 4개까지<br>스타일을 한번에 설정할 수 있다.|● none : 테두리를 없애고 투명하게 처리. 테두리가 보이지 않음<br>● hidden : 테두리를 없애고 투명하게 처리.none과 동일하지만, 일부 브라우저에서는 다르게 처리될 수도 있음<br>● dotted : 점선 스타일의 테두리를 생성<br>● dashed : 대시 스타일의 테두리를 생성<br>● solid : 기본값.실선 스타일의 테두리를 생성<br>● double : 두 줄의 실선 테두리를 생성<br>● groove : 테두리를 홈 형태로 생성<br>● ridge : 테두리를 돌출 형태로 생성<br>● inset : 테두리를 요소 안쪽으로 홈 형태로 생성<br>● outset : 테두리를 요소 바깥쪽으로 돌출 형태로 생성|
-|border-top|border-top(위쪽테두리)의 여러가지 속성을<br>간단하게 한번에 선언하여 사용할 수 있다.|● berder-top-width<br>● border-style<br>● border-color|
-|border-top-color|border-top의 색상을 설정할 수 있다.|● border-color|
-|border-top-style|border-top의 스타일을 설정할 수 있다.|● border-style|
+|border-top|border-top(위쪽테두리)의 여러가지 속성을<br>간단하게 한번에 선언하여 사용할 수 있다.|● berder-top-width : 위쪽 테두리의 너비를 설정.선의 너비는 픽셀(px), 백분율(%), thin, medium, thick 등의 값을 사용하여 지정할 수 있음<br>● border-style : 위쪽 테두리의 스타일을 설정.선의 스타일은 none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset 등의 값을 사용하여 지정할 수 있음<br>● border-color : 위쪽 테두리의 색상을 설정.|
+|border-top-color|border-top의 색상을 설정할 수 있다.|● border-color : 위쪽 테두리의 색상을 설정하는데 사용|
+|border-top-style|border-top의 스타일을 설정할 수 있다.|● border-style : 위쪽 테두리의 스타일을 설정하는데 사용|
 |border-top-width|border-top의 너비를 설정할 수 있다.|● thin : 상대적으로 얇은 선을 지정.medium보다 얇고, thick보다 더 얇음<br>● medium : 기본값으로 정해진 두께를 가진 선을 지정<br>● thick : 상대적으로 두꺼운 선을 지정.medium보다 두껍고, thin보다 더 두꺼움<br>● length : 픽셀(px), 백분율(%) 등과 같은 유효한 길이 값을 사용하여 직접 선의 두께를 지정할 수 있음|
 |border-width|상하좌우 모든 테두리의 너비를 한번에<br>설정할 수 있다.|● thin : 상대적으로 얇은 선을 지정.medium보다 얇고, thick보다 더 얇음<br>● medium : 기본값으로 정해진 두께를 가진 선을 지정<br>● thick : 상대적으로 두꺼운 선을 지정.medium보다 두껍고, thin보다 더 두꺼움<br>● length : 픽셀(px), 백분율(%) 등과 같은 유효한 길이 값을 사용하여 직접 선의 두께를 지정할 수 있음|
 ## CLASSIFICATION (분류)
@@ -43,24 +43,24 @@
 ## Dimesion (각종 치수)
 |속성|설명|값|
 |------|---|---|
-|height|요소의 높이를 지정할 수 있습니다.|● auto<br>● length<br>● %|
-|line-height|문장의 줄 간격을 지정할 수 있습니다.|● normal<br>● number<br>● length<br>● %|
-|max-height|요소의 최대 제한 높이를 지정한다.|● none<br>● length<br>● %|
-|min-height|요소의 최소 높이를 지정한다.|● length<br>● %|
-|width|요소의 너비를 지정한다.|● auto<br>● length<br>● %|
-|max-width|요소의 최대 제한 너비를 지정한다.|● none<br>● length<br>● %|
-|min-width|요소의 최소 제한 너비를 지정한다.|● length<br>● %|
+|height|요소의 높이를 지정할 수 있습니다.|● auto : 브라우저에 의해 자동으로 계산<br>● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
+|line-height|문장의 줄 간격을 지정할 수 있습니다.|● normal : 기본 줄 간격으로 설정<br>● number : 숫자를 사용하여 현재 글꼴 크기의 몇 배로 줄 간격을 설정할 수 있음<br>● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
+|max-height|요소의 최대 제한 높이를 지정한다.|● none : 최대 제한 높이가 없음을 의미<br>● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
+|min-height|요소의 최소 높이를 지정한다.|● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
+|width|요소의 너비를 지정한다.|● auto : 브라우저에 의해 자동으로 계산<br>● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
+|max-width|요소의 최대 제한 너비를 지정한다.|● none : 최대 제한 높이가 없음을 의미<br>● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
+|min-width|요소의 최소 제한 너비를 지정한다.|● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
 ## Font (글꼴)
 |속성|설명|값|
 |------|---|---|
 |font|폰트를 설정하기 위해 필요한 다양한 속성의<br>값들을 줄여서 간편하게 선언할 수 있다.|● font-style<br>● font-variant<br>● font-weight<br>● font-size/line-height<br>● font-family<br>● caption<br>● icon<br>● menu<br>● message-box<br>● small-caption<br>● status-barfont-family|
 |family name|폰트의 종류를 지정할 수 있다.|● generic-family|
-|font-size|폰트의 크기를 지정할 수 있다.|● xx-small<br>● x-small<br>● small<br>● medium<br>● large<br>● x-large<br>● xx-large<br>● smaller<br>● lager<br>● length<br>● %|
+|font-size|폰트의 크기를 지정할 수 있다.|● xx-small<br>● x-small<br>● small<br>● medium<br>● large<br>● x-large<br>● xx-large<br>● smaller<br>● lager<br>● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
 |font-size-adjust|소문자를 기준으로 글자 크기를 조정할 수 있다.<br>font-size에서 지정된 글자의 높이와 소문자 x의<br>비율로 글자 크기를 재지정한다.|● none<br>● number|
 |font-stretch|글자의 선명도, 즉 장평을 설정할 수 있다.|● normal<br>● wider<br>● narrower<br>● ultra-condensed<br>● extra-condensed<br>● condensed<br>● semi-condensed<br>● semi-expanded<br>● expanded<br>● extra-expanded<br>● ultra-expanded|
-|font-style|폰트를 기울임체로 사용할 수 있다.|● normal<br>● ltalic<br>● oblique|
-|font-variant|소문자를 작은 대문자로 만들 수 있다.|● normal<br>● small-caps|
-|font-weight|폰트의 두께를 지정할 수 있다.|● normal<br>● bold<br>● bolder<br>● lighter<br>● 100~900|
+|font-style|폰트를 기울임체로 사용할 수 있다.|● normal : 기본 폰트 스타일로 설정<br>● ltalic : 기울임체로 설정<br>● oblique : 경사로 설정|
+|font-variant|소문자를 작은 대문자로 만들 수 있다.|● normal : 기본 폰트 스타일로 설정<br>● small-caps : 소문자를 작은 대문자로 만듬|
+|font-weight|폰트의 두께를 지정할 수 있다.|● normal : 기본 폰트 두께로 설정<br>● bold : 굵은 폰트로 설정<br>● bolder : 더 굵은 폰트로 설정<br>● lighter : 더 가벼운 폰트로 설정<br>● 100~900 : 숫자로 지정하여 폰트의 두께를 상세하게 조절할 수 있음.400이 기본값이며 700이 굵은 폰트에 해당함.|
 ## Generated Content (콘텐츠 생성) 
 |속성|설명|값|
 |------|---|---|
@@ -80,18 +80,18 @@
 |속성|설명|값|
 |------|---|---|
 |margin|마진 속성을 한꺼번에 줄여서 사용할 수 있다.|● margin-top<br>● margin-right<br>● margin-bottom<br>● margin-left|
-|margin-bottom|요소의 아래쪽 마진을 줄일 수 있다.|● auto<br>● length<br>● %|
-|margin-left|요소의 왼쪽 마진을 줄일 수 있다.|● auto<br>● length<br>● %|
-|margin-right|요소의 오른쪽 마진을 줄일 수 있다.|● auto<br>● length<br>● %|
-|margin-top|요소의 위쪽 마진을 줄일 수 있다.|● auto<br>● length<br>● %|
+|margin-bottom|요소의 아래쪽 마진을 줄일 수 있다.|● auto : 브라우저에 의해 자동으로 계산<br>● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
+|margin-left|요소의 왼쪽 마진을 줄일 수 있다.|● auto : 브라우저에 의해 자동으로 계산<br>● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
+|margin-right|요소의 오른쪽 마진을 줄일 수 있다.|● auto : 브라우저에 의해 자동으로 계산<br>● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
+|margin-top|요소의 위쪽 마진을 줄일 수 있다.|● auto : 브라우저에 의해 자동으로 계산<br>● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
 ## Padding (패딩 - 안쪽여백)
 |속성|설명|값|
 |------|---|---|
 |padding|패딩 속성을 한꺼번에 줄여서 사용할 수 있다.|● padding-bottom<br>● padding-left<br>● padding-right<br>● padding-top|
-|padding-bottom|요소의 아래쪽 패딩을 줄 수 있다.|● length<br>● %|
-|padding-left|요소의 왼쪽 패딩을 줄 수 있다.|● length<br>● %|
-|padding-right|요소의 오른쪽 패딩을 줄 수 있다.|● length<br>● %|
-|padding-top|요소의 위쪽 패딩을 줄 수 있다.|● length<br>● %|
+|padding-bottom|요소의 아래쪽 패딩을 줄 수 있다.|● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
+|padding-left|요소의 왼쪽 패딩을 줄 수 있다.|● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
+|padding-right|요소의 오른쪽 패딩을 줄 수 있다.|● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
+|padding-top|요소의 위쪽 패딩을 줄 수 있다.|● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
 ## Outlines (윤곽)
 |속성|설명|값|
 |------|---|---|
@@ -102,15 +102,15 @@
 ## Positioning (위치제어) 
 |속성|설명|값|
 |------|---|---|
-|bottom|지정된 요소의 위치를 요소의 아래쪽 기준으로<br>지정한다.|● auto<br>● %<br>● length|
-|left|지정된 요소의 위치를 왼쪽 기준으로 지정한다.|● auto<br>● %<br>● length|
-|clip|지정된 수치만큼 4각형의 각 부분을 잘라낸다.|● auto<br>● shape|
-|overflow|컨텐츠가 요소의 크기보다 커져서 넘치게 되면<br>이를 보이게 할 것인지 혹은 감출 것인지 등에<br>대한 설정을 할 수 있다.|● visible<br>● hidden<br>● scroll<br>● auto|
+|bottom|지정된 요소의 위치를 요소의 아래쪽 기준으로<br>지정한다.|● auto : 브라우저에 의해 자동으로 계산<br>● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
+|left|지정된 요소의 위치를 왼쪽 기준으로 지정한다.|● auto : 브라우저에 의해 자동으로 계산<br>● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
+|clip|지정된 수치만큼 4각형의 각 부분을 잘라낸다.|● auto : 브라우저에 의해 자동으로 계산<br>● shape|
+|overflow|컨텐츠가 요소의 크기보다 커져서 넘치게 되면<br>이를 보이게 할 것인지 혹은 감출 것인지 등에<br>대한 설정을 할 수 있다.|● visible<br>● hidden<br>● scroll<br>● auto : 브라우저에 의해 자동으로 계산|
 |position|요소가 위치할 방식을 지정한다.<br>요소가 자연스럽게 흐르게 할 것인지, 공중에<br>둥둥 뜨게 할 것인지 등을 지정할 수 있다.|● static<br>● relative<br>● absolute<br>● fixed|
-|right|지정된 요소의 위치를 오른쪽 기준으로 지정한다.|● auto<br>● %<br>● length|
-|top|지정된 요소의 위치를 위쪽 기준으로 지정한다.|● auto<br>● %<br>● length|
-|vertical-align|요소안에 들어가는 요소들에 대해서 세로정렬을<br>지정 할 수 있다.|● baseline<br>● sub<br>● super<br>● top<br>● text-top<br>● middle<br>● bottom<br>● text-bottom<br>● length<br>● %|
-|z-index|요소를 쌓아 올릴 수 있다. 이 설정을 통해서 요소끼리<br>겹처 보일 경우 어떤 요소가 더 위에 보이게 할 것인지<br>설정 할 수 있다.|● auto<br>● number|
+|right|지정된 요소의 위치를 오른쪽 기준으로 지정한다.|● auto : 브라우저에 의해 자동으로 계산<br>● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
+|top|지정된 요소의 위치를 위쪽 기준으로 지정한다.|● auto : 브라우저에 의해 자동으로 계산<br>● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
+|vertical-align|요소안에 들어가는 요소들에 대해서 세로정렬을<br>지정 할 수 있다.|● baseline<br>● sub<br>● super<br>● top<br>● text-top<br>● middle<br>● bottom<br>● text-bottom<br>● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
+|z-index|요소를 쌓아 올릴 수 있다. 이 설정을 통해서 요소끼리<br>겹처 보일 경우 어떤 요소가 더 위에 보이게 할 것인지<br>설정 할 수 있다.|● auto : 브라우저에 의해 자동으로 계산<br>● number|
 ## Table (표) 
 |속성|설명|값|
 |------|---|---|
@@ -118,7 +118,7 @@
 |border-spacing|인접한 테두리의 간격을 조성할 수 있다.|● length|
 |caption-side|테이블의 제목의 위치를 테이블의 상하좌우<br>어디에 위치시킬 것인지 지정할 수 있다.|● bottom<br>● left<br>● right<br>● top|
 |empty-cells|내용이 없는 셀을 보이게 할 것인지 감출 것인지<br>여부를 설정 할 수 있다.|● show<br>● hide|
-|table-layout|테이블과 셀 등의 요소의 크기를 고정하여 문장이<br>길어도 늘어나거나 줄어들지 않게 한다.|● auto<br>● fixed|
+|table-layout|테이블과 셀 등의 요소의 크기를 고정하여 문장이<br>길어도 늘어나거나 줄어들지 않게 한다.|● auto : 브라우저에 의해 자동으로 계산<br>● fixed|
 ## TEXT (문자) 
 |속성|설명|값|
 |------|---|---|
