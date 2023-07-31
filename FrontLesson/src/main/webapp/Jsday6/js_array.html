@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트 배열 메소드 테스트 과제</title>
+<link rel="shortcut icon" href="#">
+</head>
+<body>
+	<h1>자바스크립트 배열 메소드 테스트 과제</h1>
+	<script type="text/javascript">
+	/* Array.prototype.push() : 배열 끝에 요소를 추가하는 메소드 */
+	let arr = [1, 2, 3];
+	arr.push(4);
+	console.log(arr); // 추가 후 결과 ▶ [1, 2, 3, 4]
+	document.write('<h3>1. Array.prototype.push() : 배열 끝에 요소를 추가하는 메소드</h3>');
+	document.write('push() : ['+arr+']'+'<br>'+'<br>'+'<hr>')
+	
+	/* Array.prototype.pop() : 배열 끝의 요소를 제거하고 해당 요소를 반환하는 메소드 */
+	arr = [1, 2, 3];
+	let removedElement = arr.pop();
+	console.log(arr); // 제거 후 결과 ▶ [1, 2]
+	document.write('<h3>2. Array.prototype.pop() : 배열 끝의 요소를 제거하고 해당 요소를 반환하는 메소드</h3>');
+	document.write('pop(arr) : ['+arr+']'+'<br>')
+	console.log(removedElement); // 제거 된 요소 ▶ 3
+	document.write('pop(removedElement) : ['+removedElement+']'+'<br>'+'<br>'+'<hr>')
+	
+	/* Array.prototype.shift() : 배열 첫 번째 요소를 제거하고 해당 요소를 반환하는 메소드 */
+	arr = [1, 2, 3];
+	removedElement = arr.shift();
+	console.log(arr); // 첫 번째 요소 제거 후 결과 ▶ [2, 3]
+	document.write('<h3>3. Array.prototype.shift() : 배열 첫 번째 요소를 제거하고 해당 요소를 반환하는 메소드</h3>');
+	document.write('shift(arr) : ['+arr+']'+'<br>')
+	console.log(removedElement); // 제거된 요소 ▶ 1
+	document.write('shift(removedElement) : ['+removedElement+']'+'<br>'+'<br>'+'<hr>')
+	
+	/* Array.prototype.unshift() : 배열의 맨 앞에 요소를 추가하는 메소드 */
+	arr = [1, 2, 3];
+	arr.unshift(0);
+	console.log(arr); // 추가 후 결과 ▶ [0, 1, 2, 3]
+	document.write('<h3>4. Array.prototype.unshift() : 배열의 맨 앞에 요소를 추가하는 메소드</h3>');
+	document.write('unshift() : ['+arr+']'+'<br>'+'<br>'+'<hr>')
+	
+	/* Array.prototype.splice() : 배열의 특정 위치에서 요소를 추가하거나 제거하는 메소드 */
+	arr = [1, 2, 3, 4, 5];
+	arr.splice(2, 1, 'a', 'b');
+	console.log(arr); // 3이 제거되고 'a'가 추가,'b' 추가 후 결과 ▶ [1, 2, 'a', 'b', 4, 5]
+	document.write('<h3>5. Array.prototype.splice() : 배열의 특정 위치에서 요소를 추가하거나 제거하는 메소드</h3>');
+	document.write('splice() : ['+arr+']'+'<br>'+'<br>'+'<hr>')
+	
+	/* Array.prototype.slice() : 배열의 특정 부분을 추출하여 새로운 배열로 반환하는 메소드 */
+	arr = [1, 2, 3, 4, 5];
+	let slicedArr = arr.slice(1, 4);
+	console.log(slicedArr); // 결과 ▶ [2, 3, 4]
+	document.write('<h3>6. Array.prototype.slice() : 배열의 특정 부분을 추출하여 새로운 배열로 반환하는 메소드</h3>');
+	document.write('slice() : ['+slicedArr+']'+'<br>'+'<br>'+'<hr>')
+	
+	/* Array.prototype.concat() : 두 개 이상의 배열을 합쳐 새로운 배열로 반환하는 메소드 */
+	let arr1 = [1, 2];
+	let arr2 = [3, 4];
+	let combinedArr = arr1.concat(arr2);
+	console.log(combinedArr); // arr1,arr2 배열을 합친 결과 ▶ [1, 2, 3, 4]
+	document.write('<h3>7. Array.prototype.concat() : 두 개 이상의 배열을 합쳐 새로운 배열로 반환하는 메소드</h3>');
+	document.write('concat() : ['+combinedArr+']'+'<br>'+'<br>'+'<hr>')
+	
+	/* Array.prototype.filter() : 주어진 조건에 맞는 요소만을 추출하여 새로운 배열로 반환하는 메소드 */
+	arr = [1, 2, 3, 4, 5];
+	let filteredArr = arr.filter((num) => num % 2 === 0);
+	console.log(filteredArr); // 짝수인 요소 결과 ▶ [2, 4]
+	document.write('<h3>8. Array.prototype.filter() : 주어진 조건에 맞는 요소만을 추출하여 새로운 배열로 반환하는 메소드</h3>');
+	document.write('filter() : ['+filteredArr+']'+'<br>'+'<br>'+'<hr>')
+	
+	/* Array.prototype.map() : 배열의 모든 요소를 변환하여 새로운 배열로 반환하는 메소드 */
+	arr = [1, 2, 3];
+	let mappedArr = arr.map((num) => num * 2);
+	console.log(mappedArr); // 모든 요소에 *2 를 한 결과 ▶ [2, 4, 6]
+	document.write('<h3>9. Array.prototype.map() : 배열의 모든 요소를 변환하여 새로운 배열로 반환하는 메소드</h3>');
+	document.write('map() : ['+mappedArr+']'+'<br>'+'<br>'+'<hr>')
+	
+	/* Array.prototype.reduce() : 배열의 모든 요소를 하나의 값으로 축소하여 반환하는 메소드 */
+	arr = [1, 2, 3, 4, 5];
+	let sum = arr.reduce((total, num) => total + num, 0);
+	console.log(sum); // 배열의 합계 결과 ▶ 15
+	document.write('<h3>10. Array.prototype.reduce() : 배열의 모든 요소를 하나의 값으로 축소하여 반환하는 메소드</h3>');
+	document.write('reduce() : ['+sum+']'+'<br>'+'<br>'+'<hr>')
+	
+	/* Array.prototype.every() : 배열의 모든 요소가 주어진 조건을 만족하는지 확인하는 메소드 */
+	arr = [2, 4, 6, 8];
+	let isAllEven = arr.every((num) => num % 2 === 0);
+	console.log(isAllEven); // 확인 결과 ▶ true
+	document.write('<h3>11. Array.prototype.every() : 배열의 모든 요소가 주어진 조건을 만족하는지 확인하는 메소드</h3>');
+	document.write('every() : ['+isAllEven+']'+'<br>'+'<br>'+'<hr>')
+	
+	/* Array.prototype.some() : 배열의 요소 중에서 하나 이상이 주어진 조건을 만족하는지 확인하는 메소드 */
+	arr = [1, 3, 5, 7];
+	let hasEven = arr.some((num) => num % 2 === 0);
+	console.log(hasEven); // 확인 결과 ▶ false
+	document.write('<h3>12. Array.prototype.some() : 배열의 요소 중에서 하나 이상이 주어진 조건을 만족하는지 확인하는 메소드</h3>');
+	document.write('some() : ['+hasEven+']'+'<br>'+'<br>'+'<hr>')
+	
+	/* Array.prototype.includes() : 배열에 특정 요소가 포함되어 있는지 확인하는 메소드 */
+	arr = [1, 2, 3, 4];
+	console.log(arr.includes(3)); // 확인 결과 ▶ true
+	document.write('<h3>13. Array.prototype.includes() : 배열에 특정 요소가 포함되어 있는지 확인하는 메소드</h3>');
+	document.write('includes(3) : ['+arr.includes(3)+']'+'<br>')
+	console.log(arr.includes(5)); // 확인 결과 ▶ false
+	document.write('includes(5) : ['+arr.includes(5)+']'+'<br>'+'<br>'+'<hr>')
+	
+	/* Array.prototype.indexOf() : 배열에서 특정 요소의 인덱스를 검색. 요소가 없을 경우 -1을 반환하는 메소드 */
+	arr = [1, 2, 3, 2];
+	console.log(arr.indexOf(2)); // 존재하는 인덱스 결과 ▶ 1
+	document.write('<h3>14. Array.prototype.indexOf() : 배열에서 특정 요소의 인덱스를 검색. 요소가 없을 경우 -1을 반환하는 메소드</h3>');
+	document.write('indexOf(2) : ['+arr.indexOf(2)+']'+'<br>')
+	console.log(arr.indexOf(5)); // 존재하지 않은 인덱스 결과 ▶ -1
+	document.write('indexOf(5) : ['+arr.indexOf(5)+']'+'<br>'+'<br>'+'<hr>')
+	
+	/* Array.prototype.lastIndexOf() : 배열에서 특정 요소의 마지막 인덱스를 검색. 요소가 없을 경우 -1을 반환하는 메소드 */
+	arr = [1, 2, 3, 2];
+	console.log(arr.lastIndexOf(2)); // 존재하는 요소의 마지막 인덱스 결과 ▶ 3
+	document.write('<h3>15. Array.prototype.lastIndexOf() : 배열에서 특정 요소의 마지막 인덱스를 검색. 요소가 없을 경우 -1을 반환하는 메소드</h3>');
+	document.write('lastIndexOf(2) : ['+arr.lastIndexOf(2)+']'+'<br>')
+	console.log(arr.lastIndexOf(5)); // 존재하지 않은 인덱스 결과 ▶ -1
+	document.write('lastIndexOf(5) : ['+arr.lastIndexOf(5)+']'+'<br>'+'<br>'+'<hr>')
+	
+	/* Array.prototype.join() : 배열의 모든 요소를 문자열로 결합하는 메소드 */
+	arr = ['apple', 'banana', 'orange'];
+	let str = arr.join(', ');
+	console.log(str); // 배열의 모든 요소를 결합한 후 결과 ▶ "apple, banana, orange"
+	document.write('<h3>16. Array.prototype.join() : 배열의 모든 요소를 문자열로 결합하는 메소드</h3>');
+	document.write('join() : ['+str+']'+'<br>'+'<br>'+'<hr>')
+	
+	/* Array.prototype.reverse() : 배열의 순서를 반대로 나열하는 메소드 */
+	arr = [1, 2, 3];
+	arr.reverse();
+	console.log(arr); // 배열 순서 반대로 나열 후 결과 ▶ [3, 2, 1]
+	document.write('<h3>17. Array.prototype.reverse() : 배열의 순서를 반대로 나열하는 메소드</h3>');
+	document.write('reverse() : ['+arr+']'+'<br>'+'<br>'+'<hr>')
+	
+	/* Array.prototype.sort() : 배열의 요소를 정렬. 기본적으로 문자열로 변환하여 사전식 정렬을 수행하는 메소드 */
+	arr = [3, 1, 2];
+	arr.sort();
+	console.log(arr); // 문자열로 변환하여 사전식 정렬후 결과 ▶ [1, 2, 3]
+	document.write('<h3>18. Array.prototype.sort() : 배열의 요소를 정렬. 기본적으로 문자열로 변환하여 사전식 정렬을 수행하는 메소드</h3>');
+	document.write('sort() : ['+arr+']'+'<br>'+'<br>'+'<hr>')
+	
+	/* Array.prototype.forEach() : 배열의 모든 요소에 대해 반복 작업을 수행하는 메소드 */
+	arr = [1, 2, 3];
+	document.write('<h3>19. Array.prototype.forEach() : 배열의 모든 요소에 대해 반복 작업을 수행하는 메소드</h3>');
+	arr.forEach((num) => {
+	  console.log(num * 2);
+	document.write('forEach() : ['+num * 2+']'+'<br>')
+	});
+	document.write('<br>'+'<hr>')
+	// 출력:
+	// 2
+	// 4
+	// 6
+	
+	/* Array.from() : 다른 유사 배열 객체나 iterable 객체를 배열로 변환하는 메소드 */
+	str = 'hello';
+	arr = Array.from(str);
+	console.log(arr); // 배열로 변환 후 결과 ▶ ['h', 'e', 'l', 'l', 'o']
+	document.write('<h3>20. Array.from() : 다른 유사 배열 객체나 iterable 객체를 배열로 변환하는 메소드</h3>');
+	document.write('from() : ['+arr+']'+'<br>'+'<br>')
+	
+	
+	</script>
+</body>
+</html>
