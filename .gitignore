@@ -8,6 +8,7 @@ Servers
 .metadata
 bin/
 tmp/
+web.xml
 *.tmp
 *.bak
 *.swp
