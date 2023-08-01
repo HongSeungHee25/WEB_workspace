@@ -68,14 +68,14 @@
 |counter-increment|요소 요소에 번호를 매길 수 있다. 번호는 카운터로<br>자동으로 증가하는 특성을 가지고 있다.<br>앞과 뒤 선택자와 함께 사용된다.|● none : 카운터를 증가시키지 않음.즉,번호가 자동으로 증가하지 않음 <br>● identifier number : 카운터의 이름을 지정.이 이름을 사용하여 해당 요소의 카운터를 증가시킬 수 있음|
 |counter-reset|앞서 만든 카운터의 값을 초기화 한다.|● none : 카운터를 초기화하지 않음.즉, 카운터의 값을 변경하지 않고 현재 값이 유지됨<br>● identifier number : 카운터의 이름을 지정.이 이름을 사용하여 해당 카운터의 값을 초기화할 수 있음|
 |quotes string|요소 앞뒤에 인용부호를 추가할 수 있다.|● none : 인용 부호를 추가하지 않음|
-## List and Marker (리스트와 표시)
+## List and Marker (리스트와 표시) 
 |속성|설명|값|
 |------|---|---|
-|list-style|여러가지 리스트 스타일을 줄여서 한 번에<br>지정할 수 있다.|● none<br>● list-style-type<br>● list-style-position<br>● list-style-image|
-|list-style-image|리스트 앞에 붙는 아이콘을 임의의 이미지로<br>지정해 줄 수 있다.|● none<br>● url|
-|list-style-position|리스트 앞에 붙는 블릿을 리스트에 포함해서<br>표현할 것인지, 리스트에 포함하지 않고 표현할<br>것인지 지정할 수 있다.|● inside<br>● outside|
-|list-style-position|리스트 앞에 붙는 블릿 아이콘의 모양을<br>설정 할 수 있다.|● none<br>● disc<br>● circle<br>● square<br>● decimal<br>● decimal-leading-zero<br>● lower-roman<br>● upper-roman<br>● lower-alpha<br>● upper-alpha<br>● lower-latin<br>● upper-latin<br>● hebrew<br>● armenian<br>● georgian<br>● cjk-ideographic<br>● hiragana<br>● katakana<br>● hiragana-iroha<br>● katakana-iroha|
-|marker-offset|항목표시자와 블럭간의 간격 지정|● auto<br>● length|
+|list-style|여러가지 리스트 스타일을 줄여서 한 번에<br>지정할 수 있다.|● none <br>● list-style-type<br>● list-style-position<br>● list-style-image|
+|list-style-image|리스트 앞에 붙는 아이콘을 임의의 이미지로<br>지정해 줄 수 있다.|● none : 기본값. 리스트 앞에 이미지 표시않함<br>● url : 사용자가 지정한 이미지 파일의 경로를 지정하여 해당 이미지를 리스트 앞에 표시|
+|list-style-position|리스트 앞에 붙는 블릿을 리스트에 포함해서<br>표현할 것인지, 리스트에 포함하지 않고 표현할<br>것인지 지정할 수 있다.|● inside : 블릿을 리스트 내부에 표시. 이 경우, 블릿은 리스트 항목 텍스트와 같은 라인에 표시됨<br>● outside : 블릿을 리스트 외부에 표시. 이 경우, 블릿은 리스트 항목 텍스트 위에 위치하며, 리스트 항목과는 다른 줄에 표시됨|
+|list-style-position|리스트 앞에 붙는 블릿 아이콘의 모양을<br>설정 할 수 있다.|● none : 블릿을 표시하지 않음<br>● disc : 기본값. 원 모양의 블릿 표시<br>● circle : 원 모양의 빈 블릿을 표시<br>● square : 사각형 모양의 블릿을 표시<br>● decimal : 숫자(10진수)로 블릿을 표시<br>● decimal-leading-zero : 0으로 시작하는 숫자로 블릿을 표시<br>● lower-roman : 로마자 소문자로 블릿을 표시<br>● upper-roman : 로마자 대문자로 블릿을 표시<br>● lower-alpha : 알파벳 소문자로 블릿을 표시<br>● upper-alpha : 알파벳 대문자로 블릿을 표시<br>● lower-latin : 알파벳 소문자로 블릿을 표시<br>● upper-latin : 알파벳 대문자로 블릿을 표시<br>● hebrew : 히브리어 알파벳으로 블릿을 표시<br>● armenian : 아르메니아 알파벳으로 블릿을 표시<br>● georgian : 조지아 알파벳으로 블릿을 표시<br>● cjk-ideographic : 중국어, 일본어, 한국어 표의 블릿을 표시<br>● hiragana : 히라가나 글자로 블릿을 표시<br>● katakana : 카타카나 글자로 블릿을 표시<br>● hiragana-iroha : 히라가나 글자로 블릿을 표시<br>● katakana-iroha : 카타카나 글자로 블릿을 표시|
+|marker-offset|항목표시자와 블럭간의 간격 지정|● auto : 기본값.항목표시자와 블록 사이의 간격을 브라우저가 자동으로 조정<br>● length : 특정 길이 값을 지정하여 항목표시자와 블록 사이의 간격을 설정.길이 값은 px(픽셀), em, rem, vw(뷰포트 너비에 대한 백분율) 등 단위를 사용하여 지정할 수 있음|
 ## Margin (마진 - 바깥여백)
 |속성|설명|값|
 |------|---|---|
@@ -84,7 +84,7 @@
 |margin-left|요소의 왼쪽 마진을 줄일 수 있다.|● auto : 브라우저에 의해 자동으로 계산<br>● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
 |margin-right|요소의 오른쪽 마진을 줄일 수 있다.|● auto : 브라우저에 의해 자동으로 계산<br>● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
 |margin-top|요소의 위쪽 마진을 줄일 수 있다.|● auto : 브라우저에 의해 자동으로 계산<br>● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
-## Padding (패딩 - 안쪽여백)
+## Padding (패딩 - 안쪽여백) 
 |속성|설명|값|
 |------|---|---|
 |padding|패딩 속성을 한꺼번에 줄여서 사용할 수 있다.|● padding-bottom : 요소의 아래쪽 여백 값을 지정<br>● padding-left : 요소의 왼쪽 여백 값을 지정<br>● padding-right : 요소의 오른쪽 여백 값을 지정<br>● padding-top : 요소의 위쪽 여백 값을 지정|
@@ -123,17 +123,17 @@
 |속성|설명|값|
 |------|---|---|
 |color|텍스트의 색상을 설정할 수 있다.|● color|
-|direction|텍스트가 위치할 가로 방향을 지정할 수 있다.<br>왼쪽→오른쪽, 혹은 오른쪽→왼쪽|● ltr<br>● rtl|
-|line-height|문장과 문장 사이의 간격을 지정 할 수 있다.|● normal<br>● number<br>● length<br>● %|
-|letter-spacing|글자 하나하나의 간격을 줄이거나 늘릴 수 있다.|● normal<br>● length|
-|text-align|요소 안의 텍스트 정렬을 지정 할 수 있다.|● left<br>● right<br>● center<br>● justify|
-|text-decoration|텍스트를 꾸밀 수 있다.|● none<br>● underline<br>● overline<br>● line-through|
-|text-indent|문장의 첫행을 들여쓰기 할 수 있다.|● length<br>● %|
-|text-shadow|텍스트에 그림자 효과를 줄 수 있다.|● none<br>● color<br>● length|
-|text-transform|소문자를 대문자로, 대문자를 소문자로<br>설정 할 수 있다.|● none<br>● capitalize<br>● uppercase<br>● lowercase|
-|unicode-bidi|글자 하나하나의 방향을 뒤집거나 되돌릴 수 있다.|● normal<br>● embed<br>● bidi-override|
-|white-space|스페이스바(공백)을 자유롭게 지정할 수 있다.|● normal<br>● pre<br>● nowrap|
-|word-spacing|단어와 단어 사이의 간격을 줄이거나 늘릴 수 있다.|● normal<br>● nowrap|
+|direction|텍스트가 위치할 가로 방향을 지정할 수 있다.<br>왼쪽→오른쪽, 혹은 오른쪽→왼쪽|● ltr : 기본값.텍스트가 왼쪽에서 오른쪽으로 흐름<br>● rtl : 텍스트가 오른쪽에서 왼쪽으로 흐름|
+|line-height|문장과 문장 사이의 간격을 지정 할 수 있다.|● normal : 기본값. 브라우저가 기본 줄 높이 사용<br>● number : 상대적인 값을 나타냄. 텍스트 크기의 비율에 따라 줄 높이가 설정됨.예를 들어, 1.5는 텍스트 크기의 1.5배 만큼의 줄 높이를 가지게 됨<br>● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
+|letter-spacing|글자 하나하나의 간격을 줄이거나 늘릴 수 있다.|● normal : 기본값. 브라우저가 기본 글자 간격 사용<br>● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
+|text-align|요소 안의 텍스트 정렬을 지정 할 수 있다.|● left : 텍스트를 요소의 좌측으로 정렬<br>● right : 텍스트를 요소의 우측으로 정렬<br>● center : 텍스트를 요소의 가운데로 정렬<br>● justify : 텍스트를 요소의 양쪽으로 정렬.이 경우, 텍스트의 줄들이 양쪽 끝에 맞춰져 정렬됨.단어 간의 간격이 조정되어 줄의 길이가 균등하게 유지될 수 있음|
+|text-decoration|텍스트를 꾸밀 수 있다.|● none : 기본값. 텍스트에 어떤 꾸밈도 추가하지 않음.(밑줄,윗줄,가운데 줄이 없음을 의미)<br>● underline : 텍스트에 밑에 밑줄을 추가<br>● overline : 텍스트 위에 윗줄을 추가<br>● line-through : 텍스트 중간을 가로 지나는 줄로 꾸밈|
+|text-indent|문장의 첫행을 들여쓰기 할 수 있다.|● length : 픽셀(px)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음<br>● % : 백분율(%)로 유효한 길이 값을 사용하여 직접 높이를 지정할 수 있음|
+|text-shadow|텍스트에 그림자 효과를 줄 수 있다.|● none : 기본값. 텍스트에 그림자 추가하지 않음<br>● color : 그림자의 색상을 지정<br>● length : 그림자의 거리, 흐림 정도, 그림자의 크기 등을 픽셀(px), 포인트(pt) 등 단위를 사용하여 지정|
+|text-transform|소문자를 대문자로, 대문자를 소문자로<br>설정 할 수 있다.|● none : 기본값. 텍스트 변환을 적용하지 않음.<br>● capitalize : 각 단어의 첫 글자를 대문자로 변환<br>● uppercase : 모든 글자를 대문자로 변환<br>● lowercase : 모든 글자를 소문자로 변환|
+|unicode-bidi|글자 하나하나의 방향을 뒤집거나 되돌릴 수 있다.|● normal : 기본값. 텍스트의 방향성과 언어 변환을 자동으로 처리<br>● embed : 텍스트 블록의 방향성과 언어 변환을 부모 요소에 대해 처리.이 값은 브라우저가 텍스트 블록의 방향성을 자동으로 감지하여 처리하도록 함<br>● bidi-override : 텍스트 블록의 방향성과 언어 변환을 사용자가 직접 지정.direction 속성을 함께 사용하여 직접 텍스트의 방향성을 설정할 수 있음|
+|white-space|스페이스바(공백)을 자유롭게 지정할 수 있다.|● normal : 기본값. 여러 개의 공백을 하나로 합치고, 줄 바꿈은 자동으로 처리.연속된 공백은 하나로 간주되며, 줄 바꿈은 브라우저가 텍스트가 넘칠 때 자동으로 처리<br>● pre : 연속된 공백과 줄 바꿈을 그대로 유지.텍스트 안에 있는 공백과 줄 바꿈을 그대로 표시<br>● nowrap : 공백은 하나로 합치지만, 줄 바꿈은 자동으로 처리하지 않음.텍스트가 넘칠 경우, 줄 바꿈 없이 텍스트를 한 줄에 표시|
+|word-spacing|단어와 단어 사이의 간격을 줄이거나 늘릴 수 있다.|● normal : 기본값. 브라우저가 기본 단어 간격 사용<br>● nowrap :  단어 사이의 간격을 픽셀(px), 포인트(pt), em, rem 등 단위를 사용하여 지정.양수 값은 단어 간격을 늘리고, 음수 값은 단어 간격을 줄임|
 ## Pseudo-Classes (유사클래스, 가상클래스) 
 |속성|설명|
 |------|---|
