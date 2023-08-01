@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ObjectArraySample</title>
+<link rel="shortcut icon" href="../image/favicon.ico">
+<style>
+	h4{ text-align: center; margin: auto;}
+	section{ padding-left: 25%; margin: auto;}
+	table{ width: 800px; }
+	th{ width: 13%; background-color: tomato; color: white; }
+	td{ width: 10%; }
+	th,td{ border : 1px solid tomato; padding: 7px 12px; text-align: center; }
+	button{ box-sizing: border-box; display: flex;align-items: center; justify-content: 
+			center; width: 200px; height: 30px; margin-top: 5px;border : 2px solid rgb(255, 0, 0); 
+			background-color:tomato; color: white; text-align: center;}
+</style>
+</head>
+<body>
+<hr>
+<h4>오늘의 스케줄</h4>
+<section>
+<table>
+	<tr>
+		<th>TIME</th>
+		<th>TODO</th>
+	</tr>
+	<tbody id='contents'>
+		<!-- 오브젝트 배열의 요소값을 가져다가 tr태그 1개 행 만들기를 배열 요소만큼 반복 -->
+	</tbody>
+</table>
+<button id="todoAddBtn">스케줄 추가(DOM)</button>
+<button id="timesort">시간순서로 정렬</button>
+</section>
+<hr>
+<br>
+<script type="text/javascript">
+	const schedules = 	[{time:'09:00',todo:'수업'},
+						{time:'11:00',todo:'과제'},
+						{time:'12:30',todo:'점심식사'},
+						{time:'14:00',todo:'주간회의'},
+						{time:'16:45',todo:'자료조사'}]
+	
+	let result = ''
+	schedules.forEach((value)=>{
+		result += `<tr><td>${value.time}</td><td>${value.todo}</td></tr>`
+	})
+	document.getElementById('contents').innerHTML=result
+	
+	//버튼 이벤트 리스너
+	document.getElementById('todoAddBtn').addEventListener('click',() => {
+		/* const 는 값이 안변하는 상수값 */
+		const atime = prompt('시간을 입력하세요.')
+		const atodo = prompt('할일을 입력하세요.')
+		
+		/* 방법2. 새로 추가된 항목만 table에 추가한다.(DOM 관련 메소드)
+		table 에 첫번째 자식 tr 찾아서 td 자식(atime)을 새로 추가하기
+				   두번째 자식 tr 찾아서 td 자식(atodo)을 새로 추가하기
+		출력방향이 세로방향이고, 추가는 가로 방향으로 추가 되므로 위와 같이 구현해야 함. */
+		/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+		const tr = document.querySelector('tbody:last-child')
+		const newtr = document.createElement('tr')
+		const newtd1 = document.createElement('td')
+		const newtd2 = document.createElement('td')
+		
+		newtd1.innerHTML = atime
+		newtd2.innerHTML = atodo
+		
+		newtr.appendChild(newtd1)
+		newtr.appendChild(newtd2)
+		
+		tr.appendChild(newtr)
+		
+		const add = {time:atime,todo:atodo}
+		schedules.push(add)
+		
+		/* time과 todo를 속성으로 갖는 Object 객체 생성 */
+		/* const add = {time:addtime,todo:addtodo}
+		schedules.push(add) */
+		
+		/* 입력받은걸 테이블에 추가하기 위해 forEach 문 추가 */
+		/* let result = ''
+			schedules.forEach((value)=>{
+				result += `<tr><td>${value.time}</td><td>${value.todo}</td></tr>`
+			})
+			document.getElementById('contents').innerHTML=result */
+	})
+	//시간정렬 버튼 이벤트 리스너
+	document.getElementById('timesort').addEventListener('click',() => {
+		schedules.sort(number_ascending)
+		
+		let result = ''
+			schedules.forEach((value)=>{
+				result += `<tr><td>${value.time}</td><td>${value.todo}</td></tr>`
+			})
+			document.getElementById('contents').innerHTML=result
+	})
+	
+	function number_ascending(a, b) { // 오름차순
+    return a - b;
+	}
+	function number_descending(a, b) { // 내림차순
+	    return b - a;
+	}
+	
+</script>
+</body>
+</html>
