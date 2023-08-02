@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>dateFormSample.html</title>
+<link rel="shortcut icon" href="../image/favicon.ico">
+<!-- 상태코드 참고 : https://ko.wikipedia.org/wiki/HTTP -->
+<style type="text/css">
+	body{  margin: 0; height: 100%;  }
+	header{ box-sizing: border-box; height: 15%; 
+	display: flex; align-items: center; justify-content: center;}
+	section{ box-sizing: border-box; min-height: 70%; display: flex;
+	align-items: center; justify-content: center;}
+	label{ font-size: 2em;}
+	select{ width: 110px; height: 40px; font-size: 100%; text-align: center;}
+	input{ width: 105px; height: 36px; font-size: 100%; text-align: center;}
+	button{ width: 100px; height: 40px; font-size: 70%; margin: 12px;
+	background-color: pink; color: white; border: none;}
+	
+</style>
+</head>
+<body>
+<header>
+<h1>KOREA호텔</h1>
+</header>
+<section>
+<form action="">
+	<label for="selectNight">숙박일수 : </label>
+	<select name="days" id="selectNight">
+		<option value="0">선택</option>
+		<option value="1">1박</option>
+		<option value="2">2박</option>
+		<option value="3">3박</option>
+		<option value="4">4박</option>
+	</select><br>
+	<!--  4. 입실날짜는 오늘 이전 날짜는 선택을 못하도록 해야합니다. (input 태그 min 속성)
+	 	입실날짜는 오늘 ~ 3달 이후로만 설정할 수 있습니다.(input 태그 max 속성)   -->
+	<label for="enterDate">입실날짜 : </label>
+	<input type="date" name="start" id="enterDate" min=2023-08-02 max=2023-11-02><br>
+	<label for="outDate">퇴실날짜 : </label>
+	<input type="date" name="end" id="outDate" min=2023-08-03><br>
+	
+	<label for="enterTime">입실시간 : </label>
+    <input type="time" name="startTime" id="enterTime" value="14:00"><br>
+    <!-- 시간 선택 못하게 막기 -->
+    <!-- <input type="time" name="startTime" id="enterTime" value="14:00" readonly><br> -->
+    <label for="outTime">퇴실시간 : </label>
+    <input type="time" name="endTime" id="outTime" ><br>
+	
+	<label for="reservBtn">
+	<button name="reservation" id="reservBtn">예약</button></label>
+	<label for="cancellBtn">
+	<button name="cancellation" id="cancellBtn">취소</button></label>
+	
+</form>
+</section>
+<!-- 1. 입실날짜는 오늘 날짜로 초기화 합니다.
+	 2. 퇴실날짜는 선택한 숙박일수 + 입실날짜로 합니다. 8/2 입실 + 3박 = 8월5일
+	 3. 퇴실날짜는 select 태그에서 숙박일수 선택하면 계산해서 표시합니다.
+	 							┗> click, change 이벤트
+	 4. 입실날짜는 오늘 이전 날짜는 선택을 못하도록 해야합니다. (input 태그 min 속성)
+	 	입실날짜는 오늘 ~ 3달 이후로만 설정할 수 있습니다.(input 태그 max 속성)
+	 **참고 : input type=date 인 경우 value 는 년도4자리-월2자리-일2자리 로 설정**
+	  -->
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+    // 날짜 입력 요소와 버튼 가져오기
+    const enterDateInput = document.getElementById('enterDate');
+    const outDateInput = document.getElementById('outDate');
+    const enterTimeInput = document.getElementById('enterTime');
+    const outTimeInput = document.getElementById('outTime'); // 퇴실시간 입력 요소 추가
+    const selectNight = document.getElementById('selectNight');
+    const reservBtn = document.getElementById('reservBtn');
+    const cancellBtn = document.getElementById('cancellBtn');
+
+    // 초기값 설정
+    const currentDate = new Date();
+    const currentHour = currentDate.getHours();
+    const currentMinute = currentDate.getMinutes();
+    enterDateInput.valueAsDate = currentDate;
+    enterTimeInput.value = '14:00';
+
+    // 숙박일수 선택시 이벤트 리스너
+    selectNight.addEventListener('change', function() {
+        const selectedNights = parseInt(selectNight.value, 10);
+        if (!isNaN(selectedNights) && selectedNights > 0) {
+            const departureDate = new Date(currentDate);
+            departureDate.setDate(departureDate.getDate() + selectedNights);
+            outDateInput.valueAsDate = departureDate;
+
+            // 퇴실시간 설정: 오후 14시
+            const outHour = 14;
+            const outMinute = 0;
+            const formattedOutTime = `${outHour.toString().padStart(2, '0')}:${outMinute.toString().padStart(2, '0')}`;
+            outTimeInput.value = formattedOutTime;
+        } else {
+            // 숙박일수가 선택되지 않은 경우 퇴실날짜 필드와 퇴실시간 필드를 빈 값으로 설정
+            outDateInput.value = '';
+            outTimeInput.value = '';
+        }
+    });
+
+ 	// 입실시간 변경 이벤트 리스너
+    enterTimeInput.addEventListener('change', function() {
+        const enterHour = parseInt(enterTimeInput.value.substring(0, 2), 10);
+        const enterMinute = parseInt(enterTimeInput.value.substring(3, 5), 10);
+
+        // 퇴실시간 변경: 입실시간에 추가한 시간을 퇴실시간에도 추가
+        const outHour = enterHour;
+
+        // 24시간 이상이면 날짜를 하루 증가시켜줌
+        let departureDate = new Date(enterDateInput.valueAsDate);
+        if (outHour >= 24) {
+            departureDate.setDate(departureDate.getDate() + 1);
+        }
+        departureDate.setHours(outHour % 24, enterMinute); // 퇴실시간 분은 입실시간 분과 동일하게 유지
+        outDateInput.valueAsDate = departureDate;
+
+        // 퇴실시간도 변경
+        const formattedOutTime = `${(outHour % 24).toString().padStart(2, '0')}:${enterMinute.toString().padStart(2, '0')}`;
+        outTimeInput.value = formattedOutTime;
+    });
+
+
+
+    // 예약 버튼 클릭 이벤트 리스너
+    reservBtn.addEventListener('click', function() {
+        const enterDate = enterDateInput.value;
+        const outDate = outDateInput.value;
+        const selectedNights = selectNight.value;
+
+        alert('숙박예약이 완료되었습니다.\n숙박 날짜는 ' + enterDate + ' 부터 ' + outDate + ' 까지 총 ' + selectedNights + '일 입니다.\n즐거운 여행되세요.');
+    });
+
+    // 취소 버튼 클릭 이벤트 리스너
+    cancellBtn.addEventListener('click', function() {
+        alert('취소되었습니다.');
+    });
+});
+
+
+	 	
+</script>
+</body>
+</html>

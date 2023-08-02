@@ -5,10 +5,27 @@
 <title>dateFormSample.html</title>
 <link rel="shortcut icon" href="../image/favicon.ico">
 <!-- 상태코드 참고 : https://ko.wikipedia.org/wiki/HTTP -->
+<style type="text/css">
+	body{  margin: 0; height: 100%;  }
+	header{ box-sizing: border-box; height: 15%; 
+	display: flex; align-items: center; justify-content: center;}
+	section{ box-sizing: border-box; min-height: 70%; display: flex;
+	align-items: center; justify-content: center;}
+	label{ font-size: 2em;}
+	select{ width: 100px; height: 40px; font-size: 100%; text-align: center;}
+	input{ width: 95px; height: 36px; font-size: 100%; }
+	button{ width: 100px; height: 40px; font-size: 70%; margin: 10px;
+	background-color: pink; color: white; border: none;}
+	
+</style>
 </head>
 <body>
+<header>
+<h1>KOREA호텔</h1>
+</header>
+<section>
 <form action="">
-	<label for="selectNight">숙박일수</label>
+	<label for="selectNight">숙박일수 : </label>
 	<select name="days" id="selectNight">
 		<option value="0">선택</option>
 		<option value="1">1박</option>
@@ -16,11 +33,20 @@
 		<option value="3">3박</option>
 		<option value="4">4박</option>
 	</select><br>
+	<!--  4. 입실날짜는 오늘 이전 날짜는 선택을 못하도록 해야합니다. (input 태그 min 속성)
+	 	입실날짜는 오늘 ~ 3달 이후로만 설정할 수 있습니다.(input 태그 max 속성)   -->
 	<label for="enterDate">입실날짜 : </label>
-	<input type="date" name="start" id="enterDate" min=2023-08-02 max=2023-11-02>
+	<input type="date" name="start" id="enterDate" min=2023-08-02 max=2023-11-02><br>
 	<label for="outDate">퇴실날짜 : </label>
-	<input type="date" name="end" id="outDate" min=2023-08-03>
+	<input type="date" name="end" id="outDate" min=2023-08-03><br>
+	
+	<label for="reservBtn">
+	<button name="reservation" id="reservBtn">예약</button></label>
+	<label for="cancellBtn">
+	<button name="cancellation" id="cancellBtn">취소</button></label>
+	
 </form>
+</section>
 <!-- 1. 입실날짜는 오늘 날짜로 초기화 합니다.
 	 2. 퇴실날짜는 선택한 숙박일수 + 입실날짜로 합니다. 8/2 입실 + 3박 = 8월5일
 	 3. 퇴실날짜는 select 태그에서 숙박일수 선택하면 계산해서 표시합니다.
@@ -33,16 +59,51 @@
 	/* 1. 입실날짜는 오늘 날짜로 초기화 합니다. */
 	document.getElementById('enterDate').valueAsDate = new Date()
 	/* 2. 퇴실날짜는 선택한 숙박일수 + 입실날짜로 합니다. 8/2 입실 + 3박 = 8월5일 */
-	
-	
+	/* 'selectNight'라는 ID를 가진 "숙박일수"(여기서 <select> 요소)를 선택하여 
+		해당 요소에 대한 참조를 selectNight 변수에 저장 					  */
+	const selectNight = document.getElementById('selectNight');
+	/* 'outDate'라는 ID를 가진 "퇴실날짜"(여기서 <input type="date"> 요소)를 
+		선택하여 해당 요소에 대한 참조를 outDateInput 변수에 저장 			  */
+    const outDateInput = document.getElementById('outDate');
+
 	/* 3. 퇴실날짜는 select 태그에서 숙박일수 선택하면 계산해서 표시합니다.
-									┗> click, change 이벤트            */
-									
-									
-	/* 4. 입실날짜는 오늘 이전 날짜는 선택을 못하도록 해야합니다. (input 태그 min 속성)
-	 	입실날짜는 오늘 ~ 3달 이후로만 설정할 수 있습니다.(input 태그 max 속성)  */
+									┗> click, change 이벤트             */
+	/* 숙박일수 선택시 이벤트 리스너										  */
+    selectNight.addEventListener('change', function() {
+      /* 선택한 숙박일수를 나타내는 문자열 값을 정수로 변환하여 selectedNights 변수에 저장 
+      	 parseInt 함수를 사용하여 숫자 값으로 변환하며, 두 번째 인수인 10은 기수를 나타냄  */
+      const selectedNights = parseInt(selectNight.value, 10);
+      /* 선택한 숙박일수가 유효한 숫자이고, 0보다 큰 경우 */
+      if (!isNaN(selectedNights) && selectedNights > 0) {
+    	/* 현재 날짜와 시간으로 새로운 Date 객체를 생성하여 departureDate 변수에 저장 */
+        const departureDate = new Date();
+    	/* 1-1) departureDate의 날짜를 선택한 숙박일수만큼 미래로 설정
+    	   1-2) 현재 날짜에 selectedNights를 더하여 퇴실 날짜를 계산  */
+        departureDate.setDate(departureDate.getDate() + selectedNights);
+    	/* 1-1) departureDate를 ISO 8601 형식으로 변환한 후, 처음 10글자 (년-월-일 부분)만 추출 
+    	   1-2) formattedDepartureDate 변수에 저장 */
+        const formattedDepartureDate = departureDate.toISOString().slice(0, 10);
+    	/* formattedDepartureDate 값으로 설정하여 'outDateInput' 요소에 표시
+    	   선택한 숙박일수에 따라 퇴실 날짜가 자동으로 변경  */
+        outDateInput.value = formattedDepartureDate;
+      }
+    });
+    
+    
+    document.getElementById('reservBtn').addEventListener('click',() => {
+    	const enterDateInput = document.getElementById('enterDate') // 입실 날짜 입력 요소
+    	const outDateInput = document.getElementById('outDate') // 퇴실 날짜 입력 요소
+    	const selectNight = document.getElementById('selectNight').value // 숙박일수 선택 요소의 값
 
-
+    	const enterDate = enterDateInput.value; // 입실 날짜 값
+    	const outDate = outDateInput.value; // 퇴실 날짜 값
+    	
+    	alert('숙박예약이 완료되었습니다.\n숙박 날짜는 '+enterDate+' 부터 '+outDate+' 까지 총 '+selectNight+'박 입니다.\n즐거운 여행되세요.')
+    });
+    document.getElementById('cancellBtn').addEventListener('click',() => {
+    	alert('취소되었습니다.')
+    });
+	 	
 </script>
 </body>
 </html>

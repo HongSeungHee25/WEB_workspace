@@ -1,0 +1,57 @@
+@charset "UTF-8";
+head, body{
+	margin: 0;
+	height: 100%;
+}
+header{
+	padding: 30px 20px;
+	background-color:  #0066CC;
+	color: white;
+	box-sizing: border-box;
+	height: 15%;
+	/* flextbox 레이아웃으로 자식 요소를 정렬하기 */
+	display: flex;
+	/* 수직 정렬 */
+	align-items: center;
+	/* 수평 정렬 */
+	justify-content: center;
+}
+section{
+	box-sizing: border-box;
+	min-height: 70%;
+	padding: 20px;
+	/* 컨텐츠 내용만큼 높이만 지정되는 것을 최소 높이 지정하여 바꾸기 */
+	/* min-height: 600px; */
+}
+table{
+	border: 1px solid black;
+	table-layout: fixed;
+	width: 80%;
+	margin: auto;
+}
+th, tr,td{
+	border: 1px solid black;
+}
+
+td{
+	padding: 3px;
+}
+tr td:first-child {
+	width: 80px;
+	text-align: center;
+}
+tr td:nth-child(2) {
+	text-align: center;
+}
+tr td:nth-child(3) {
+	width: 90px;
+	text-align: center;
+}
+tr td:nth-child(4) {
+	width: 250px;
+	text-align: center;
+}
+tr td:last-child {
+	width: 145px;
+	text-align: center;
+}
