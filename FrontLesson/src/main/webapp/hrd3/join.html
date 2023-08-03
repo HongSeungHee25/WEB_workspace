@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>내부평가연습</title>
+<link rel="shortcut icon" href="../image/favicon.ico">
+<link rel="stylesheet" href="./join.css">
+<!-- 상태코드 참고 : https://ko.wikipedia.org/wiki/HTTP -->
+</head>
+<body>
+<form action="">
+<header>
+	<h3>쇼핑몰 회원관리 ver1.0</h3>
+</header>
+<nav>
+	<ul>
+		<li><a href="#">회원등록</a></li>
+		<li><a href="#">회원목록조회/수정</a></li>
+		<li><a href="#">회원매출조회</a></li>
+		<li><a href="#">홈으로.</a></li>
+	</ul>
+</nav>
+<section>
+	<h3 id="text">홈쇼핑 회원 등록</h3>
+	<table>
+	<tr>
+	<td><label for="lblno">회원번호(자동발생)</label></td>
+	<td><input type="number" id="lblno" name="customno" value="100001" disabled></td>
+	</tr>
+	<tr>
+	<td><label for="lblname">회원성명</label></td>
+	<td><input type="text" id="lblname" name="customname" placeholder="이름을 입력해주세요."></td>
+	</tr>
+	<tr>
+	<td><label for="lblphone">회원전화</label></td>
+	<td><input type="text" id="lblphone" name="phone" placeholder="'-' 을 포함해서 전화번호를 입력해주세요."></td>
+	</tr>
+	<tr>
+	<td><label for="lbladdr">회원주소</label></td>
+	<td><input type="text" id="lbladdr" name="address" placeholder="주소를 입력해주세요."></td>
+	</tr>
+	<tr>
+	<td><label for="lbljoin">가입일자</label></td>
+	<td><input type="date" id="lbljoin" name="joindate" disabled></td>
+	</tr>
+	<tr>
+	<td><label for="lblRetention">회원정보 보관기간</label></td>
+	<td><select id="lblRetention" name="Retentionperiod">
+		<option value="0">선택</option>
+		<option value="1">1년</option>
+		<option value="2">2년</option>
+		<option value="3">3년</option>
+	</select></td>
+	</tr>
+	<tr>
+	<td><label for="lblexpiration">만료일자</label></td>
+	<td><input type="date" id="lblexpiration" name="expirationdate" disabled></td>
+	</tr>
+	<tr>
+	<td><label for="lblgrade">고객등급[A:VIP,B:일반,C:직원]</label></td>
+	<td><input type="text" id="lblgrade" name="grade" placeholder="A 또는 B 또는 C 로 입력해주세요."></td>
+	</tr>
+	<tr>
+	<td><label for="lblcode">도시코드</label></td>
+	<td><select id="lblcode" name="citycode">
+		<option value="0">선택</option>
+		<option value="1">서울</option>
+		<option value="2">경기</option>
+		<option value="3">부산</option>
+	</select></td>
+	</tr>
+	<tr>
+	<td colspan="2" id="btn">
+	<button id="joinBtn" onclick="">등록</button>
+	<button id="checkBtn" onclick="">조회</button>
+	</td>
+	</tr>
+	</table>
+</section>
+</form>
+
+<footer>
+	<h4 id="foot">HRDKOREA Copyright@2016 All rights reserved. Human Resources Development Service of Korea</h4>
+</footer>
+
+<script type="text/javascript" src="./join.js"></script>
+</body>
+</html>

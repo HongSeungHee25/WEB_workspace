@@ -82,11 +82,11 @@
 	// 기호를 -로 받으면
 	// 2023-07-31로 반환
 
-	function dateFormat(vdate,vsymbol){
+	function dateFormat(vdate){
 	   let year = vdate.getFullYear()
 	   let month = (vdate.getMonth()+1).toString().padStart(2,'0')
-	   let dates = vdate.getDate().toString().padStart(2,'0')
-	   let result = [year,month,dates].join(vsymbol)
+	   let date = vdate.getDate().toString().padStart(2,'0')
+	   let result = [year,month,date].join('-')
 	   return result
 	}
 		//실행
