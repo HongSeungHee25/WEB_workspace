@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+/* 1% = 1vh*/
+
+/* 전체를 100%로 맞추고 구역 배분 */
+html, body{		/* ★★★★★★ */
+	height: 100vh;
+	margin: 0;
+}
+
+/* border-box를 전체 애들한테 설정 */
+header,nav,section,footer{		/* ★★★★★★ *//* ★★★★★★ */
+	box-sizing: border-box;
+}
+
+header{
+	display: flex;		/* ★★★★★★ */
+	align-items: center;	/* ★★★★★★ */
+	justify-content: center;	/* ★★★★★★ */
+	min-height: 10vh;
+	background-color: blue;
+	color: white;
+}
+
+nav{
+	margin: 0;
+	min-height: 7vh;
+}
+
+nav ul{
+	margin: 0;
+	min-height: 7vh;	/* ★★★★★★ */
+	list-style: none;
+	overflow: hidden;	/* ★★★★★★ */
+	background-color: purple;
+}
+
+nav ul li{
+	float: left;		/* ★★★★★★ */
+}
+
+nav ul li:last-child{
+	float: right;
+	margin-right: 20px;
+}
+
+nav ul li a{
+	text-decoration: none;
+	display : inline-block; 	/* ★★★★★★ */
+	padding: 20px;
+	color: white;
+}
+
+/* padding margin weight height */
+/* inline 요소는 weight height 만 사용 가능 */
+
+section{
+	min-height: 76vh;
+	/* padding: 20px; */
+	background-color: #d7d7d7;
+}
+
+#text{
+	margin: 0;
+	text-align: center;
+	padding: 20px;
+}
+
+table{
+	margin: auto;
+	border: 2px solid black;
+	/* 테두리가 겹치는 테이블 */
+	/* border-collapse: collapse; */		/* ★★★★★★ */
+	/* 테두리가 겹치지 않는 테이블 */
+	border-collapse: separate;				/* ★★★★★★ */
+	border-spacing: 2px;
+}
+
+th,td{
+	border: 1px solid black;
+	
+}
+th{
+	padding: 5px 20px;
+}
+
+td{
+	padding: 5px;
+	padding-right: 50px;
+	text-align: left;
+}
+
+#Btn{
+	text-align: center;
+	padding: 5px;
+}
+
+footer{
+	height: 7vh;
+	text-align: center;
+	background-color: blue;
+	color: white;
+	padding: 20px;
+}
+
+#foot{
+	margin: 0;
+	text-align: center;
+}
+

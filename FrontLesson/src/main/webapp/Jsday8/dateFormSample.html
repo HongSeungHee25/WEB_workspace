@@ -21,10 +21,10 @@
 </head>
 <body>
 <header>
-<h1>KOREA호텔</h1>
+<h1>💒HSH HOTEL💒</h1>
 </header>
 <section>
-<form action="">
+<form action=""> <!-- 동기방식의 서버-클라이언트 동박에서만 form 태그 사용 -->
 	<label for="selectNight">숙박일수 : </label>
 	<select name="days" id="selectNight">
 		<option value="0">선택</option>
@@ -36,9 +36,9 @@
 	<!--  4. 입실날짜는 오늘 이전 날짜는 선택을 못하도록 해야합니다. (input 태그 min 속성)
 	 	입실날짜는 오늘 ~ 3달 이후로만 설정할 수 있습니다.(input 태그 max 속성)   -->
 	<label for="enterDate">입실날짜 : </label>
-	<input type="date" name="start" id="enterDate" min=2023-08-02 max=2023-11-02><br>
+	<input type="date" name="start" id="enterDate"><br>
 	<label for="outDate">퇴실날짜 : </label>
-	<input type="date" name="end" id="outDate" min=2023-08-03><br>
+	<input type="date" name="end" id="outDate"><br>
 	
 	<label for="reservBtn">
 	<button name="reservation" id="reservBtn">예약</button></label>
@@ -56,8 +56,45 @@
 	 **참고 : input type=date 인 경우 value 는 년도4자리-월2자리-일2자리 로 설정**
 	  -->
 <script type="text/javascript">
-	/* 1. 입실날짜는 오늘 날짜로 초기화 합니다. */
-	document.getElementById('enterDate').valueAsDate = new Date()
+/* 강사님 답 */
+const start = document.forms[0].start	//입실날짜 요소
+const end = document.forms[0].end		//퇴실날짜 요소
+const days = document.forms[0].days		//숙박일수 요소
+
+document.getElementById('selectNight').addEventListener('click',calculateEnd)
+										//선택상자(드롭다운, 콤보) 에서는 change 이벤트도 가능
+document.getElementById('enterDate').addEventListener('chenge',calculateEnd)	//반드시 'change'이벤트
+
+//입실 날짜 요소의 초기화
+let today = new Date()
+start.value = dateFormat(today,'-') 
+start.min = dateFormat(today,'-') 			//입실날짜의 최소값
+today.setMonth(today.getMonth()+3)			//3개월 후 날짜로 today 를 변경하기
+start.max = dateFormat(today,'-') 			//입실날짜의 최대값
+
+//숙박일수 또는 입실날짜 선택할 때의 이벤트 함수
+function calculateEnd(){
+	console.log(start.value)
+	console.log(end.value)
+	console.log(days.value)
+	
+	//퇴실날짜 : start.value 는 문자열이므로 날짜형식으로 바꾸어서 + 숙박일수. => 문자열로 변경해서 퇴실날짜 요소 value 로 설정하기
+	let temp = new Date(start.value)
+	temp.setDate(temp.getDate()+Number(days.value))		//temp 는 날짜형식. + 은 덧셈과 문자열 연결
+	console.log("퇴실날짜 : "+temp)
+	//temp 를 'yyyy-mm-dd' 문자열로 변환하여 퇴실날짜로 합니다.
+	end.value = dateFormat(temp,'-')	
+} 
+	//월,일은 1자리 숫자가 나올수 있습니다. 이 때에도 2자리로 07로 하고 싶으면
+	function dateFormat(vdate){
+	let year = vdate.getFullYear()
+	let month = (vdate.getMonth()+1).toString().padStart(2,'0')
+	let dates = vdate.getDate().toString().padStart(2,'0')
+	let result = [year,month,dates].join('-')
+	return result
+	}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 	/* 2. 퇴실날짜는 선택한 숙박일수 + 입실날짜로 합니다. 8/2 입실 + 3박 = 8월5일 */
 	/* 'selectNight'라는 ID를 가진 "숙박일수"(여기서 <select> 요소)를 선택하여 
 		해당 요소에 대한 참조를 selectNight 변수에 저장 					  */
@@ -98,7 +135,7 @@
     	const enterDate = enterDateInput.value; // 입실 날짜 값
     	const outDate = outDateInput.value; // 퇴실 날짜 값
     	
-    	alert('숙박예약이 완료되었습니다.\n숙박 날짜는 '+enterDate+' 부터 '+outDate+' 까지 총 '+selectNight+'박 입니다.\n즐거운 여행되세요.')
+    	alert('숙박예약이 완료되었습니다.\n숙박 날짜는 '+enterDate+' 부터 '+outDate+' 까지 총 '+selectNight+'일 입니다.\n즐거운 여행되세요.')
     });
     document.getElementById('cancellBtn').addEventListener('click',() => {
     	alert('취소되었습니다.')
