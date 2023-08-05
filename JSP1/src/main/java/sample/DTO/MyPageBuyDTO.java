@@ -1,4 +1,4 @@
-package sample.dto;
+package sample.DTO;
 
 import java.sql.Date;
 import lombok.ToString;

@@ -1,4 +1,4 @@
-package jdbc.util;
+package jdbc.Util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -10,12 +10,12 @@ public class OracleUtility {	//Connection 생성하여 제공해주고, 리소�
 	public static Connection getConnection() { 
 		Connection conn = null;         
 		String url = "jdbc:oracle:thin:@localhost:1521:xe";
-		//String driver = "oracle.jdbc.driver.OracleDriver";
+		String driver = "oracle.jdbc.driver.OracleDriver";
 		String user = "iclass";
 		String password = "0419";
 		
 		try {
-			//Class.forName(driver);
+			Class.forName(driver);
 			conn = DriverManager.getConnection(url,user,password);
 		}catch(Exception e) {
 			System.out.println("데이터베이스 연결 및 사용에 문제가 생겼습니다. : "+ e.getMessage());

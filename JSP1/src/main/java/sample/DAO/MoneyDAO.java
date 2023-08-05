@@ -1,4 +1,4 @@
-package sample.dao;
+package sample.DAO;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -7,8 +7,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import jdbc.util.OracleUtility;
-import sample.dto.MoneyDTO;
+import jdbc.Util.OracleUtility;
+import sample.DTO.MoneyDTO;
 
 
 public class MoneyDAO {

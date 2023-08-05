@@ -1,4 +1,4 @@
-package sample.dao;
+package sample.DAO;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import jdbc.util.OracleUtility;
-import sample.dto.JCustomerDTO;
+import jdbc.Util.OracleUtility;
+import sample.DTO.JCustomerDTO;
 
 
 public class JCustomerDAO {

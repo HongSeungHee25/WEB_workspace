@@ -1,4 +1,4 @@
-package sample.dao;
+package sample.DAO;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -7,11 +7,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import jdbc.util.OracleUtility;
-import sample.dto.JBuyDTO;
-import sample.dto.JCustomerDTO;
-import sample.dto.JProductDTO;
-import sample.dto.MyPageBuyDTO;
+import jdbc.Util.OracleUtility;
+import sample.DTO.JBuyDTO;
+import sample.DTO.JCustomerDTO;
+import sample.DTO.JProductDTO;
+import sample.DTO.MyPageBuyDTO;
 
 
 public class JBuyDAO {	//구매와 관련된 CRUD 실행 SQL. DAO : JCustomerDao, ProductDao

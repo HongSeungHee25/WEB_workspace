@@ -1,16 +1,16 @@
-package sample.main;
+package sample.Main;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import sample.dao.JBuyDAO;
-import sample.dao.JCustomerDAO;
-import sample.dao.JProductDAO;
-import sample.dto.JBuyDTO;
-import sample.dto.JCustomerDTO;
-import sample.dto.JProductDTO;
+import sample.DAO.JBuyDAO;
+import sample.DAO.JCustomerDAO;
+import sample.DAO.JProductDAO;
+import sample.DTO.JBuyDTO;
+import sample.DTO.JCustomerDTO;
+import sample.DTO.JProductDTO;
 
 public class MyShoppingMall {
 
