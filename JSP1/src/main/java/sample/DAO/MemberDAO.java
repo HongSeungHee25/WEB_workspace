@@ -1,6 +1,7 @@
 package sample.DAO;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -63,25 +64,51 @@ public class MemberDAO {
       
    }//joinMember end
    
+   public MemberDTO selectOne(int custno) throws SQLException {		//수정할 데이터 가져오기
+		Connection conn = OracleUtility.getConnection();
+		String sql = "select custno,custname,phone,address,to_char(joindate,'yyyy-mm-dd') as joindate,grade,city from MEMBER_TBL_02 where custno = ?";
+		PreparedStatement ps = conn.prepareStatement(sql);
+		ps.setInt(1,custno);
+		MemberDTO result = null;
+		ResultSet rs = ps.executeQuery();
+		if(rs.next()) {
+			String custname = rs.getString(2);
+			String phone = rs.getString(3);
+			String address = rs.getString(4);
+			String joindate = rs.getString(5);
+			String grade = rs.getString(6);
+			String city = rs.getString(7);
+			result = new MemberDTO(custno, custname, phone, address, joindate, grade, city);
+		}
+		return result;
+	}
    
-   public List<MemberDTO> selectAll() throws SQLException{
-      Connection conn = OracleUtility.getConnection();
-      String sql = "select custno , custname , phone , address , to_char(joindate,'yyyy-mm-dd') as joindate , grade , city "
-            + "from MEMBER_TBL_02 "
-            + "order by custno";
-      PreparedStatement ps = conn.prepareStatement(sql);
-      ResultSet rs = ps.executeQuery();
-      List<MemberDTO> list = new ArrayList<>();
-      
-      while(rs.next()) {
-         list.add(new MemberDTO(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),rs.getString(6),rs.getString(7)));
-      }
-      
-      ps.close();
-      rs.close();
-      
-      return list;
-   }//selectAll end
+   
+   public List<MemberDTO> selectAll() throws SQLException {		//전체 목록 가져오기
+		Connection conn = OracleUtility.getConnection();
+		String sql = "select custno,custname,phone,address,joindate,"
+				+ " decode(grade,'A','VIP','B','일반','C','직원') ,city "
+				+ " from MEMBER_TBL_02";
+		PreparedStatement ps = conn.prepareStatement(sql);
+		
+		List<MemberDTO> result = new ArrayList<>();
+		ResultSet rs = ps.executeQuery();
+		while(rs.next()) {
+			MemberDTO md = new MemberDTO(rs.getInt(1), 
+						rs.getString(2), 
+						rs.getString(3), 
+						rs.getString(4), 
+						rs.getString(5), 
+						rs.getString(6), 
+						rs.getString(7));
+			result.add(md);
+		}
+		ps.close();
+		conn.close();
+		
+			return result;
+		
+	}
    
    public void updateMember(MemberDTO mDto) {
       Connection conn = OracleUtility.getConnection();

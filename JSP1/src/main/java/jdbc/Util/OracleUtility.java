@@ -22,7 +22,7 @@ public class OracleUtility {	//Connection 생성하여 제공해주고, 리소�
 		}
 		return conn;
 	}
-	public static void close(Connection conn) {
+	public static void close(Connection conn) throws ClassNotFoundException {
 		try {
 			if(conn != null) {
 				conn.close();
