@@ -110,39 +110,24 @@ public class MemberDAO {
 		
 	}
    
-   public void updateMember(MemberDTO mDto) {
-      Connection conn = OracleUtility.getConnection();
-      String sql = "update MEMBER_TBL_02 set custname = ? , phone = ? , address = ? , grade = ? , city = ? where custno = ?";
-      PreparedStatement ps;
-      
-      try {
-         conn.setAutoCommit(false);
-         
-         ps = conn.prepareStatement(sql);
-         
-         ps.setString(1, mDto.getCustname());
-         ps.setString(2, mDto.getPhone());
-         ps.setString(3, mDto.getAddress());
-         ps.setString(4, mDto.getGrade());
-         ps.setString(5, mDto.getCity());
-         ps.setInt(6, mDto.getCustno());
-         ps.execute();
-         
-         conn.commit();
-         conn.setAutoCommit(true);
-         ps.close();
-         conn.close();
-         System.out.println("__회원 수정이 완료되었습니다!");
-      } catch (SQLException e) {
-         System.out.println("예외 : "+e.getMessage());
-         try {
-            conn.rollback();
-         } catch (SQLException e2) {
-            System.out.println("예외 : "+e.getMessage());
-         }//try-catch 2 end
-      }//try-catch 1 end
-      
-   }//updateMember end
+   public int update(MemberDTO md) throws SQLException {
+		Connection conn = OracleUtility.getConnection();
+		//수정 가능한 항목(컬럼)은 모두 set에 포함시키기
+		String sql = "update MEMBER_TBL_02 set custname = ?,phone = ?,address =?,grade =?,city =? \n"
+				+ "where custno = ?";
+		PreparedStatement ps = conn.prepareStatement(sql);
+		ps.setString(1, md.getCustname());
+		ps.setString(2, md.getPhone());
+		ps.setString(3, md.getAddress());
+		ps.setString(4, md.getGrade());
+		ps.setString(5, md.getCity());
+		ps.setInt(6, md.getCustno());
+		int result = ps.executeUpdate();
+		
+		ps.close();
+		conn.close();
+		return result;
+	}
    
    
    

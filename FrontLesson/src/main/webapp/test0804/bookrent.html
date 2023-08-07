@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>BOOKRENT</title>
+<link rel="stylesheet" href="./bookrent.css">
+</head>
+<body>
+<nav>
+	<ul id="join">
+		<li><a href="#">이달의 추천도서</a></li>
+		<li><a href="#">도서대여</a></li>
+		<li><a href="#">도서반납</a></li>
+		<li><a href="#">로그인</a></li>
+	</ul>
+</nav>
+<main>
+		<h3>도서 대여</h3>
+	<table>
+		<tr>
+		<td><label for="lblId">회원 IDX</label></td>
+		<td><input type="text" id="lblId" name="customID"></td>
+		</tr>
+		<tr>
+		<td><label for="lblcode">도서코드</label></td>
+		<td><input type="text" id="lblcode" name="bookcode"></td>
+		</tr>
+		<tr>
+		<td><label for="lbl"></label></td>
+		<td id="lbl"><hr>도서코드로 도서명이 조회되어 나옵니다.<hr></td>
+		</tr>
+		<tr>
+		<td><label for="lblstartdate">대여일자</label></td>
+		<td><input type="date" id="lblstartdate" name="bookstartdate"></td>
+		</tr>
+		<tr>
+		<td><label for="lblcheckdate">반납기한날짜</label></td>
+		<td><input type="date" id="lblcheckdate" name="bookcheckdate"></td>
+		</tr>
+		<tr>
+		<td colspan="2"><label for="rentbtn"></label>
+		<button id="rentBtn" onclick="">대여</button>
+	</table>
+		
+</main>
+
+
+<footer>
+	<h3 id="foot">HRDKOREA Copyrightⓒ2023 All rights reserved. Human Resources Development Service of Korea.</h3>
+</footer>
+<script type="text/javascript" src="./bookrent.js"></script>
+</body>
+</html>

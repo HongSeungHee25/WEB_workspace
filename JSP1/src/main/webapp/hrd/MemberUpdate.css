@@ -21,6 +21,7 @@ tr,td{
 td{
 	padding: 3px;
 }
+
 input[type=text],input[type=number]{
 	float: left;
 	

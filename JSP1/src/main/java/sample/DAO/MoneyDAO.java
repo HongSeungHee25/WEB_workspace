@@ -77,7 +77,7 @@ public class MoneyDAO {
 	}//historyAll end
 	
 	//3) 고객별 단가 기준 총 매출액 조회하기 
-	 public static List<MoneyDTO> getSalesByAmountDesc() throws SQLException {
+	 public List<MoneyDTO> getSalesByAmountDesc() throws SQLException {
 		 Connection connection = OracleUtility.getConnection();
 	        List<MoneyDTO> salesList = new ArrayList<>();
 
