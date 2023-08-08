@@ -18,15 +18,12 @@
 	 
 <!-- name="dto" 는 useBean 태그의 id 값으로 정합니다.-->
 <jsp:setProperty property="uname" name="dto" param="myname"/>
-myuser 이름 : <jsp:getProperty property="uname" name="dto"/>
+MyName 이름 : <jsp:getProperty property="uname" name="dto"/><br>
 				<!-- getxxxx 메소드 역할 -->
 <jsp:setProperty property="age" name="dto" param="myage"/>
-myuser 나이 : <jsp:getProperty property="age" name="dto"/>
+MyAge 나이 : <jsp:getProperty property="age" name="dto"/><br>
 <jsp:setProperty property="address" name="dto" param="myaddress"/>
-myuser 주소 : <jsp:getProperty property="address" name="dto"/>
-
-
-
+MyAddress 주소 : <jsp:getProperty property="address" name="dto"/><br>
 
 </body>
 </html>
