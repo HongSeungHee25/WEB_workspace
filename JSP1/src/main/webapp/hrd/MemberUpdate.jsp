@@ -36,13 +36,13 @@
  	MemberSave.jsp 를 만드세요. 그리고 전달받은 파라미터로 update 실행하도록 하세요. 
  		ㄴ> 이 파일에는 자바코드 만 작성하고 태그는 필요 없습니다.	
  	MemberUpdate.jsp 에서 보내는 파라미터 이름은 input 태그의 name 속성입니다. -->
- <form action="MemberSave.jsp" method="post">
+ <form action="MemberUpdateSave.jsp" method="post">
  <table>
  	<tr>
  		<td><label for="lblNo">회원번호</label></td>
  		<!-- MemberList.jsp 에서 보낸 파라미터를 받아 custno 변수에 저장합니다. 그리고 value 에서 출력하기. -->
  		<td style="text-align: left; font-size: 90%;">
-            <%= custno %>
+ 			<input type="number" name="cust" value="<%= custno %>" disabled>
             <input type="hidden" name="custno" value="<%= custno %>">
         </td>
  	</tr>
@@ -74,8 +74,10 @@
  		</tr>
  		<tr>
  			<td colspan="2">
- 				<button type="submit">수정</button>
+ 				<button>수정</button>
  				<button type="button" onclick="location.href='MemberList.jsp'">조회</button>
+ 		</td>
+ 		</tr>
  </table>
  </form>
  </section>

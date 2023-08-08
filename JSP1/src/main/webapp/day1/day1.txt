@@ -47,7 +47,7 @@
 보내는 방법은 1) url 의 쿼리스트링 2) form 태그 사용 	2가지 입니다.
 1) 번은 a 태그 href 속성값으로 정하기. 자바스크립트의 location.href = '요청url과 쿼리스트링' 사용하기
 
-요청으로 전달받은 데이터(파라미터)를 서버에서 받을때는 request 객체를 사용합니다. 메소드는 getParameter()
+요청으로 전달받은 데이터(**파라미터**)를 서버에서 받을때는 request 객체를 사용합니다. 메소드는 getParameter()
 
 *예제파일*
 3parameterSend.jsp

@@ -15,7 +15,7 @@
  }
  
  const rentdate = document.getElementById('lblstartdate')
- rentdate.value = dateFormat(today)
+ rentdate.value = today
  
  const enddate = document.getElementById('lblcheckdate')
 

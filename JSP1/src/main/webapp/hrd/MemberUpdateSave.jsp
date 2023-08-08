@@ -13,28 +13,20 @@
 	String city = request.getParameter("citycode");
 	String custno = request.getParameter("custno");
 	
-	if (custno != null && !custno.isEmpty()) {
-        MemberDTO dto = new MemberDTO();
-        dto.setCustname(name);
-        dto.setPhone(phone);
-        dto.setAddress(address);
-        dto.setGrade(grade);
-        dto.setCity(city);
-        try {
-            dto.setCustno(Integer.parseInt(custno));
+        MemberDTO dto = new MemberDTO(Integer.parseInt(custno),name,phone,address,null,grade,city);
             
             MemberDAO dao = MemberDAO.getMemberDAO();
             int result = dao.update(dto);
 
             if (result > 0) {
-                out.println("회원 정보가 수정되었습니다.");
+                out.println("<script>");
+                out.println("alert('회원 정보가 수정되었습니다.');");
+                out.println("location.href='MemberList.jsp';");
+                out.println("</script>");
+                
             } else {
-                out.println("회원 정보 수정에 실패했습니다.");
+            	out.println("<script>");
+                out.println("alert('회원 정보 수정에 실패했습니다.')");
+                out.println("</script>");
             }
-        } catch (NumberFormatException e) {
-            out.println("custno 값이 올바르지 않습니다.");
-        }
-    } else {
-        out.println("custno 값이 전달되지 않았습니다.");
-    }
 %>

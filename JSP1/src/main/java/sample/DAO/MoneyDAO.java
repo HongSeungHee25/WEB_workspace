@@ -50,6 +50,10 @@ public class MoneyDAO {
 					rs.getInt(1),rs.getString(2),rs.getString(3),rs.getInt(4))+" ◀");
 		count++;
 		}
+		connection.close();
+		ps.close();
+		rs.close();
+		
 		return count;
 	}//history end
 	
@@ -72,6 +76,10 @@ public class MoneyDAO {
 					rs.getInt(1),rs.getString(2),rs.getString(3),rs.getInt(4))+" ◀");
 			count++;
 		}
+		connection.close();
+		ps.close();
+		rs.close();
+		
 		return count;
 		
 	}//historyAll end
@@ -102,6 +110,7 @@ public class MoneyDAO {
 	        } catch (SQLException e) {
 	            e.printStackTrace();
 	        }
+	        connection.close();
 	        
 	        return salesList;
 	    }//getSalesByAmountDesc end
