@@ -24,6 +24,16 @@
 회원정보 수정과 같은 방법으로 아래 소스파일 완성하세요.
 MemberRegister.jsp
 RegisterSave.jsp
+
+<<jsp 액션태그>>
+1. jsp:include
+	┗> 외부 jsp 파일을 포함시킵니다. 컴파일된 .class 를 포함합니다. 
+	┗> 여러 jsp 파일에서 공통적으로 사용되고 코드 부분을 반복해서 코드 작성하지 않고 파일로 생성해서 include 합니다.
+2. jsp:param
+	┗> jsp:include 에서 포함시키는 jsp에 파라미터를 전달하기
+
+
+
 <<jsp 액션 태그>>
 jsp 안에서 내장객체를 이용하여 작성하는 자바코드 대신에 사용하는 태그
 jsp:useBean 태그를 조사해서,RegisterSave.jsp 에서 사용해보세요.(getParameter 대신에 사용합니다.)

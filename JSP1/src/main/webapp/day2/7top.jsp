@@ -4,9 +4,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>7top.jsp</title>
 </head>
 <body>
+<h4>top - header</h4>
+<%
+	String name = request.getParameter("username");
+	out.print(name);
+%>
+<hr>
 
 </body>
 </html>

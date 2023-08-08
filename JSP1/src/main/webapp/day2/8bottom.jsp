@@ -4,9 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>8bottom.jsp</title>
 </head>
 <body>
+<hr>
+<h4>bottom - footer</h4>
 
 </body>
 </html>
