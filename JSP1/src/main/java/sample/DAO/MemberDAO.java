@@ -90,7 +90,7 @@ public class MemberDAO {
    
    public List<MemberDTO> selectAll() throws SQLException {		//전체 목록 가져오기
 		Connection conn = OracleUtility.getConnection();
-		String sql = "select custno,custname,phone,address,joindate,"
+		String sql = "select custno,custname,phone,address,to_char(joindate,'yyyy-mm-dd') as joindate,"
 				+ " decode(grade,'A','VIP','B','일반','C','직원') ,city "
 				+ " from MEMBER_TBL_02 ORDER BY custno";
 		PreparedStatement ps = conn.prepareStatement(sql);

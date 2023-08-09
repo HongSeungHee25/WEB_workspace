@@ -7,6 +7,7 @@
 <title>13forward.jsp</title>
 </head>
 <body>
+<!-- 자바빈을 생성하는 useBean -->
 <jsp:useBean id="reqDto" class="sample.DTO.MyUser" scope="request" />
 <jsp:setProperty property="*" name="reqDto"/>
 <!-- A.jsp 가 받은 요청을 B.jsp 에게 전달해주는 동작을 forward 입니다. -->

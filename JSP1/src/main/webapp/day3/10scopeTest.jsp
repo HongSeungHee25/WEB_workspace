@@ -13,10 +13,22 @@
 <!-- applicationScope 에 저장된 appDto 자바빈을 가져오기 -->
 <jsp:useBean id="appDto" class="sample.DTO.MyUser" scope="application"/>
 <% out.println(appDto); %>
+<hr>
+<ul>
+	<li>${appDto.uname }</li>		<!-- getter 대신에 필드 이름만 작성. -->
+	<li>${appDto.age }</li>
+	<li>${appDto.address }</li>
+</ul>
 <h4>session</h4>
 <!-- sessionScope 에 저장된 appDto 자바빈을 가져오기 -->
 <jsp:useBean id="sessionDto" class="sample.DTO.MyUser" scope="session"/>
 <% out.println(sessionDto); %>
+<hr>
+<ul>
+	<li>${sessionDto.uname }</li>
+	<li>${sessionDto.age }</li>
+	<li>${sessionDto.address }</li>
+</ul>
 <h4>???????</h4>
 <p>jsp:useBean의 기본 scope="page" 입니다. <br>
 여기서 page는 psgeContext 입니다. <br>

@@ -22,6 +22,11 @@ MyName 이름 : <jsp:getProperty property="uname" name="dto"/><br>
 MyAge 나이 : <jsp:getProperty property="age" name="dto"/><br>
 <jsp:setProperty property="address" name="dto" param="address"/>
 MyAddress 주소 : <jsp:getProperty property="address" name="dto"/><br>
+<ul>
+	<li>${dto.uname }</li>
+	<li>${dto.age }</li>
+	<li>${dto.address }</li>
+</ul>
 <hr>
 <!-- 10scopeTest.jsp 에서도 아래 2개의 자바빈을 가져오는지 확인해봅시다. -->
 <!-- 자바빈즈 2개를 scope를 다르게 해서 더 만들기 -->
