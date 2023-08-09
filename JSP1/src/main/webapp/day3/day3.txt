@@ -32,7 +32,7 @@ out : javax.servlet.jsp.jsp.jspWriter
 		● JSP 페이지(html 문서) 출력 스트림 객체
 		------------------------------------------
 page : java.lang.Object 
-		● JSP 페이지에 대한  자바 클래스 객체
+		● JSP 페이지에 대한 자바 클래스 객체
 config : javax.servlet.ServletConfig 
 		● JSP 페이지에 대한 설정 정보를 저장하고 있는 객체 
 exception : java.lang.Throwable 
