@@ -25,5 +25,9 @@ public class MyUser {
 		this.address = address;
 	}
 	
+	@Override
+	public String toString() {
+		return "MyUser ▶uname = " + uname + ", age = " + age + ", address = " + address + "◀";
+	}
 	
 }
