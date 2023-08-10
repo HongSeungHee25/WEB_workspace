@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>18loginAction.jsp</title>
+<title>loginAction.jsp</title>
 </head>
 <body>
 <%
@@ -27,7 +27,7 @@
 		out.print("location.href='index.jsp';");
 	}else{
 		out.print("alert('로그인 실패 - 계정 정보가 올바르지 않습니다.');");
-		out.print("location.href='17loginView.jsp';");
+		out.print("location.href='loginView.jsp';");
 	}
 		out.print("</script>");
 	/* alert 안에서 줄바꿈은 html 문서 안에서 실행되어야 하므로 \\n 으로 하세요.

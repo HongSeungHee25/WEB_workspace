@@ -17,7 +17,7 @@ public class JCustomerDAO {
 	
 	public void insert(JCustomerDTO dto){
 		Connection connection = OracleUtility.getConnection();
-		String sql = "insert into j_custom values (?,?,?,?,SYSDATE)";
+		String sql = "insert into j_custom values (?,?,?,?,SYSDATE,?)";
 		PreparedStatement ps;
 		try{
 		connection.setAutoCommit(false);
@@ -29,6 +29,7 @@ public class JCustomerDAO {
 		ps.setString(2, dto.getName());
 		ps.setString(3, dto.getEmail());
 		ps.setInt(4, dto.getAge());
+		ps.setString(5, dto.getPassword());
 		ps.execute();
 		
 		connection.commit();
