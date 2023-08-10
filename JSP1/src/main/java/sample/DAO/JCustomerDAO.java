@@ -16,41 +16,33 @@ public class JCustomerDAO {
 	//CRUD 실행 SQL
 	
 	public void insert(JCustomerDTO dto){
-		String customer_ID;
-		String name;
-		String email;
-		int age;
-		/////////////////////////////////////////////////////
-		try(
-		Scanner sc = new Scanner(System.in);
 		Connection connection = OracleUtility.getConnection();
-		 ){
 		String sql = "insert into j_custom values (?,?,?,?,SYSDATE)";
-		PreparedStatement ps = connection.prepareStatement(sql);
+		PreparedStatement ps;
+		try{
+		connection.setAutoCommit(false);
+			
+		ps = connection.prepareStatement(sql);
 		
-		//회원가입
-		System.out.print("아이디를 입력해주세요 >> ");
-		customer_ID = sc.nextLine();
 		
-		System.out.print("이름을 입력해주세요 >> ");
-		name = sc.nextLine();
-		
-		System.out.print("이메일을 입력해주세요 >> ");
-		email = sc.nextLine();
-		
-		System.out.print("나이를 입력해주세요 >> ");
-		age = Integer.parseInt(sc.nextLine());
-		
-		ps.setString(1, customer_ID);
-		ps.setString(2, name);
-		ps.setString(3, email);
-		ps.setInt(4, age);
-
+		ps.setString(1, dto.getCustom_id());
+		ps.setString(2, dto.getName());
+		ps.setString(3, dto.getEmail());
+		ps.setInt(4, dto.getAge());
 		ps.execute();
 		
+		connection.commit();
+		connection.setAutoCommit(true);
+		ps.close();
+        connection.close();
 		}catch(SQLException e) {
 			System.out.println("예외 : "+e.getMessage());
-		}
+			try {
+	            connection.rollback();
+	         } catch (Exception e2) {
+	            System.out.println("예외 : "+e2.getMessage());
+	         }//try-catch 2 end
+		}//try-catch 1 end
 	}//insert end
 	
 	public List<JCustomerDTO> selectAll() throws SQLException{
@@ -68,7 +60,7 @@ public class JCustomerDAO {
 			rs.getString("name"),
 			rs.getString("email"),
 			rs.getInt("age"),
-			rs.getString("reg_date"));
+			rs.getString("reg_date"),null);
 			
 			list.add(dt);
 		}
@@ -112,30 +104,59 @@ public class JCustomerDAO {
 		
 	}//delete end
 	
-	//1. 회원 로그인 - 간단히 회원아이디를 입력해서 존재하면 로그인 성공
-	public JCustomerDTO selectById(String customid) throws SQLException{
-		Connection connection = OracleUtility.getConnection();
-		String sql = "select * from j_custom where custom_ID = ?";
+		//1. id 로그인 - 간단히 회원아이디를 입력해서 존재하면 로그인 성공
+		public JCustomerDTO selectById(String customid) throws SQLException {
+			Connection conn = OracleUtility.getConnection();
+			String sql = "select * from j_custom"
+					+ " where custom_id=?";		//PK조회 : 결과 행 0 또는 1개
+			PreparedStatement ps = conn.prepareStatement(sql);
+			// Statement : SQL, Prepared : SQL 이 미리 컴파일되어 준비된.		
+			// PreparedStatement 는 Statement 인터페이스와 비교할수 있습니다.
+			// Statement 인터페이스 : SQL 실행에 필요한 데이터를 동시에 포함시켜서 컴파일을 합니다.
+			
+			ps.setString(1, customid);
+			// 준비된 SQL 에 파라미터 전달하여
+			
+			ResultSet rs = ps.executeQuery();
+			// select 쿼리 실행
+			
+			JCustomerDTO temp = null;
+			if(rs.next()) {
+				temp = new JCustomerDTO(rs.getString(1), 
+						rs.getString(2), 
+						rs.getString(3), 
+						rs.getInt(4), 
+						rs.getString(5),null);
+			}
+			ps.close();
+			conn.close();
+			
+			return temp;
+		}//selectById end
 		
-		PreparedStatement ps = connection.prepareStatement(sql);
-		JCustomerDTO temp = null;
-		
-		ps.setString(1, customid);
-		
-		ResultSet rs = ps.executeQuery();
-		if(rs.next()) {
-			temp  =  new JCustomerDTO(rs.getString(1),
-					rs.getString(2),
-					rs.getString(3),
-					rs.getInt(4),
-					rs.getString(5));
-		}
-		
-		ps.close();
-		connection.close();
-		
-		return temp;
-	}//selectById end
-	
+		//2. 회원 로그인 - 회원아이디와 비밀번호 입력해서 존재하면 로그인 성공
+		public JCustomerDTO login(String id,String password){
+		      Connection conn = OracleUtility.getConnection();
+		      //id 는 custom_id 컬럼값, password는 password 컬럼값(평문으로 저장됨)
+		      String sql = "select custom_id ,name  "
+		            + "from j_custom where custom_id =? and password=?";
+		      JCustomerDTO result = null;
+		      try(PreparedStatement ps = conn.prepareStatement(sql)){
+		      ps.setString(1, id);
+		      ps.setString(2,password);
+		      
+		      ResultSet rs = ps.executeQuery();
+		      if(rs.next()) {
+		         result = new JCustomerDTO();
+		         result.setCustom_id(rs.getString(1));
+		         result.setName(rs.getString(2));
+		      }
+		      
+		      conn.close();
+		      }catch(SQLException e) {
+		    	  e.printStackTrace();
+		      }
+		      return result;      //result 가 null 이 아니면 로그인 성공
+		   }//login end
 	
 }

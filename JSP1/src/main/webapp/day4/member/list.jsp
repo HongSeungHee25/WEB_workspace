@@ -18,7 +18,6 @@
 	request.setAttribute("list", list);
 	
 	//요청을 listView.jsp(화면출력)로 전달하기
-	//-> list 를 list.jsp 와 listView.jsp 가 공유하게 됩니다.
 	pageContext.forward("listView.jsp");
 %>
 

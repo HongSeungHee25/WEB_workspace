@@ -5,8 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <title>listView.jsp - 화면 출력 페이지</title>
-<link rel="stylesheet" href="../../hrd/Index.css?v=3">
-<link rel="stylesheet" href="../../hrd/MemberList.css?v=3">
+<!-- 아래 href 의 주소는 애플리케이션이름(context) 를 기준으로 하는 절대 주소입니다. -->
+<link rel="stylesheet" href="<%=request.getContextPath() %>/css/Index.css?v=3">
+<!-- el로 표기할 때에는 현재 페이지의 request를 가져와야 합니다.(pageContext.request) -->
+<link rel="stylesheet" href="${pageContext.request.contextPath }/css/MemberList.css?v=3">
 </head>
 <body>
 <!-- request.getAttribute("list") 실행 + List<MemberDTO> 타입변환 + 출력 -->
@@ -25,14 +27,15 @@
             <th>거주지역</th>
         </tr>
         <!-- 기존에 들어가 있던 향상 for문이 forEach 문으로 변경 -->
+        <!-- list 애트리뷰트는 컬렉션이므로 하나씩 가져와서 member 에 저장 -->
         <c:forEach items="${list}" var="member">
             <!-- getter 대신에 EL 표기법으로 dto 컬럼 가져옴. -->
             <tr>
-                <td><a href="../../hrd/MemberUpdate.jsp?custno=${member.custno}"><c:out value="${member.custno}" /></a></td>
-                <td><c:out value="${member.custname}" /></td>
-                <td><c:out value="${member.phone}" /></td>
-                <td><c:out value="${member.address}" /></td>
-                <td><c:out value="${member.joindate}" /></td>
+                <td><a href="../../hrd/MemberUpdate.jsp?custno=${member.custno}">${member.custno}</a></td>
+                <td>${member.custname}</td>
+                <td>${member.phone}</td>
+                <td>${member.address}</td>
+                <td>${member.joindate}</td>
                 <td>
                     <!-- eq 는 같다는 뜻. 회원 등급이 VIP 라면 텍스트 색상을 빨간색으로 하라는 뜻 -->
                     <c:choose>
@@ -40,12 +43,11 @@
                             <span style='color:red;'>VIP</span>
                         </c:when>
                         <c:otherwise>
-                            <c:out value="${member.grade}" />
+                            ${member.grade}
                         </c:otherwise>
                     </c:choose>
-                    
                 </td>
-                <td><c:out value="${member.city}" /></td>
+                <td>${member.city}</td>
             </tr>
         </c:forEach>
         <!-- list 가 비어 있으면 true 를 반환하고, 비어있지 않으면 false 를 반환 -->
