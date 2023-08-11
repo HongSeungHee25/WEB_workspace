@@ -19,6 +19,8 @@
 	String temp = request.getParameter("userage");
 	String password = request.getParameter("password");
 	String hashedPassword = PasswordHashingUtil.hashPassword(password);
+	/* 자바스크립트로 해시함수 해보기 */
+	System.out.println(hashedPassword);
 	
 	JCustomerDAO dao = new JCustomerDAO();
 	JCustomerDTO dto = null;

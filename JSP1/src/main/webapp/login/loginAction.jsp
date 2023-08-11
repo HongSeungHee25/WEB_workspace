@@ -1,3 +1,4 @@
+<%@page import="jdbc.Util.PasswordHashingUtil"%>
 <%@page import="sample.DTO.JCustomerDTO"%>
 <%@page import="sample.DAO.JCustomerDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -10,16 +11,20 @@
 </head>
 <body>
 <%
+
 	/* id와 패스워드 전달 받아서 dao login 메소드 실행 */
 	String userid = request.getParameter("userid");
 	String password = request.getParameter("password");
+	String hashedPassword = PasswordHashingUtil.hashPassword(password);
+	/* 자바스크립트로 해시함수로 해보기 */
+	
 	
 	JCustomerDAO dao = new JCustomerDAO();
-	JCustomerDTO dto = dao.login(userid, password);
+	JCustomerDTO dto = dao.login(userid, hashedPassword);
 	if(dto != null){
 		session.setAttribute("user", dto);
 	}
-	
+	System.out.println(hashedPassword);
 	
 	out.print("<script>");
 	if(dto != null){
