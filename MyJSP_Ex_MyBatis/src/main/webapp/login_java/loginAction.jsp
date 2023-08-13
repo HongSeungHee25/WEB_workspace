@@ -1,4 +1,4 @@
-<%@page import="jdbc.Util.PasswordHashingUtil"%>
+<%@page import="jdbc.Util.*"%>
 <%@page import="sample.DTO.JCustomerDTO"%>
 <%@page import="sample.DAO.JCustomerDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -10,15 +10,14 @@
 <title>loginAction.jsp</title>
 </head>
 <body>
-
 <%
 
 	/* id와 패스워드 전달 받아서 dao login 메소드 실행 */
 	String userid = request.getParameter("userid");
 	String password = request.getParameter("password");
-	/* 해시함수는 단방향이기 때문에 자바를 사용해 구현해 놓은 PasswordHashingUtil 클래스를
-	   불러와서 평문으로 입력해도 로그인할수 있게끔 구현 */
 	String hashedPassword = PasswordHashingUtil.hashPassword(password);
+	/* 자바스크립트로 해시함수로 해보기 */
+	
 	
 	JCustomerDAO dao = new JCustomerDAO();
 	JCustomerDTO dto = dao.login(userid, hashedPassword);
@@ -36,7 +35,10 @@
 		out.print("location.href='loginView.jsp';");
 	}
 		out.print("</script>");
+	/* alert 안에서 줄바꿈은 html 문서 안에서 실행되어야 하므로 \\n 으로 하세요.
+		\n 으로 하면 자바에서 처리할 수가 없어서 오류가 발생합니다. */
 %>
+
 
 </body>
 </html>

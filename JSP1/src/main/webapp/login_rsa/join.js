@@ -1,7 +1,12 @@
 /**
  * 
  */
-/* 이메일 정규식 함수 */
+// RSA 키 생성
+var encrypt = new JSEncrypt();
+encrypt.getKey();
+var publicKey = encrypt.getPublicKey();
+
+
 function CheckEmail(str){                                                 
      var reg_email = /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,2}$/;
      if(!reg_email.test(str)) {                            
@@ -10,14 +15,15 @@ function CheckEmail(str){
           return true;         
      }                            
 }   
-function func_join(){			
-	
+function func_join(){			/* '가입하기' 버튼의 onclick 이벤트에 대해 실행하는 함수 */
+	/* 자바스크립트의 변수 선언 키워드 : var, let, const. var 은 old version 변수 선언 방식.
+		const 는 값은 변경할 수 없고, 객체는 재할당 불가. 일반적으로 요소를 저장하는 변수 형식으로 사용
+	*/
 	const frm = document.forms[0];
     const userid = frm.userid.value;
     const username = frm.username.value;
     const useremail = frm.useremail.value;
     const userage = frm.userage.value;
-    /* 사용자가 실수로 공백을 입력할 경우 공백으로 제거하고 비밀번호만 추출해서 비교  */
     let password = frm.password.value.trim(); 
     let password2 = frm.password2.value.trim();
 	console.log(frm)
@@ -64,7 +70,6 @@ function func_join(){
         frm.password2.focus();
         isValid = false;
     }
-    /* 첫번째 입력한 비밀번호와 비밀번호 확인하는 두번째 비밀번호와 일치하는지 확인 */
     if (password2 != password) {
         alert('비밀번호 확인이 일치하지 않습니다.');
         frm.password2.focus();
@@ -72,9 +77,10 @@ function func_join(){
     }
 
     if (isValid) {
-        const hashedPassword = sha256(password); // SHA-256 해시화
-        frm.password.value = hashedPassword; // 해시화된 비밀번호를 폼 필드에 설정
-        frm.password2.value = hashedPassword; // 해시화된 비밀번호를 폼 필드에 설정
+        // 비밀번호를 공개키로 암호화
+        const encryptedPassword = encrypt.encrypt(password);
+        frm.password.value = encryptedPassword; // 함호화된 비밀번호를 폼 필드에 설정
+        frm.password2.value = encryptedPassword; // 함호화된 비밀번호를 폼 필드에 설정
         frm.submit();
     } else {
         alert('회원가입 실패');

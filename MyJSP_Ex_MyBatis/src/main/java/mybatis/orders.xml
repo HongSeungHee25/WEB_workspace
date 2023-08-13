@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="order2"> <!-- namespace 는 다른 mapper가 있을수도 있어서 이름 설정은 해주는게 좋음 -->
+ <!-- sql 실행에 필요한 값 또는 조회결과 값 과 자바 객체를 매핑합니다. -->
+ 	
+ 	<insert id="insert" parameterType="sample.DTO.JCustomerDTO" useGeneratedKeys="true" keyProperty="custom_id">
+  insert into j_custom
+  values (#{custom_id}, #{name}, #{email}, #{age}, sysdate, #{password})
+	</insert>
+
+
+ <select id="login" parameterType="java.util.Map" resultType="sample.DTO.JCustomerDTO">
+  select custom_id, name
+  from j_custom
+  where custom_id = #{id} and password = #{password}
+</select>
+
+ 	<!-- ${} 는 출력, #{} 저장(파라미터 변수명 표시) -->
+ 	
+ </mapper>
+ 
+ 
+ 
+ 
+ 
+ 
