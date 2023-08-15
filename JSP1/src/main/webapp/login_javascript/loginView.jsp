@@ -6,6 +6,8 @@
 <meta charset="UTF-8">
 <title>로그인</title>
 <link rel="stylesheet" href="./css.css?v=3">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"></script>
+<script type="text/javascript" src="./login.js"></script>
 </head>
 <body>
 <!-- 패스워드 인증 방법으로 로그인  id, password 입력 (제일단순/쉬운)
@@ -31,7 +33,7 @@
 	<td><input type="password" id="lblpw" name="password" placeholder="비밀번호를 입력하세요."></td>
 </tr>
 <tr>
-	<td colspan="2"><button>로그인</button>
+	<td colspan="2"><button onclick="func_login()">로그인</button>
 	<button type="button" onclick="location.href='joinView.jsp'">회원가입</button></td>
 </tr>
 </table>

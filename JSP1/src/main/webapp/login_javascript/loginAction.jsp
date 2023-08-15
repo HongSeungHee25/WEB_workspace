@@ -13,13 +13,15 @@
 
 <%
 
+	request.setCharacterEncoding("UTF-8");	
+
 	/* id와 패스워드 전달 받아서 dao login 메소드 실행 */
 	String userid = request.getParameter("userid");
-	String password = request.getParameter("password");
+	String hashedPassword = request.getParameter("password");
 	/* 해시함수는 단방향이기 때문에 자바를 사용해 구현해 놓은 PasswordHashingUtil 클래스를
 	   불러와서 평문으로 입력해도 로그인할수 있게끔 구현 */
-	String hashedPassword = PasswordHashingUtil.hashPassword(password);
-	
+	/* String hashedPassword = PasswordHashingUtil.hashPassword(password); */
+	System.out.println(hashedPassword);
 	JCustomerDAO dao = new JCustomerDAO();
 	JCustomerDTO dto = dao.login(userid, hashedPassword);
 	if(dto != null){
