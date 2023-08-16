@@ -24,8 +24,11 @@ public class ListController implements Controller
 		// dao select list 생성 -> Attribute에 저장 -> listView.jsp에 전달
 		MemberDao dao = MemberDao.getMemberDao();
 		List<MemberVo> list = null;
-		try {list = dao.selectList();} 
-		catch (SQLException e) {logger.error("[MyInfo] - {}",e.getMessage());}
+		try {
+			list = dao.selectList();
+		} catch (SQLException e) {
+			logger.error("[MyInfo] - {}",e.getMessage());
+		}
 		
 		request.setAttribute("list", list);
 		

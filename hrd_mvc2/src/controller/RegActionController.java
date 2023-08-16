@@ -15,7 +15,9 @@ public class RegActionController implements Controller {
 
 	@Override
 	public void handle(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	//handle 메소드: 클라이언트로부터 받은 회원 정보를 데이터베이스에 등록하고 결과에 따라 메시지와 함께 페이지를 리다이렉트합니다.
 		request.setCharacterEncoding("UTF-8");
+		//MemberVo 객체를 생성하여 회원 정보를 담고, MemberDao를 이용하여 데이터베이스에 등록을 시도합니다.
 		MemberVo vo = new MemberVo(Integer.parseInt(request.getParameter("custno")),
 							request.getParameter("custname"),
 							request.getParameter("phone"),
@@ -43,6 +45,7 @@ public class RegActionController implements Controller {
 		}
 		out.print("location.href='list.hrd'");
 		out.print("</script>");
+		//등록 결과에 따라 알림창을 띄우고 list.hrd로 페이지를 리다이렉트합니다.
 
 	}
 
