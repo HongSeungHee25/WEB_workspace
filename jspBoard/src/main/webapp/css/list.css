@@ -15,18 +15,18 @@ h3, p {
 	list-style: none;
 }
 #list ul#main{
-		display:flex;
+		display:flex;	
 		flex-direction:column;
 }
 #list ul.row {
-		display: flex;
+		display: flex;			 /* flex 레이아웃. float:left 와 같은 기능 */
 		flex-direction: row;     /* 기본값 */
 }
 #list ul.row > li{
 	padding: 3px 0px;
 }
 #list ul.row > li:nth-child(1){  /* .row 의 자식태그 중 li 그리고 그 li의 n번째 위치(자식요소)로 select  */
-	flex-basis:10%;
+	flex-basis:10%;				 /* flex 레이아웃 적용된 요소들의 너비를 비율로 설정 */
 }	
 #list ul.row > li:nth-child(2){
 	flex-basis:35%;

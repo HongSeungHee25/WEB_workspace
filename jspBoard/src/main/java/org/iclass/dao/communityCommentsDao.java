@@ -23,16 +23,16 @@ public class communityCommentsDao {
 	
 	public int delete(int idx) {
 		SqlSession mapper = SqlSessionBean.getSession();
-		int count = mapper.delete("communityComments.delete",idx);
+		int result = mapper.delete("communityComments.delete",idx);
 		mapper.commit();
 		mapper.close();
-		return count;
+		return result;
 	}
 	public int maxOf() {
 		SqlSession mapper = SqlSessionBean.getSession();
-		int count = mapper.selectOne("communityComments.maxOf");
+		int result = mapper.selectOne("communityComments.maxOf");
 		mapper.close();
-		return count;
+		return result;
 	}
 		//메인글의 댓글 갯수 업데이트	
 		public int setCommentCount(long idx) {

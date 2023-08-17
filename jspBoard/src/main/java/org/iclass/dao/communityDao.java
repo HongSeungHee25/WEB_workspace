@@ -32,35 +32,74 @@ public class communityDao {
 	
 	public int count() {
 		SqlSession mapper = SqlSessionBean.getSession();
-		int count = mapper.selectOne("community.count");
+		int result = mapper.selectOne("community.count");
 		mapper.close();
-		return count;
+		return result;
 	}
+	// PK 로 글 조회(글 읽기)
 	public Community selectByIdx(long idx) {
+		/*
+		   <select id="selectByIdx" parameterType="long" resultType="org.iclass.vo.Community">
+	 		SELECT * 
+	 		FROM 
+	 			community 
+	 		WHERE 
+	 			idx=#{idx}   
+	 		</select>
+		 */
 		SqlSession mapper = SqlSessionBean.getSession();
-		Community dto = mapper.selectOne("community.selectByIdx");
+		Community vo = mapper.selectOne("community.selectByIdx",idx);
 		mapper.close();
-		return dto;
+		return vo;
 	}
+	// 글 조회수 증가
 	public int setReadCount(long idx) {
+		/*
+		   <update id="setReadCount" parameterType="long">
+	 		UPDATE community 
+			SET 
+				READCOUNT = READCOUNT +1 
+			WHERE 
+				idx = #{idx}
+	 		</update>
+		 */
 		SqlSession mapper = SqlSessionBean.getSession();
-		int count = mapper.update("community.setReadCount");
+		int result = mapper.update("community.setReadCount",idx);
 		mapper.commit();
 		mapper.close();
-		return count;
+		return result;
 	}
-	public int update(Community dto) {
+	// 글 수정
+	public int update(Community vo) {
+		/*
+		 	<update id="update" parameterType="org.iclass.vo.Community">
+		 	UPDATE community
+			SET 
+				title=#{title}, content=#{content} ,ip=#{ip}
+			WHERE 
+				idx=#{idx}
+	 		</update>
+		 */
 		SqlSession mapper = SqlSessionBean.getSession();
-		int count = mapper.update("community.update", dto);
+		int result = mapper.update("community.update", vo);
 		mapper.commit();
 		mapper.close();
-		return count;
+		return result;
 	}
+	// 글 삭제
 	public int delete(long idx) {
+		/*
+		 	<delete id="delete" parameterType="long">
+	 		DELETE FROM 
+	 			community 
+	 		WHERE 
+	 			idx=#{idx}
+	 		</delete>
+		 */
 		SqlSession mapper = SqlSessionBean.getSession();
-		int count = mapper.delete("community.delete");
+		int result = mapper.delete("community.delete",idx);
 		mapper.commit();
 		mapper.close();
-		return count;
+		return result;
 	}
 }
