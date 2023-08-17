@@ -17,6 +17,7 @@
 								(SELECT * FROM community  ORDER BY idx DESC) f)
 		WHERE r BETWEEN #{start} AND #{end}
  	</select>
+ 	
  	<select id="count" resultType="int">
  		SELECT count(*) FROM community
  	</select>
