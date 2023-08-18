@@ -12,6 +12,7 @@
 	<li>요청 URL : <%= request.getRequestURL() %></li>
 	<li>요청 URI : <%= request.getRequestURI() %></li>
 	<li>컨텍스트(context) : <%= request.getContextPath() %></li>
+	<!-- el로 할때 ${pageContext.request.contextPath} 는 /jspBorad : 프로젝트 이름, 웹서비스 이름 -->
 	<li>클라이언트 - IP : <%= request.getRemoteAddr() %></li>
 	<li>클라이언트 - host : <%= request.getRemoteHost() %></li>
 	<li>클라이언트 - Port : <%= request.getRemotePort() %></li>

@@ -26,9 +26,9 @@ public class Paging {
 		this.pageSize=pageSize;
 		
 		//예시
-		//totalCount = 367개이다. 그러면, pageSize=20 일 떄 totalPage =19  , pageSize=10 일 떄 totalPage =37
-		//totalCount = 7개이다. 그러면, pageSize=20 일 떄 totalPage =1 , pageSize=10 일 떄 totalPage =1
-		//totalCount = 200개이다. 그러면, pageSize=20 일 떄 totalPage =10 ,  pageSize=10 일 떄 totalPage =20
+		//totalCount = 367개이다. 그러면, pageSize=20 일 때 totalPage =19  , pageSize=10 일 때 totalPage =37
+		//totalCount = 7개이다. 그러면, pageSize=20 일 때 totalPage =1 , pageSize=10 일 때 totalPage =1
+		//totalCount = 200개이다. 그러면, pageSize=20 일 때 totalPage =10 ,  pageSize=10 일 때 totalPage =20
 		totalPage = (int)Math.ceil((double)totalCount/pageSize); //ceil 은 올림입니다.
 		//현재페이지 범위(1~totalPage) 의 유효성을 체크 
 		this.currentPage= (currentPage > totalPage)? totalPage:currentPage;
@@ -40,10 +40,10 @@ public class Paging {
 		
 		//아래 예시값을 대입해 보세요.
 		startPage = (this.currentPage-1)/10*10+1;		 //페이지번호 리스트 10개씩 
-		//현재 페이지가 57 (51~60) , startPage =51
-		//현재 페이지가 7 (1~10) , startPage =1
-		//현재 페이지가 156(151~160) , startPage =151
-		//현재 페이지가 160(151~160)  , startPage =151
+		//현재 페이지가 57 (51~60) , startPage =51		endPage =60
+		//현재 페이지가 7 (1~10) , startPage =1		endPage =10
+		//현재 페이지가 156(151~160) , startPage =151	endPage =160
+		//현재 페이지가 160(151~160)  , startPage =151	endPage =160
 		endPage = startPage+9;
 		endPage = endPage > totalPage ? totalPage:endPage;   //totalPage 보다 큰값에 대한 제한.
 	}
