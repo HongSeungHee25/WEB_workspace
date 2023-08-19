@@ -80,7 +80,7 @@
 		let yn
 		if('${user.id}'==''){
 			yn=confirm('글쓰기는 로그인이 필요합니다. 로그인 하시겠습니까?')
-			if(yn) location.href='../login.jsp?back=w'  // 로그인 후 글쓰기 url로 redirect 하기 위한 파라미터
+			if(yn) location.href='./login.jsp?back=w'  // 로그인 후 글쓰기 url로 redirect 하기 위한 파라미터
 		}else{
 			location.href='write.jsp?page=${paging.currentPage }'
 		}
