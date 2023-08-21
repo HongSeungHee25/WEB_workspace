@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +14,7 @@
 	<h3>북챗 :: 커뮤니티</h3>
 	<p>오늘 무슨 책을 읽으셨나요? </p>
 	<hr style="color: white;">
-	<form name="frm1" method="post" action="writeAction.jsp" onsubmit="return isValid()">
+	<form name="frm1" method="post" action="writerAction.jsp" onsubmit="return isValid()">
 	<table>
 		<tr>
 			<th>제목</th>

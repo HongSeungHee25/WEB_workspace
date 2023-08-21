@@ -4,6 +4,7 @@
     pageEncoding="UTF-8"%>
 <!-- 기본키 idx 값으로 글 조회하여 화면에 전달하기 -->
 <% 
+	request.setCharacterEncoding("UTF-8");	
 	int idx = 0;
 	int pageNo = 0;
 	if(request.getParameter("idx") != null){

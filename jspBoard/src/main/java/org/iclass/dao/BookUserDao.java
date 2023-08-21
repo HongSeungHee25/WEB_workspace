@@ -16,4 +16,15 @@ public class BookUserDao {
 		mapperSession.close();
 		return vo;
 	}
+	
+	public int join(BookUser vo) {
+		SqlSession mapper = SqlSessionBean.getSession();
+		mapper.commit();
+		mapper.close();
+		int result = mapper.insert("bookuser.join", vo);
+		
+		return result;
+	}
+	
+	
 }

@@ -104,9 +104,24 @@ public class communityDao {
 		return result;
 	}
 	
+	//글 등록 
 	public long insert(Community vo) {
+	/*
+		<insert id="insert" parameterType="org.iclass.dto.Community">
+ 		INSERT INTO 
+ 			community (idx,writer,title,content)
+		VALUES 
+			(community_idx_seq.nextval,#{writer}, #{title}, #{content})
+			<!-- insert 후에 community_idx_seq 시퀀스 값을 가져와서 idx 프로퍼티에 저장하는 태그 -->
+			<selectKey keyProperty="idx" resultType="long" order="AFTER">
+				<!-- community_idx_seq 시퀀스값 가져오는 sql -->
+				select community_idx_seq.currval
+				from dual
+			</selectKey>
+ 		</insert>
+	 */
 		SqlSession mapper = SqlSessionBean.getSession();
-		mapper.insert("community.insert", vo);
+		mapper.insert("community.insert",vo);
 		mapper.commit();
 		mapper.close();
 		

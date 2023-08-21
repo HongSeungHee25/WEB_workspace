@@ -13,9 +13,9 @@ import lombok.ToString;
 @ToString
 public class BookUser {	
 	private String id;
-	private String email;
 	private String name;
+	private String email;
+	private int age;
 	private String password;
-	private String tel;
 
 }

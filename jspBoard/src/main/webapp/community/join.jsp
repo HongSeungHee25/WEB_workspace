@@ -26,16 +26,30 @@
 <%
 String temp=request.getParameter("back");
 if(temp!=null && temp.equals("w")) 
-	session .setAttribute("back","community/write.jsp");
+	session .setAttribute("back","community/login.jsp");
 %>
 <div class="container mt-3 width30">
-  <h2>회원 로그인</h2>
-  <label id="incorrect">계정 정보가 일치하지 않습니다.</label>
-  <form action="loginAction.jsp" method="post">
+  <h2>회원가입</h2>
+  <form action="joinAction.jsp" method="post">
     <div class="mb-3 mt-3">
       <label for="userid">아이디:</label>
       <input class="form-control" id="userid" placeholder="Enter id" 
       		name="id" required>
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="username">이름:</label>
+      <input class="form-control" id="username" placeholder="Enter name" 
+      		name="name" required>
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="useremail">이메일:</label>
+      <input class="form-control" id="useremail" placeholder="Enter email" 
+      		name="email" required>
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="userage">나이:</label>
+      <input type="number" class="form-control" id="userage" placeholder="Enter age" 
+      		name="age" required>
     </div>
     <div class="mb-3">
       <label for="pwd">패스워드:</label>
@@ -47,17 +61,12 @@ if(temp!=null && temp.equals("w"))
         <input class="form-check-input" type="checkbox" name="remember"> Remember me
       </label>
     </div>
-    <button type="submit" class="btn btn-primary">로그인</button>
-    <button type="button" class="btn btn-primary" onclick="location.href='join.jsp'">회원가입</button>
+    <button type="button" class="btn btn-primary" onclick="location.href='login.jsp'">로그인</button>
+    <button type="submit" class="btn btn-primary">회원가입</button>
     <button type="button" class="btn btn-primary" 
     		onclick="location.href='${pageContext.request.contextPath}'">HOME</button>
   </form>
 </div>
-  <script type="text/javascript">
-  	console.log('${param.incorrect}')
-  	if('${param.incorrect}'==='y')
-  		document.getElementById('incorrect').style.display='inline-block'
-  </script>
 </body>
 </html>
     

@@ -20,6 +20,7 @@
 </c:if>
 <c:if test="${user ==null }">
 	<p><a href="./community/login.jsp">로그인</a></p>
+	<p><a href="./community/join.jsp">회원가입</a></p>
 </c:if>
 	<p><a href="./community/list.jsp">커뮤니티</a></p>
 </nav>
