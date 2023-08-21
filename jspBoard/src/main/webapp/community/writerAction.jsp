@@ -34,7 +34,7 @@
 	int result = dao.update(vo);
 	if(result==1){
 		request.setAttribute("message", "글 수정이 완료되었습니다.");
-		request.setAttribute("url", "read.jsp?idx="+idx+"&page="+pageNo);
+		request.setAttribute("url", "list.jsp?idx="+idx+"&page="+pageNo);
 		pageContext.forward("alert.jsp");
 	}
 	

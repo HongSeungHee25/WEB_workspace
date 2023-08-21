@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
+import org.checkerframework.checker.units.qual.m;
 import org.iclass.dto.Community;
 
 import mybatis.SqlSessionBean;
@@ -101,5 +102,15 @@ public class communityDao {
 		mapper.commit();
 		mapper.close();
 		return result;
+	}
+	
+	public long insert(Community vo) {
+		SqlSession mapper = SqlSessionBean.getSession();
+		mapper.insert("community.insert", vo);
+		mapper.commit();
+		mapper.close();
+		
+		//매퍼 xml에서 selectkey 로 시퀀스 값을 vo 객체 idx 프로퍼티에 저장시켰습니다.
+		return vo.getIdx();
 	}
 }
