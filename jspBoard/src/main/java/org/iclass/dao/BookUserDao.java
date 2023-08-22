@@ -17,11 +17,11 @@ public class BookUserDao {
 		return vo;
 	}
 	
-	public int join(BookUser vo) {
+	public int insert(BookUser vo) {
 		SqlSession mapper = SqlSessionBean.getSession();
+		int result = mapper.insert("bookuser.insert", vo);
 		mapper.commit();
 		mapper.close();
-		int result = mapper.insert("bookuser.join", vo);
 		
 		return result;
 	}

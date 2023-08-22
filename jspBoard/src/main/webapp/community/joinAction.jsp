@@ -11,20 +11,18 @@
 		String password = request.getParameter("password");
 		
 		BookUserDao dao = new BookUserDao();
-		BookUser vo = new BookUser(id,name,email,age,password);
+		BookUser vo = new BookUser(id,name,email,age,null,password);
 		
 		String url = request.getContextPath();
 		String back = (String) session.getAttribute("back");
 		
-		int result = dao.join(vo);
+		int result = dao.insert(vo);
 		if (result == 1) {
-			request.setAttribute("message", "회원가입이 완료되었습니다.");
-			request.setAttribute("url", "login.jsp?id="+id+"&password="+password);
-			pageContext.forward("alert.jsp");
+%>
+<script type="text/javascript">
+	alert('회원가입이 완료되었습니다.')
+	location.href='login.jsp'
+</script>
+<% 
 		}
-		if (back != null) {
-			url = back;
-			session.removeAttribute("back"); //back 이름의 애트리뷰트 삭제
-		}
-		response.sendRedirect(url);
 %>

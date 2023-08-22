@@ -23,11 +23,6 @@
   </style>
 </head>
 <body>
-<%
-String temp=request.getParameter("back");
-if(temp!=null && temp.equals("w")) 
-	session .setAttribute("back","community/login.jsp");
-%>
 <div class="container mt-3 width30">
   <h2>회원가입</h2>
   <form action="joinAction.jsp" method="post">

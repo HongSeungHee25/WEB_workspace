@@ -11,7 +11,7 @@
 		where id=#{id} and password = #{password}
  	</select>
  	
- 	<insert id="join" parameterType="org.iclass.dto.BookUser">
+ 	<insert id="insert" parameterType="org.iclass.dto.BookUser">
  		INSERT INTO 
  			BOOKUSER (id,name,email,age,password) 
  		VALUES (#{id}, #{name}, #{email}, #{age}, #{password}) 
