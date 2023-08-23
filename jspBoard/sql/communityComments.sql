@@ -11,17 +11,17 @@ CREATE TABLE communityComments (
 );
 CREATE SEQUENCE comment_idx_seq;
 
--- 댓글 테이블 데이터
+-- 댓글 테이블 데이터(mref 컬럼값은 community 최근글의 idx로 수정해야 확인이 편합니다.)
 INSERT INTO communityComments (idx,mref,writer,content)
-VALUES (comment_idx_seq.nextval,3,'이하니','이글은 메인글 3번 댓글~');
+VALUES (comment_idx_seq.nextval,515,'이하니','이글은 메인글 3번 댓글~');
 INSERT INTO communityComments (idx,mref,writer,content)
-VALUES (comment_idx_seq.nextval,3,'김땡땡','이글은 메인글 3번 댓글~2');
+VALUES (comment_idx_seq.nextval,514,'김땡땡','이글은 메인글 3번 댓글~2');
 INSERT INTO communityComments (idx,mref,writer,content)
-VALUES (comment_idx_seq.nextval,1,'이하니','이글은 메인글 333번 댓글~');
+VALUES (comment_idx_seq.nextval,513,'이하니','이글은 메인글 333번 댓글~');
 INSERT INTO communityComments (idx,mref,writer,content)
-VALUES (comment_idx_seq.nextval,9,'김땡땡','이글은 메인글 333번 댓글~2');
+VALUES (comment_idx_seq.nextval,512,'김땡땡','이글은 메인글 333번 댓글~2');
 INSERT INTO communityComments (idx,mref,writer,content)
-VALUES (comment_idx_seq.nextval,9,'김땡땡','하이!!!하이~~');
+VALUES (comment_idx_seq.nextval,511,'김땡땡','하이!!!하이~~');
 
 -- 필요시 데이블 및 데이터 삭제
 DROP TABLE communityComments ;

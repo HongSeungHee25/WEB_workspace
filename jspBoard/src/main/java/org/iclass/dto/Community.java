@@ -24,6 +24,6 @@ public class Community {
 	private int readCount;			//조회수
 	private Timestamp createdAt;
 	private String ip;
-	private String commentCount;	//댓글 개수
+	private int commentCount;	//댓글 개수
 
 }

@@ -6,7 +6,7 @@
     pageEncoding="UTF-8"%>
 <!-- 수정된 내용 db 테이블에 저장하기 -->
 <%
-	request.setCharacterEncoding("UTF-8");	
+//request.setCharacterEncoding("UTF-8");	//filter 가 실행함
 	
     BookUser writer = (BookUser) session.getAttribute("user");
     

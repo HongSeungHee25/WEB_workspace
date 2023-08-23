@@ -8,6 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"></script>
+<script type="text/javascript" src="./login.js"></script>
   <style type="text/css">
   	.width30{
   		width:30%;
@@ -47,7 +49,7 @@ if(temp!=null && temp.equals("w"))
         <input class="form-check-input" type="checkbox" name="remember"> Remember me
       </label>
     </div>
-    <button type="submit" class="btn btn-primary">로그인</button>
+    <button type="submit" class="btn btn-primary" onclick="func_login()">로그인</button>
     <button type="button" class="btn btn-primary" onclick="location.href='join.jsp'">회원가입</button>
     <button type="button" class="btn btn-primary" 
     		onclick="location.href='${pageContext.request.contextPath}'">HOME</button>

@@ -13,8 +13,8 @@
  	
  	<insert id="insert" parameterType="org.iclass.dto.BookUser">
  		INSERT INTO 
- 			BOOKUSER (id,name,email,age,password) 
- 		VALUES (#{id}, #{name}, #{email}, #{age}, #{password}) 
+ 			BOOKUSER (id,name,email,age,reg_date,password) 
+ 		VALUES (#{id}, #{name}, #{email}, #{age},sysdate, #{password}) 
  	</insert>
  	
  </mapper>

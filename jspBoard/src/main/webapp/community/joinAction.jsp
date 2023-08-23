@@ -3,15 +3,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-		request.setCharacterEncoding("UTF-8");	
+		//request.setCharacterEncoding("UTF-8");	//filter 가 실행함
 		String id = request.getParameter("id");
 		String name = request.getParameter("name");
 		String email = request.getParameter("email");
 		int age = Integer.parseInt(request.getParameter("age"));
-		String password = request.getParameter("password");
+		String hashedPassword = request.getParameter("password");
 		
 		BookUserDao dao = new BookUserDao();
-		BookUser vo = new BookUser(id,name,email,age,null,password);
+		BookUser vo = new BookUser(id,name,email,age,null,hashedPassword);
 		
 		String url = request.getContextPath();
 		String back = (String) session.getAttribute("back");

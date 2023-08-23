@@ -8,6 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"></script>
+	<script type="text/javascript" src="./join.js"></script>
   <style type="text/css">
   	.width30{
   		width:30%;
@@ -51,13 +53,18 @@
       <input type="password" class="form-control" id="password" placeholder="Enter password" 
       		name="password" required>
     </div>
+    <div class="mb-3">
+      <label for="pwd2">패스워드 확인:</label>
+      <input type="password" class="form-control" id="password2" placeholder="Enter password" 
+      		name="password2" required>
+    </div>
     <div class="form-check mb-3">
       <label class="form-check-label">
         <input class="form-check-input" type="checkbox" name="remember"> Remember me
       </label>
     </div>
     <button type="button" class="btn btn-primary" onclick="location.href='login.jsp'">로그인</button>
-    <button type="submit" class="btn btn-primary">회원가입</button>
+    <button type="submit" class="btn btn-primary"  onclick="func_join()">회원가입</button>
     <button type="button" class="btn btn-primary" 
     		onclick="location.href='${pageContext.request.contextPath}'">HOME</button>
   </form>

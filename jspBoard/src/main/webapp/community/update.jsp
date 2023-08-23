@@ -5,7 +5,7 @@
     pageEncoding="UTF-8"%>
 <!-- 기본키 idx 값으로 글 조회하여 화면에 전달하기 -->
 <% 
-	request.setCharacterEncoding("UTF-8");	
+//request.setCharacterEncoding("UTF-8");	//filter 가 실행함
 
 	BookUser user = (BookUser)session.getAttribute("user");
 	if(user==null)	/* 로그인이 안된 상태 */

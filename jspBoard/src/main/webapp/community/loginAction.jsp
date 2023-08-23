@@ -5,12 +5,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-String id = request.getParameter("id");
-		String password = request.getParameter("password");
+	String id = request.getParameter("id");
+	String hashedPassword = request.getParameter("password");
 		//할일 : dao 로 id,password 확인하는 메소드 실행
 		Map<String, String> map = new HashMap<>();
 		map.put("id", id);
-		map.put("password", password);
+		map.put("password", hashedPassword);
 		BookUserDao dao = new BookUserDao();
 		BookUser vo = dao.login(map);
 		

@@ -12,7 +12,7 @@
 <body>
 <!-- 수정된 내용 db 테이블에 저장하기 -->
 <% 
-	request.setCharacterEncoding("UTF-8");	
+//request.setCharacterEncoding("UTF-8");	//filter 가 실행함
 
 	String ip = request.getRemoteAddr();	//클라이언트 ip 가져오기
 	String title = request.getParameter("title");
@@ -29,7 +29,7 @@
 		}
 	
 	communityDao dao = communityDao.getInstance();
-	Community vo = new Community(idx,null,title,content,0,null,ip,null);
+	Community vo = new Community(idx,null,title,content,0,null,ip,0);
 
 	int result = dao.update(vo);
 	if(result==1){

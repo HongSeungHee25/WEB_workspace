@@ -9,7 +9,7 @@
     pageEncoding="UTF-8"%>
 <%
 
-	request.setCharacterEncoding("UTF-8");	
+//request.setCharacterEncoding("UTF-8");	//filter 가 실행함
 	int pageNo;
 //페이지 번호를 파라미터로 받습니다
 	if(request.getParameter("page")==null) pageNo=1;

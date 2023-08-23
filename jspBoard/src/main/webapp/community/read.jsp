@@ -1,10 +1,13 @@
+<%@page import="java.util.List"%>
+<%@page import="org.iclass.dao.communityCommentsDao"%>
+<%@page import="org.iclass.dto.CommunityComments"%>
 <%@page import="org.iclass.dto.Community"%>
 <%@page import="org.iclass.dao.communityDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <% 
 
-		request.setCharacterEncoding("UTF-8");	
+//request.setCharacterEncoding("UTF-8");	//filter 가 실행함
 		int idx = 0;
 		int pageNo = 0;
 		if(request.getParameter("idx") != null){
@@ -24,7 +27,14 @@
 		//(1) vo 를 setAttribute 로 readView에 넘겨줌
 		request.setAttribute("vo", vo);			
 		//(2) 
-		request.setAttribute("page", pageNo);			
+		request.setAttribute("page", pageNo);	
+		
+		//(3) 댓글 목록 전달하기
+		communityCommentsDao cmtdao = communityCommentsDao.getInstance();
+		List<CommunityComments> cmtlist = cmtdao.commentsList(idx);
+		
+		
+		request.setAttribute("cmtlist", cmtlist);
 		
 		pageContext.forward("readView.jsp");		// 화면에 애트리뷰트와 함께 요청 전달.
 %>
