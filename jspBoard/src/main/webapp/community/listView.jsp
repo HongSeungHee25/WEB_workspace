@@ -30,7 +30,8 @@
 	<li>
 		<ul  class="row">
 			<li><!-- "vo" 변수 안에 있는 "idx" 값을 출력합니다. -->
-				<c:out value="${vo.idx }"/>
+				<%-- <c:out value="${vo.idx }"/> --%>		<!-- rownum 출력하기 -->
+				<c:out value="${vo.r }"/>		<!-- rownum 출력하기 -->
 			</li>
 			<!-- 제목에 링크를 설정하고, 해당 게시물의 "idx"와 페이지 정보를 전달합니다. -->
 			<li><a href="read.jsp?idx=${vo.idx }&page=${paging.currentPage}" class="title">  

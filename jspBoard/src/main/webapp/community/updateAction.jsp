@@ -29,7 +29,7 @@
 		}
 	
 	communityDao dao = communityDao.getInstance();
-	Community vo = new Community(idx,null,title,content,0,null,ip,0);
+	Community vo = new Community(0,idx,null,title,content,0,null,ip,0);
 
 	int result = dao.update(vo);
 	if(result==1){
