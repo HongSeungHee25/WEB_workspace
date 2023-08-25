@@ -22,7 +22,6 @@
  		SELECT count(*) FROM community
  	</select>
  	
- 	
  	<!-- PK로 글 조회(글 읽기) -->
  	<select id="selectByIdx" parameterType="long" resultType="org.iclass.dto.Community">
  		SELECT * 

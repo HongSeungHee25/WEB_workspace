@@ -1,5 +1,4 @@
 <%@page import="java.text.DecimalFormat"%>
-<%@page import="vo.SaleVo"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
