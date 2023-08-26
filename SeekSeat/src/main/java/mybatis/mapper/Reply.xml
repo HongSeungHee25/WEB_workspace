@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="Reply">
+ 	
+ 	<!-- 댓글 리스트 출력 -->
+ 	<select id="replyList" resultType="Reply">
+ 		SELECT *
+ 		FROM
+ 			Reply
+ 	</select>
+ 	
+ 	<!-- 댓글 작성 -->
+ 	<insert id="write" parameterType="Reply">
+ 		INSERT INTO
+ 			Reply
+ 		VALUES
+ 			(seq_reply.nextval , #{id} , #{reply} , sysdate)
+ 	</insert>
+ 	
+ 	<!-- 댓글 삭제 -->
+ 	<delete id="delete" parameterType="int">
+ 		DELETE FROM
+ 			Reply
+ 		WHERE
+ 			writeNo=#{writeNo}
+ 	</delete>
+ 	
+ </mapper>

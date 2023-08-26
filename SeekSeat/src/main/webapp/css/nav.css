@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #9EB9D4
+}
+
+nav input[type="text"] {
+	padding: 5px;
+	border: none;
+	border-radius: 5px;
+	margin-right: 10px;
+}
+
+nav button#logo {
+	width: 95px;
+	height: 85px;
+	background-color: #9EB9D4;
+	border-radius: 10px;
+	border: none;
+	margin-right: 15px;
+}
+
+nav button#logo img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+/* 검색창 */
+.search1 {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.search1 input[type="text"] {
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+.search2 button {
+	padding: 10px;
+	background-color: #007bff;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.search2 button:hover {
+	background-color: #0056b3;
+}
+
+/* .search1 {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.search1 input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.search2 button {
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.search2 button:hover {
+  background-color: #0056b3;
+}
+ */

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="QnA">
+ 	<!-- 1:1 문의 -->
+ 	<insert id="insert" parameterType="QnA">
+ 		INSERT INTO
+ 			QnA
+ 		VALUES (seq_QnA.nextval,#{user_id},#{owner_id},#{admin_id},#{title},#{content},#{answer},sysdate,#{answerDate},#{status})
+ 	</insert>
+ 	
+ 	<!-- 1:1 문의글 리스트 출력 -->
+ 	<select id="selectList" resultType="QnA">
+ 		select * 
+ 		from QnA
+ 	</select>
+ 	
+ 	<!-- 선택한 문의글 출력 -->
+ 	<select id="selectOne" resultType="QnA" parameterType="int">
+ 		SELECT *
+ 		FROM
+ 			QnA
+ 		WHERE
+ 			writeNo=#{writeNo}
+ 	</select>
+ 	
+ 	<!-- 1:1 문의 답글 -->
+ 	<update id="update" parameterType="QnA">
+ 	UPDATE QnA
+ 	SET
+ 		admin_id = #{admin_id}, answer = #{answer}, answerDate = sysdate
+ 	WHERE 
+ 		writeNo = #{writeNo}
+ 	</update>
+ 	
+ </mapper>

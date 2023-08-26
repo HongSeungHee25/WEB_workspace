@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="Owner">
+ 	<!-- 사장님 로그인 -->
+ 	<select id="login" parameterType="java.util.Map">
+ 		select count(*)
+ 		from owner
+ 		where id=#{id} and pw=#{pw}
+ 	</select>
+ 	
+ 	<!-- 사장님 회원가입 -->
+ 	<insert id="join" parameterType="Owner">
+ 		INSERT INTO
+			OWNER 
+		VALUES (#{id}, #{pw}, #{name},#{member_type}, #{tel}, #{email})
+ 	</insert>
+ 	
+ 	<!-- 사장님 ID 중복체크 -->
+ 	<select id="doubleCheck" parameterType="String">
+		SELECT 
+			count(*) 
+		FROM OWNER
+		where id=#{id}
+	</select>
+	
+	<!-- 사장님 정보 수정 -->
+ 	<update id="update" parameterType="Owner">
+		UPDATE OWNER
+		SET
+			pw = #{pw}, tel = #{tel}, email = #{email}
+		WHERE 
+			id = #{id}
+	</update>
+	
+	<!-- 사장님 정보 출력 -->
+	<select id="select" resultType="Owner" parameterType="String">
+		select * 
+		from owner
+		where id=#{id}
+	</select>
+	
+ </mapper>

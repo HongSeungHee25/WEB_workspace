@@ -1,0 +1,156 @@
+@charset "UTF-8";
+html, body {
+	height:100vh;
+	margin: 0;
+	font-family: Arial, sans-serif;
+}
+body::-webkit-scrollbar {
+    width: 8px;  /* 스크롤바의 너비 */
+}
+
+body::-webkit-scrollbar-thumb {
+    height: 30%; /* 스크롤바의 길이 */
+    background: #3D74A9; /* 스크롤바의 색상 */
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: white;
+}
+header {
+	height:20vh;
+	background-color: #3D74A9;
+	color: #fff;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+/* 사이드바 */
+.sidebar ul {
+	list-style: none;
+}
+
+.menu-item {
+	display: block;
+	padding: 10px; /* 텍스트 주위에 여백 추가 */
+	text-decoration: none; /* 링크에 밑줄 제거 */
+	font-size: 16px; /* 텍스트 크기 설정 */
+	color: white;
+	font-weight: bold;
+}
+
+.menu-toggle {
+	cursor: pointer;
+	font-size: 40px;
+}
+
+.sidebar {
+	width: 250px;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: -250px;
+	background-color: #7DA2C5;
+	transition: left 0.3s ease-in-out;
+}
+/* 메인 로고 */
+.logo {
+	display: flex;
+	justify-content: center;
+}
+
+header button#logo {
+	background-color: #f6f6f6;
+	border: none;
+	margin: 0 auto;
+	border-radius: 10px;
+}
+/* 검색 네비게이션 */
+nav {
+	height:15vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #9EB9D4
+}
+
+nav input[type="text"] {
+	padding: 5px;
+	border: none;
+	border-radius: 5px;
+	margin-right: 10px;
+}
+
+nav button#logo {
+	width: 95px;
+	height: 85px;
+	background-color: #9EB9D4;
+	border-radius: 10px;
+	border: none;
+	margin-right: 15px;
+}
+
+nav button#logo img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+/* 검색창 */
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+input[type="search"] {
+  width: 100%;
+  max-width: 700px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#searchButton {
+  margin-left: 10px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+/* 로그인 회원 가입 */
+
+/* section */
+section{
+	position: relative; /* 버튼 위치기준을 위한 부모요소 */
+	height: 58%;
+	text-align: center;
+}
+/* 지도 음식점 리스트 스크롤창 */
+.grid-container {
+ 	margin: 0 auto;
+	width: 700px;
+ 	display: grid;
+ 	grid-template-columns: repeat(2, 1fr); /* 2개의 열로 분할 */
+ 	grid-gap: 10px; /* 그리드 간격 설정 */
+ 	overflow-y: scroll;
+}
+
+.grid-item {
+  border: 1px solid gray;
+  padding: 10px;
+  
+}
+
+footer{
+	background-color: #3D74A9;
+	min-height: 7vh;
+	text-align: center;
+	font-size: 150%;
+	padding-top: 20px;
+}

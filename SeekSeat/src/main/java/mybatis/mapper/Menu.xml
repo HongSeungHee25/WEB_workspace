@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="Menu">
+ 	
+ 	<!-- 메뉴 출력 -->
+ 	<select id="menuList" parameterType="String" resultType="Menu">
+ 		SELECT *
+ 		FROM
+ 			Menu
+ 		WHERE
+ 			store_id=#{store_id}
+ 	</select>
+ 	
+ 	<!-- 메뉴 등록 -->
+ 	<insert id="insert" parameterType="Menu">
+ 		INSERT INTO
+ 			Menu
+ 		VALUES
+ 			(#{store_id} , #{menu_name} , #{price} , #{content} , #{best})
+ 		WHERE
+ 			store_id=#{store_id}
+ 	</insert>
+ 	
+ 	<!-- 메뉴 수정 -->
+ 	<update id="update" parameterType="Menu">
+ 		UPDATE 
+ 			Menu
+ 		SET
+ 			price=#{price} , content=#{content} , best=#{best}
+ 		WHERE
+ 			store_id=#{store_id} AND menu_name=#{menu_name}
+ 	</update>
+ 	
+ 	<!-- 메뉴 삭제 -->
+ 	<delete id="delete" parameterType="java.util.Map">
+ 		DELETE FROM
+ 			Menu
+ 		WHERE
+ 			store_id=#{store_id} AND menu_name=#{menu_name}
+ 	</delete>
+ </mapper>

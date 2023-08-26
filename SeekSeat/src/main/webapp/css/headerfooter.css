@@ -1,0 +1,59 @@
+@charset "UTF-8";
+html, body {
+	height:100%;
+	margin: 0;
+	font-family: Arial, sans-serif;
+}
+
+header {
+	height:20%;
+	background-color: #3D74A9;
+	color: #fff;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.sidebar ul {
+	list-style: none;
+}
+
+.menu-item {
+	display: block;
+	padding: 10px; /* 텍스트 주위에 여백 추가 */
+	text-decoration: none; /* 링크에 밑줄 제거 */
+	color: #000; /* 텍스트 색상 설정 */
+	font-size: 16px; /* 텍스트 크기 설정 */
+}
+
+.logo {
+	display: flex;
+	justify-content: center;
+}
+
+header button#logo {
+	background-color: #f6f6f6;
+	border: none;
+	margin: 0 auto;
+	border-radius: 10px;
+}
+
+.menu-toggle {
+	cursor: pointer;
+	font-size: 40px;
+}
+
+.sidebar {
+	width: 250px;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: -250px;
+	background-color: #BED0E2;
+	transition: left 0.3s ease-in-out;
+}
+
+footer{
+	height: 15vx;
+}
